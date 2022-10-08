@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akhaten/Documents/OpenglProject
+CMAKE_SOURCE_DIR = /home/akhaten/Documents/MeshManipulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akhaten/Documents/OpenglProject/build
+CMAKE_BINARY_DIR = /home/akhaten/Documents/MeshManipulator/build
 
 # Utility rule file for demos.
 
@@ -74,10 +74,10 @@ libs/eigen/demos/CMakeFiles/demos.dir/build: demos
 .PHONY : libs/eigen/demos/CMakeFiles/demos.dir/build
 
 libs/eigen/demos/CMakeFiles/demos.dir/clean:
-	cd /home/akhaten/Documents/OpenglProject/build/libs/eigen/demos && $(CMAKE_COMMAND) -P CMakeFiles/demos.dir/cmake_clean.cmake
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/eigen/demos && $(CMAKE_COMMAND) -P CMakeFiles/demos.dir/cmake_clean.cmake
 .PHONY : libs/eigen/demos/CMakeFiles/demos.dir/clean
 
 libs/eigen/demos/CMakeFiles/demos.dir/depend:
-	cd /home/akhaten/Documents/OpenglProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akhaten/Documents/OpenglProject /home/akhaten/Documents/OpenglProject/libs/eigen/demos /home/akhaten/Documents/OpenglProject/build /home/akhaten/Documents/OpenglProject/build/libs/eigen/demos /home/akhaten/Documents/OpenglProject/build/libs/eigen/demos/CMakeFiles/demos.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/akhaten/Documents/MeshManipulator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akhaten/Documents/MeshManipulator /home/akhaten/Documents/MeshManipulator/libs/eigen/demos /home/akhaten/Documents/MeshManipulator/build /home/akhaten/Documents/MeshManipulator/build/libs/eigen/demos /home/akhaten/Documents/MeshManipulator/build/libs/eigen/demos/CMakeFiles/demos.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libs/eigen/demos/CMakeFiles/demos.dir/depend
 

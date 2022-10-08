@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akhaten/Documents/OpenglProject
+CMAKE_SOURCE_DIR = /home/akhaten/Documents/MeshManipulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akhaten/Documents/OpenglProject/build
+CMAKE_BINARY_DIR = /home/akhaten/Documents/MeshManipulator/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/akhaten/Documents/OpenglProject/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/akhaten/Documents/OpenglProject/build/CMakeFiles /home/akhaten/Documents/OpenglProject/build/libs/eigen/blas//CMakeFiles/progress.marks
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/eigen/blas/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akhaten/Documents/OpenglProject/build/CMakeFiles 0
+	cd /home/akhaten/Documents/MeshManipulator/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/akhaten/Documents/MeshManipulator/build/CMakeFiles /home/akhaten/Documents/MeshManipulator/build/libs/eigen/blas//CMakeFiles/progress.marks
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/eigen/blas/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akhaten/Documents/MeshManipulator/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/eigen/blas/clean
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/eigen/blas/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,17 +148,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/eigen/blas/preinstall
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/eigen/blas/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/eigen/blas/preinstall
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/eigen/blas/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/akhaten/Documents/OpenglProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/akhaten/Documents/MeshManipulator/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -184,6 +184,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/akhaten/Documents/OpenglProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/akhaten/Documents/MeshManipulator/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -DEIGEN_MAKING_DOCS
 
-CXX_INCLUDES = -I/home/akhaten/Documents/OpenglProject/libs/eigen
+CXX_INCLUDES = -I/home/akhaten/Documents/MeshManipulator/libs/eigen
 
 CXX_FLAGS =  -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -O1 -g1 -g -DEIGEN_NO_DEPRECATED_WARNING -std=c++14
 

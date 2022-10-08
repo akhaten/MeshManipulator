@@ -1,0 +1,59 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"libs/OpenMesh/src/OpenMesh/Tools/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 204,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"Build/lib/libOpenMeshToolsd.so.9.1"
+			],
+			"targetId" : "OpenMeshTools::@e32d913c403f3a092c03",
+			"targetIndex" : 12,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"Build/lib/libOpenMeshToolsd.so"
+			],
+			"targetId" : "OpenMeshTools::@e32d913c403f3a092c03",
+			"targetIndex" : 12,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "libs/OpenMesh/src/OpenMesh/Tools",
+		"source" : "libs/OpenMesh/src/OpenMesh/Tools"
+	}
+}

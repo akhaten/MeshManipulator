@@ -1,4 +1,4 @@
-# Install script for directory: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Apps
+# Install script for directory: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Apps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

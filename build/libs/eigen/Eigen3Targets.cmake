@@ -54,7 +54,7 @@ unset(_cmake_expected_targets)
 add_library(Eigen3::Eigen INTERFACE IMPORTED)
 
 set_target_properties(Eigen3::Eigen PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/home/akhaten/Documents/OpenglProject/libs/eigen"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/akhaten/Documents/MeshManipulator/libs/eigen"
 )
 
 # This file does not depend on other imported targets which have

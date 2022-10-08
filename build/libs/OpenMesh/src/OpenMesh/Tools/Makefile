@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akhaten/Documents/OpenglProject
+CMAKE_SOURCE_DIR = /home/akhaten/Documents/MeshManipulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akhaten/Documents/OpenglProject/build
+CMAKE_BINARY_DIR = /home/akhaten/Documents/MeshManipulator/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/akhaten/Documents/OpenglProject/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/akhaten/Documents/OpenglProject/build/CMakeFiles /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Tools//CMakeFiles/progress.marks
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/OpenMesh/src/OpenMesh/Tools/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akhaten/Documents/OpenglProject/build/CMakeFiles 0
+	cd /home/akhaten/Documents/MeshManipulator/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/akhaten/Documents/MeshManipulator/build/CMakeFiles /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Tools//CMakeFiles/progress.marks
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/OpenMesh/src/OpenMesh/Tools/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akhaten/Documents/MeshManipulator/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/OpenMesh/src/OpenMesh/Tools/clean
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/OpenMesh/src/OpenMesh/Tools/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/OpenMesh/src/OpenMesh/Tools/preinstall
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/OpenMesh/src/OpenMesh/Tools/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/OpenMesh/src/OpenMesh/Tools/preinstall
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/OpenMesh/src/OpenMesh/Tools/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/akhaten/Documents/OpenglProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/akhaten/Documents/MeshManipulator/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/rule:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/rule
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/rule
 .PHONY : libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ OpenMeshTools: libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/rul
 
 # fast build rule for target.
 OpenMeshTools/fast:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build
 .PHONY : OpenMeshTools/fast
 
 # Convenience name for target.
 libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/rule:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/rule
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/rule
 .PHONY : libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/rule
 
 # Convenience name for target.
@@ -186,7 +186,7 @@ OpenMeshToolsStatic: libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsSt
 
 # fast build rule for target.
 OpenMeshToolsStatic/fast:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build
 .PHONY : OpenMeshToolsStatic/fast
 
 Decimater/Observer.o: Decimater/Observer.cc.o
@@ -194,8 +194,8 @@ Decimater/Observer.o: Decimater/Observer.cc.o
 
 # target to build an object file
 Decimater/Observer.cc.o:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Decimater/Observer.cc.o
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Decimater/Observer.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Decimater/Observer.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Decimater/Observer.cc.o
 .PHONY : Decimater/Observer.cc.o
 
 Decimater/Observer.i: Decimater/Observer.cc.i
@@ -203,8 +203,8 @@ Decimater/Observer.i: Decimater/Observer.cc.i
 
 # target to preprocess a source file
 Decimater/Observer.cc.i:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Decimater/Observer.cc.i
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Decimater/Observer.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Decimater/Observer.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Decimater/Observer.cc.i
 .PHONY : Decimater/Observer.cc.i
 
 Decimater/Observer.s: Decimater/Observer.cc.s
@@ -212,8 +212,8 @@ Decimater/Observer.s: Decimater/Observer.cc.s
 
 # target to generate assembly for a file
 Decimater/Observer.cc.s:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Decimater/Observer.cc.s
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Decimater/Observer.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Decimater/Observer.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Decimater/Observer.cc.s
 .PHONY : Decimater/Observer.cc.s
 
 Utils/Gnuplot.o: Utils/Gnuplot.cc.o
@@ -221,8 +221,8 @@ Utils/Gnuplot.o: Utils/Gnuplot.cc.o
 
 # target to build an object file
 Utils/Gnuplot.cc.o:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/Gnuplot.cc.o
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/Gnuplot.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/Gnuplot.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/Gnuplot.cc.o
 .PHONY : Utils/Gnuplot.cc.o
 
 Utils/Gnuplot.i: Utils/Gnuplot.cc.i
@@ -230,8 +230,8 @@ Utils/Gnuplot.i: Utils/Gnuplot.cc.i
 
 # target to preprocess a source file
 Utils/Gnuplot.cc.i:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/Gnuplot.cc.i
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/Gnuplot.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/Gnuplot.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/Gnuplot.cc.i
 .PHONY : Utils/Gnuplot.cc.i
 
 Utils/Gnuplot.s: Utils/Gnuplot.cc.s
@@ -239,8 +239,8 @@ Utils/Gnuplot.s: Utils/Gnuplot.cc.s
 
 # target to generate assembly for a file
 Utils/Gnuplot.cc.s:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/Gnuplot.cc.s
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/Gnuplot.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/Gnuplot.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/Gnuplot.cc.s
 .PHONY : Utils/Gnuplot.cc.s
 
 Utils/Timer.o: Utils/Timer.cc.o
@@ -248,8 +248,8 @@ Utils/Timer.o: Utils/Timer.cc.o
 
 # target to build an object file
 Utils/Timer.cc.o:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/Timer.cc.o
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/Timer.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/Timer.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/Timer.cc.o
 .PHONY : Utils/Timer.cc.o
 
 Utils/Timer.i: Utils/Timer.cc.i
@@ -257,8 +257,8 @@ Utils/Timer.i: Utils/Timer.cc.i
 
 # target to preprocess a source file
 Utils/Timer.cc.i:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/Timer.cc.i
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/Timer.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/Timer.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/Timer.cc.i
 .PHONY : Utils/Timer.cc.i
 
 Utils/Timer.s: Utils/Timer.cc.s
@@ -266,8 +266,8 @@ Utils/Timer.s: Utils/Timer.cc.s
 
 # target to generate assembly for a file
 Utils/Timer.cc.s:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/Timer.cc.s
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/Timer.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/Timer.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/Timer.cc.s
 .PHONY : Utils/Timer.cc.s
 
 Utils/conio.o: Utils/conio.cc.o
@@ -275,8 +275,8 @@ Utils/conio.o: Utils/conio.cc.o
 
 # target to build an object file
 Utils/conio.cc.o:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/conio.cc.o
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/conio.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/conio.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/conio.cc.o
 .PHONY : Utils/conio.cc.o
 
 Utils/conio.i: Utils/conio.cc.i
@@ -284,8 +284,8 @@ Utils/conio.i: Utils/conio.cc.i
 
 # target to preprocess a source file
 Utils/conio.cc.i:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/conio.cc.i
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/conio.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/conio.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/conio.cc.i
 .PHONY : Utils/conio.cc.i
 
 Utils/conio.s: Utils/conio.cc.s
@@ -293,8 +293,8 @@ Utils/conio.s: Utils/conio.cc.s
 
 # target to generate assembly for a file
 Utils/conio.cc.s:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/conio.cc.s
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/conio.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/Utils/conio.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/Utils/conio.cc.s
 .PHONY : Utils/conio.cc.s
 
 VDPM/VFront.o: VDPM/VFront.cc.o
@@ -302,8 +302,8 @@ VDPM/VFront.o: VDPM/VFront.cc.o
 
 # target to build an object file
 VDPM/VFront.cc.o:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VFront.cc.o
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VFront.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VFront.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VFront.cc.o
 .PHONY : VDPM/VFront.cc.o
 
 VDPM/VFront.i: VDPM/VFront.cc.i
@@ -311,8 +311,8 @@ VDPM/VFront.i: VDPM/VFront.cc.i
 
 # target to preprocess a source file
 VDPM/VFront.cc.i:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VFront.cc.i
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VFront.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VFront.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VFront.cc.i
 .PHONY : VDPM/VFront.cc.i
 
 VDPM/VFront.s: VDPM/VFront.cc.s
@@ -320,8 +320,8 @@ VDPM/VFront.s: VDPM/VFront.cc.s
 
 # target to generate assembly for a file
 VDPM/VFront.cc.s:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VFront.cc.s
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VFront.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VFront.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VFront.cc.s
 .PHONY : VDPM/VFront.cc.s
 
 VDPM/VHierarchy.o: VDPM/VHierarchy.cc.o
@@ -329,8 +329,8 @@ VDPM/VHierarchy.o: VDPM/VHierarchy.cc.o
 
 # target to build an object file
 VDPM/VHierarchy.cc.o:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchy.cc.o
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchy.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchy.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchy.cc.o
 .PHONY : VDPM/VHierarchy.cc.o
 
 VDPM/VHierarchy.i: VDPM/VHierarchy.cc.i
@@ -338,8 +338,8 @@ VDPM/VHierarchy.i: VDPM/VHierarchy.cc.i
 
 # target to preprocess a source file
 VDPM/VHierarchy.cc.i:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchy.cc.i
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchy.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchy.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchy.cc.i
 .PHONY : VDPM/VHierarchy.cc.i
 
 VDPM/VHierarchy.s: VDPM/VHierarchy.cc.s
@@ -347,8 +347,8 @@ VDPM/VHierarchy.s: VDPM/VHierarchy.cc.s
 
 # target to generate assembly for a file
 VDPM/VHierarchy.cc.s:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchy.cc.s
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchy.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchy.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchy.cc.s
 .PHONY : VDPM/VHierarchy.cc.s
 
 VDPM/VHierarchyNodeIndex.o: VDPM/VHierarchyNodeIndex.cc.o
@@ -356,8 +356,8 @@ VDPM/VHierarchyNodeIndex.o: VDPM/VHierarchyNodeIndex.cc.o
 
 # target to build an object file
 VDPM/VHierarchyNodeIndex.cc.o:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchyNodeIndex.cc.o
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchyNodeIndex.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchyNodeIndex.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchyNodeIndex.cc.o
 .PHONY : VDPM/VHierarchyNodeIndex.cc.o
 
 VDPM/VHierarchyNodeIndex.i: VDPM/VHierarchyNodeIndex.cc.i
@@ -365,8 +365,8 @@ VDPM/VHierarchyNodeIndex.i: VDPM/VHierarchyNodeIndex.cc.i
 
 # target to preprocess a source file
 VDPM/VHierarchyNodeIndex.cc.i:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchyNodeIndex.cc.i
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchyNodeIndex.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchyNodeIndex.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchyNodeIndex.cc.i
 .PHONY : VDPM/VHierarchyNodeIndex.cc.i
 
 VDPM/VHierarchyNodeIndex.s: VDPM/VHierarchyNodeIndex.cc.s
@@ -374,8 +374,8 @@ VDPM/VHierarchyNodeIndex.s: VDPM/VHierarchyNodeIndex.cc.s
 
 # target to generate assembly for a file
 VDPM/VHierarchyNodeIndex.cc.s:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchyNodeIndex.cc.s
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchyNodeIndex.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchyNodeIndex.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchyNodeIndex.cc.s
 .PHONY : VDPM/VHierarchyNodeIndex.cc.s
 
 VDPM/VHierarchyWindow.o: VDPM/VHierarchyWindow.cc.o
@@ -383,8 +383,8 @@ VDPM/VHierarchyWindow.o: VDPM/VHierarchyWindow.cc.o
 
 # target to build an object file
 VDPM/VHierarchyWindow.cc.o:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchyWindow.cc.o
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchyWindow.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchyWindow.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchyWindow.cc.o
 .PHONY : VDPM/VHierarchyWindow.cc.o
 
 VDPM/VHierarchyWindow.i: VDPM/VHierarchyWindow.cc.i
@@ -392,8 +392,8 @@ VDPM/VHierarchyWindow.i: VDPM/VHierarchyWindow.cc.i
 
 # target to preprocess a source file
 VDPM/VHierarchyWindow.cc.i:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchyWindow.cc.i
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchyWindow.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchyWindow.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchyWindow.cc.i
 .PHONY : VDPM/VHierarchyWindow.cc.i
 
 VDPM/VHierarchyWindow.s: VDPM/VHierarchyWindow.cc.s
@@ -401,8 +401,8 @@ VDPM/VHierarchyWindow.s: VDPM/VHierarchyWindow.cc.s
 
 # target to generate assembly for a file
 VDPM/VHierarchyWindow.cc.s:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchyWindow.cc.s
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchyWindow.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/VHierarchyWindow.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/VHierarchyWindow.cc.s
 .PHONY : VDPM/VHierarchyWindow.cc.s
 
 VDPM/ViewingParameters.o: VDPM/ViewingParameters.cc.o
@@ -410,8 +410,8 @@ VDPM/ViewingParameters.o: VDPM/ViewingParameters.cc.o
 
 # target to build an object file
 VDPM/ViewingParameters.cc.o:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/ViewingParameters.cc.o
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/ViewingParameters.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/ViewingParameters.cc.o
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/ViewingParameters.cc.o
 .PHONY : VDPM/ViewingParameters.cc.o
 
 VDPM/ViewingParameters.i: VDPM/ViewingParameters.cc.i
@@ -419,8 +419,8 @@ VDPM/ViewingParameters.i: VDPM/ViewingParameters.cc.i
 
 # target to preprocess a source file
 VDPM/ViewingParameters.cc.i:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/ViewingParameters.cc.i
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/ViewingParameters.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/ViewingParameters.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/ViewingParameters.cc.i
 .PHONY : VDPM/ViewingParameters.cc.i
 
 VDPM/ViewingParameters.s: VDPM/ViewingParameters.cc.s
@@ -428,8 +428,8 @@ VDPM/ViewingParameters.s: VDPM/ViewingParameters.cc.s
 
 # target to generate assembly for a file
 VDPM/ViewingParameters.cc.s:
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/ViewingParameters.cc.s
-	cd /home/akhaten/Documents/OpenglProject/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/ViewingParameters.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir/VDPM/ViewingParameters.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build && $(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/VDPM/ViewingParameters.cc.s
 .PHONY : VDPM/ViewingParameters.cc.s
 
 # Help Target
@@ -484,6 +484,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/akhaten/Documents/OpenglProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/akhaten/Documents/MeshManipulator/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

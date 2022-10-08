@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akhaten/Documents/OpenglProject
+CMAKE_SOURCE_DIR = /home/akhaten/Documents/MeshManipulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akhaten/Documents/OpenglProject/build
+CMAKE_BINARY_DIR = /home/akhaten/Documents/MeshManipulator/build
 
 # Utility rule file for all_examples.
 
@@ -74,10 +74,10 @@ libs/eigen/doc/CMakeFiles/all_examples.dir/build: all_examples
 .PHONY : libs/eigen/doc/CMakeFiles/all_examples.dir/build
 
 libs/eigen/doc/CMakeFiles/all_examples.dir/clean:
-	cd /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc && $(CMAKE_COMMAND) -P CMakeFiles/all_examples.dir/cmake_clean.cmake
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc && $(CMAKE_COMMAND) -P CMakeFiles/all_examples.dir/cmake_clean.cmake
 .PHONY : libs/eigen/doc/CMakeFiles/all_examples.dir/clean
 
 libs/eigen/doc/CMakeFiles/all_examples.dir/depend:
-	cd /home/akhaten/Documents/OpenglProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akhaten/Documents/OpenglProject /home/akhaten/Documents/OpenglProject/libs/eigen/doc /home/akhaten/Documents/OpenglProject/build /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/CMakeFiles/all_examples.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/akhaten/Documents/MeshManipulator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akhaten/Documents/MeshManipulator /home/akhaten/Documents/MeshManipulator/libs/eigen/doc /home/akhaten/Documents/MeshManipulator/build /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/CMakeFiles/all_examples.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libs/eigen/doc/CMakeFiles/all_examples.dir/depend
 

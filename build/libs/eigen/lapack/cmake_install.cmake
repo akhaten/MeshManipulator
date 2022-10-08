@@ -1,4 +1,4 @@
-# Install script for directory: /home/akhaten/Documents/OpenglProject/libs/eigen/lapack
+# Install script for directory: /home/akhaten/Documents/MeshManipulator/libs/eigen/lapack
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

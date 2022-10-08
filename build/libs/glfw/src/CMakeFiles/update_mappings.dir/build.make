@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akhaten/Documents/OpenglProject
+CMAKE_SOURCE_DIR = /home/akhaten/Documents/MeshManipulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akhaten/Documents/OpenglProject/build
+CMAKE_BINARY_DIR = /home/akhaten/Documents/MeshManipulator/build
 
 # Utility rule file for update_mappings.
 
@@ -67,8 +67,8 @@ include libs/glfw/src/CMakeFiles/update_mappings.dir/compiler_depend.make
 include libs/glfw/src/CMakeFiles/update_mappings.dir/progress.make
 
 libs/glfw/src/CMakeFiles/update_mappings:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
-	cd /home/akhaten/Documents/OpenglProject/libs/glfw/src && /usr/bin/cmake -P /home/akhaten/Documents/OpenglProject/libs/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
+	cd /home/akhaten/Documents/MeshManipulator/libs/glfw/src && /usr/bin/cmake -P /home/akhaten/Documents/MeshManipulator/libs/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 
 update_mappings: libs/glfw/src/CMakeFiles/update_mappings
 update_mappings: libs/glfw/src/CMakeFiles/update_mappings.dir/build.make
@@ -79,10 +79,10 @@ libs/glfw/src/CMakeFiles/update_mappings.dir/build: update_mappings
 .PHONY : libs/glfw/src/CMakeFiles/update_mappings.dir/build
 
 libs/glfw/src/CMakeFiles/update_mappings.dir/clean:
-	cd /home/akhaten/Documents/OpenglProject/build/libs/glfw/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/glfw/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
 .PHONY : libs/glfw/src/CMakeFiles/update_mappings.dir/clean
 
 libs/glfw/src/CMakeFiles/update_mappings.dir/depend:
-	cd /home/akhaten/Documents/OpenglProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akhaten/Documents/OpenglProject /home/akhaten/Documents/OpenglProject/libs/glfw/src /home/akhaten/Documents/OpenglProject/build /home/akhaten/Documents/OpenglProject/build/libs/glfw/src /home/akhaten/Documents/OpenglProject/build/libs/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/akhaten/Documents/MeshManipulator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akhaten/Documents/MeshManipulator /home/akhaten/Documents/MeshManipulator/libs/glfw/src /home/akhaten/Documents/MeshManipulator/build /home/akhaten/Documents/MeshManipulator/build/libs/glfw/src /home/akhaten/Documents/MeshManipulator/build/libs/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libs/glfw/src/CMakeFiles/update_mappings.dir/depend
 

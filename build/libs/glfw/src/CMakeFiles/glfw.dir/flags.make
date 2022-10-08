@@ -4,7 +4,7 @@
 # compile C with /usr/bin/gcc
 C_DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
 
-C_INCLUDES = -I/home/akhaten/Documents/OpenglProject/libs/glfw/include -I/home/akhaten/Documents/OpenglProject/libs/glfw/src -I/home/akhaten/Documents/OpenglProject/build/libs/glfw/src
+C_INCLUDES = -I/home/akhaten/Documents/MeshManipulator/libs/glfw/include -I/home/akhaten/Documents/MeshManipulator/libs/glfw/src -I/home/akhaten/Documents/MeshManipulator/build/libs/glfw/src
 
 C_FLAGS = -g -fPIC -Wall -std=c99
 

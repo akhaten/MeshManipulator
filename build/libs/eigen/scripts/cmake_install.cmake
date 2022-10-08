@@ -1,4 +1,4 @@
-# Install script for directory: /home/akhaten/Documents/OpenglProject/libs/eigen/scripts
+# Install script for directory: /home/akhaten/Documents/MeshManipulator/libs/eigen/scripts
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

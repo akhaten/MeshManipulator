@@ -1,0 +1,267 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "examples/BezierSurface/BezierSurface"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"examples/BezierSurface/CMakeLists.txt",
+			"CMakeLists.txt",
+			"libs/glfw/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 98,
+				"parent" : 3
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 231,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 243,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 70,
+				"parent" : 3
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"fragment" : "-std=c++14"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 8,
+					"path" : "/home/akhaten/Documents/MeshManipulator/libs/glm"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/akhaten/Documents/MeshManipulator/src/MeshManipulator/Mesh"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/akhaten/Documents/MeshManipulator/src/MeshManipulator/Geometry"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/akhaten/Documents/MeshManipulator/src/MeshManipulator/Utils"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/akhaten/Documents/MeshManipulator/src/MeshManipulator/Window"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/akhaten/Documents/MeshManipulator/src"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/../.."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Tools/../.."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/akhaten/Documents/MeshManipulator/libs/glfw/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "14"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "MeshManipulator::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "glfw::@9d94ad66e13f8aab41f7"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "OpenMeshCore::@2291b4640f14a37da42f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "OpenMeshTools::@e32d913c403f3a092c03"
+		}
+	],
+	"id" : "BezierSurface::@83add227d629673d32fe",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/akhaten/Documents/MeshManipulator/build/Build/lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../libMeshManipulator.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "../../Build/lib/libOpenMeshToolsd.so.9.1",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "../../Build/lib/libOpenMeshCored.so.9.1",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libOpenGL.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libGLX.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libGLU.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "../../libs/glfw/src/libglfw3.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/usr/lib/librt.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lOpenGL",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lGLEW",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "BezierSurface",
+	"nameOnDisk" : "BezierSurface",
+	"paths" : 
+	{
+		"build" : "examples/BezierSurface",
+		"source" : "examples/BezierSurface"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/BezierSurface/main.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

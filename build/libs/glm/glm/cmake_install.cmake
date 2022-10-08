@@ -1,4 +1,4 @@
-# Install script for directory: /home/akhaten/Documents/OpenglProject/libs/glm/glm
+# Install script for directory: /home/akhaten/Documents/MeshManipulator/libs/glm/glm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

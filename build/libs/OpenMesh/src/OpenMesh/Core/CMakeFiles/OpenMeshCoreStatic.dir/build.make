@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akhaten/Documents/OpenglProject
+CMAKE_SOURCE_DIR = /home/akhaten/Documents/MeshManipulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akhaten/Documents/OpenglProject/build
+CMAKE_BINARY_DIR = /home/akhaten/Documents/MeshManipulator/build
 
 # Include any dependencies generated for this target.
 include libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/depend.make
@@ -70,354 +70,354 @@ include libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/progre
 include libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/BinaryHelper.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/BinaryHelper.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/BinaryHelper.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/BinaryHelper.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/BinaryHelper.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/BinaryHelper.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/BinaryHelper.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/BinaryHelper.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/BinaryHelper.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/IOManager.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/IOManager.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/IOManager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/IOManager.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/IOManager.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/IOManager.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/IOManager.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/IOManager.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/IOManager.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/OMFormat.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/OMFormat.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/OMFormat.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/OMFormat.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/OMFormat.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/OMFormat.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/OMFormat.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/OMFormat.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/OMFormat.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/BaseReader.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/BaseReader.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/BaseReader.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/BaseReader.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/BaseReader.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/BaseReader.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/BaseReader.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/BaseReader.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/BaseReader.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OBJReader.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OBJReader.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OBJReader.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OBJReader.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OBJReader.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OBJReader.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OBJReader.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OBJReader.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OBJReader.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OFFReader.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OFFReader.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OFFReader.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OFFReader.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OFFReader.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OFFReader.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OFFReader.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OFFReader.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OFFReader.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OMReader.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OMReader.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OMReader.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OMReader.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OMReader.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OMReader.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OMReader.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/OMReader.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/OMReader.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/PLYReader.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/PLYReader.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/PLYReader.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/PLYReader.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/PLYReader.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/PLYReader.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/PLYReader.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/PLYReader.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/PLYReader.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/STLReader.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/STLReader.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/STLReader.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/STLReader.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/STLReader.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/STLReader.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/reader/STLReader.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/reader/STLReader.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/reader/STLReader.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/BaseWriter.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/BaseWriter.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/BaseWriter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/BaseWriter.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/BaseWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/BaseWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/BaseWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/BaseWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/BaseWriter.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OBJWriter.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OBJWriter.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OBJWriter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OBJWriter.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OBJWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OBJWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OBJWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OBJWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OBJWriter.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OFFWriter.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OFFWriter.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OFFWriter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OFFWriter.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OFFWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OFFWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OFFWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OFFWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OFFWriter.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OMWriter.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OMWriter.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OMWriter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OMWriter.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OMWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OMWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OMWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/OMWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/OMWriter.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/PLYWriter.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/PLYWriter.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/PLYWriter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/PLYWriter.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/PLYWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/PLYWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/PLYWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/PLYWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/PLYWriter.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/STLWriter.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/STLWriter.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/STLWriter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/STLWriter.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/STLWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/STLWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/STLWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/STLWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/STLWriter.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/VTKWriter.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/VTKWriter.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/VTKWriter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/VTKWriter.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/VTKWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/VTKWriter.cc > CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/IO/writer/VTKWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/IO/writer/VTKWriter.cc -o CMakeFiles/OpenMeshCoreStatic.dir/IO/writer/VTKWriter.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/ArrayKernel.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/ArrayKernel.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/ArrayKernel.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/ArrayKernel.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/ArrayKernel.cc > CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/ArrayKernel.cc > CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/ArrayKernel.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/ArrayKernel.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/ArrayKernel.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/BaseKernel.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/BaseKernel.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/BaseKernel.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/BaseKernel.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/BaseKernel.cc > CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/BaseKernel.cc > CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/BaseKernel.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/BaseKernel.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/BaseKernel.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/PolyConnectivity.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/PolyConnectivity.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/PolyConnectivity.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/PolyConnectivity.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/PolyConnectivity.cc > CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/PolyConnectivity.cc > CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/PolyConnectivity.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/PolyConnectivity.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/PolyConnectivity.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/TriConnectivity.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/TriConnectivity.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/TriConnectivity.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/TriConnectivity.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/TriConnectivity.cc > CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/TriConnectivity.cc > CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Mesh/TriConnectivity.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Mesh/TriConnectivity.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Mesh/TriConnectivity.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/System/omstream.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/System/omstream.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/System/omstream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/System/omstream.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/System/omstream.cc > CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/System/omstream.cc > CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/System/omstream.cc -o CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/System/omstream.cc -o CMakeFiles/OpenMeshCoreStatic.dir/System/omstream.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/BaseProperty.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/BaseProperty.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/BaseProperty.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/BaseProperty.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/BaseProperty.cc > CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/BaseProperty.cc > CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/BaseProperty.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/BaseProperty.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/BaseProperty.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/Endian.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/Endian.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/Endian.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/Endian.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/Endian.cc > CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/Endian.cc > CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/Endian.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/Endian.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/Endian.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/PropertyCreator.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/PropertyCreator.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/PropertyCreator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/PropertyCreator.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/PropertyCreator.cc > CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/PropertyCreator.cc > CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/PropertyCreator.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/PropertyCreator.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/PropertyCreator.cc.s
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/flags.make
-libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o: /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/RandomNumberGenerator.cc
+libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/RandomNumberGenerator.cc
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o -c /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/RandomNumberGenerator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o -MF CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o.d -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o -c /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/RandomNumberGenerator.cc
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/RandomNumberGenerator.cc > CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/RandomNumberGenerator.cc > CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.i
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core/Utils/RandomNumberGenerator.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core/Utils/RandomNumberGenerator.cc -o CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.s
 
 # Object files for target OpenMeshCoreStatic
 OpenMeshCoreStatic_OBJECTS = \
@@ -477,20 +477,20 @@ libs/OpenMesh/src/OpenMesh/Core/libOpenMeshCored.a: libs/OpenMesh/src/OpenMesh/C
 libs/OpenMesh/src/OpenMesh/Core/libOpenMeshCored.a: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/Utils/RandomNumberGenerator.cc.o
 libs/OpenMesh/src/OpenMesh/Core/libOpenMeshCored.a: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/build.make
 libs/OpenMesh/src/OpenMesh/Core/libOpenMeshCored.a: libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX static library libOpenMeshCored.a"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && $(CMAKE_COMMAND) -P CMakeFiles/OpenMeshCoreStatic.dir/cmake_clean_target.cmake
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenMeshCoreStatic.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/cmake -E copy_if_different /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core/libOpenMeshCored.a /home/akhaten/Documents/OpenglProject/build/Build/lib/libOpenMeshCored.a
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX static library libOpenMeshCored.a"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && $(CMAKE_COMMAND) -P CMakeFiles/OpenMeshCoreStatic.dir/cmake_clean_target.cmake
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenMeshCoreStatic.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && /usr/bin/cmake -E copy_if_different /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core/libOpenMeshCored.a /home/akhaten/Documents/MeshManipulator/build/Build/lib/libOpenMeshCored.a
 
 # Rule to build all files generated by this target.
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/build: libs/OpenMesh/src/OpenMesh/Core/libOpenMeshCored.a
 .PHONY : libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/build
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/clean:
-	cd /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core && $(CMAKE_COMMAND) -P CMakeFiles/OpenMeshCoreStatic.dir/cmake_clean.cmake
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core && $(CMAKE_COMMAND) -P CMakeFiles/OpenMeshCoreStatic.dir/cmake_clean.cmake
 .PHONY : libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/clean
 
 libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/depend:
-	cd /home/akhaten/Documents/OpenglProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akhaten/Documents/OpenglProject /home/akhaten/Documents/OpenglProject/libs/OpenMesh/src/OpenMesh/Core /home/akhaten/Documents/OpenglProject/build /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core /home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/akhaten/Documents/MeshManipulator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akhaten/Documents/MeshManipulator /home/akhaten/Documents/MeshManipulator/libs/OpenMesh/src/OpenMesh/Core /home/akhaten/Documents/MeshManipulator/build /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core /home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libs/OpenMesh/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir/depend
 

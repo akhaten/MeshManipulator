@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akhaten/Documents/OpenglProject
+CMAKE_SOURCE_DIR = /home/akhaten/Documents/MeshManipulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akhaten/Documents/OpenglProject/build
+CMAKE_BINARY_DIR = /home/akhaten/Documents/MeshManipulator/build
 
 # Include any dependencies generated for this target.
 include libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/depend.make
@@ -71,18 +71,18 @@ include libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/flags.m
 
 libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o: libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/flags.make
 libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o: libs/eigen/doc/snippets/compile_Slicing_arrayexpr.cpp
-libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o: /home/akhaten/Documents/OpenglProject/libs/eigen/doc/snippets/Slicing_arrayexpr.cpp
+libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o: /home/akhaten/Documents/MeshManipulator/libs/eigen/doc/snippets/Slicing_arrayexpr.cpp
 libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o: libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/snippets && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o -MF CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o.d -o CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o -c /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/snippets/compile_Slicing_arrayexpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/snippets && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o -MF CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o.d -o CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o -c /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/snippets/compile_Slicing_arrayexpr.cpp
 
 libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.i"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/snippets && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/snippets/compile_Slicing_arrayexpr.cpp > CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.i
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/snippets && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/snippets/compile_Slicing_arrayexpr.cpp > CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.i
 
 libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.s"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/snippets && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/snippets/compile_Slicing_arrayexpr.cpp -o CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.s
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/snippets && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/snippets/compile_Slicing_arrayexpr.cpp -o CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.s
 
 # Object files for target compile_Slicing_arrayexpr
 compile_Slicing_arrayexpr_OBJECTS = \
@@ -94,19 +94,19 @@ compile_Slicing_arrayexpr_EXTERNAL_OBJECTS =
 libs/eigen/doc/snippets/compile_Slicing_arrayexpr: libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/compile_Slicing_arrayexpr.cpp.o
 libs/eigen/doc/snippets/compile_Slicing_arrayexpr: libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/build.make
 libs/eigen/doc/snippets/compile_Slicing_arrayexpr: libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/akhaten/Documents/OpenglProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable compile_Slicing_arrayexpr"
-	cd /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/snippets && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/compile_Slicing_arrayexpr.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/snippets && ./compile_Slicing_arrayexpr >/home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/snippets/Slicing_arrayexpr.out
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/akhaten/Documents/MeshManipulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable compile_Slicing_arrayexpr"
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/snippets && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/compile_Slicing_arrayexpr.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/snippets && ./compile_Slicing_arrayexpr >/home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/snippets/Slicing_arrayexpr.out
 
 # Rule to build all files generated by this target.
 libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/build: libs/eigen/doc/snippets/compile_Slicing_arrayexpr
 .PHONY : libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/build
 
 libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/clean:
-	cd /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/snippets && $(CMAKE_COMMAND) -P CMakeFiles/compile_Slicing_arrayexpr.dir/cmake_clean.cmake
+	cd /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/snippets && $(CMAKE_COMMAND) -P CMakeFiles/compile_Slicing_arrayexpr.dir/cmake_clean.cmake
 .PHONY : libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/clean
 
 libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/depend:
-	cd /home/akhaten/Documents/OpenglProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akhaten/Documents/OpenglProject /home/akhaten/Documents/OpenglProject/libs/eigen/doc/snippets /home/akhaten/Documents/OpenglProject/build /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/snippets /home/akhaten/Documents/OpenglProject/build/libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/akhaten/Documents/MeshManipulator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akhaten/Documents/MeshManipulator /home/akhaten/Documents/MeshManipulator/libs/eigen/doc/snippets /home/akhaten/Documents/MeshManipulator/build /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/snippets /home/akhaten/Documents/MeshManipulator/build/libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libs/eigen/doc/snippets/CMakeFiles/compile_Slicing_arrayexpr.dir/depend
 

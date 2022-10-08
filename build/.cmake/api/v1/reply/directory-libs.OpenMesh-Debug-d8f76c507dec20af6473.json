@@ -1,0 +1,71 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"libs/OpenMesh/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 196,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 200,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "libdata/pkgconfig",
+			"paths" : 
+			[
+				"build/libs/OpenMesh/openmesh.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "share/OpenMesh/cmake",
+			"exportName" : "OpenMeshConfig",
+			"exportTargets" : 
+			[
+				{
+					"id" : "OpenMeshCore::@2291b4640f14a37da42f",
+					"index" : 10
+				},
+				{
+					"id" : "OpenMeshTools::@e32d913c403f3a092c03",
+					"index" : 12
+				}
+			],
+			"paths" : 
+			[
+				"libs/OpenMesh/CMakeFiles/Export/14b769bc31fd504a15bc5c93136aeb1f/OpenMeshConfig.cmake"
+			],
+			"type" : "export"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "libs/OpenMesh",
+		"source" : "libs/OpenMesh"
+	}
+}

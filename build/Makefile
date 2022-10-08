@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akhaten/Documents/OpenglProject
+CMAKE_SOURCE_DIR = /home/akhaten/Documents/MeshManipulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akhaten/Documents/OpenglProject/build
+CMAKE_BINARY_DIR = /home/akhaten/Documents/MeshManipulator/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akhaten/Documents/OpenglProject/build/CMakeFiles /home/akhaten/Documents/OpenglProject/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akhaten/Documents/MeshManipulator/build/CMakeFiles /home/akhaten/Documents/MeshManipulator/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akhaten/Documents/OpenglProject/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akhaten/Documents/MeshManipulator/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -162,17 +162,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named learnopengl
+# Target rules for targets named MeshManipulator
 
 # Build rule for target.
-learnopengl: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 learnopengl
-.PHONY : learnopengl
+MeshManipulator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MeshManipulator
+.PHONY : MeshManipulator
 
 # fast build rule for target.
-learnopengl/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/build
-.PHONY : learnopengl/fast
+MeshManipulator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/build
+.PHONY : MeshManipulator/fast
 
 #=============================================================================
 # Target rules for targets named uninstall
@@ -5309,317 +5309,258 @@ OpenMeshToolsStatic/fast:
 	$(MAKE) $(MAKESILENT) -f libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build.make libs/OpenMesh/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir/build
 .PHONY : OpenMeshToolsStatic/fast
 
-src/Geometry/Curve/BernsteinPolynom.o: src/Geometry/Curve/BernsteinPolynom.cpp.o
-.PHONY : src/Geometry/Curve/BernsteinPolynom.o
+#=============================================================================
+# Target rules for targets named BezierSurface
+
+# Build rule for target.
+BezierSurface: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BezierSurface
+.PHONY : BezierSurface
+
+# fast build rule for target.
+BezierSurface/fast:
+	$(MAKE) $(MAKESILENT) -f examples/BezierSurface/CMakeFiles/BezierSurface.dir/build.make examples/BezierSurface/CMakeFiles/BezierSurface.dir/build
+.PHONY : BezierSurface/fast
+
+src/MeshManipulator/Geometry/Curve/BernsteinPolynom.o: src/MeshManipulator/Geometry/Curve/BernsteinPolynom.cpp.o
+.PHONY : src/MeshManipulator/Geometry/Curve/BernsteinPolynom.o
 
 # target to build an object file
-src/Geometry/Curve/BernsteinPolynom.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Geometry/Curve/BernsteinPolynom.cpp.o
-.PHONY : src/Geometry/Curve/BernsteinPolynom.cpp.o
+src/MeshManipulator/Geometry/Curve/BernsteinPolynom.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Geometry/Curve/BernsteinPolynom.cpp.o
+.PHONY : src/MeshManipulator/Geometry/Curve/BernsteinPolynom.cpp.o
 
-src/Geometry/Curve/BernsteinPolynom.i: src/Geometry/Curve/BernsteinPolynom.cpp.i
-.PHONY : src/Geometry/Curve/BernsteinPolynom.i
+src/MeshManipulator/Geometry/Curve/BernsteinPolynom.i: src/MeshManipulator/Geometry/Curve/BernsteinPolynom.cpp.i
+.PHONY : src/MeshManipulator/Geometry/Curve/BernsteinPolynom.i
 
 # target to preprocess a source file
-src/Geometry/Curve/BernsteinPolynom.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Geometry/Curve/BernsteinPolynom.cpp.i
-.PHONY : src/Geometry/Curve/BernsteinPolynom.cpp.i
+src/MeshManipulator/Geometry/Curve/BernsteinPolynom.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Geometry/Curve/BernsteinPolynom.cpp.i
+.PHONY : src/MeshManipulator/Geometry/Curve/BernsteinPolynom.cpp.i
 
-src/Geometry/Curve/BernsteinPolynom.s: src/Geometry/Curve/BernsteinPolynom.cpp.s
-.PHONY : src/Geometry/Curve/BernsteinPolynom.s
+src/MeshManipulator/Geometry/Curve/BernsteinPolynom.s: src/MeshManipulator/Geometry/Curve/BernsteinPolynom.cpp.s
+.PHONY : src/MeshManipulator/Geometry/Curve/BernsteinPolynom.s
 
 # target to generate assembly for a file
-src/Geometry/Curve/BernsteinPolynom.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Geometry/Curve/BernsteinPolynom.cpp.s
-.PHONY : src/Geometry/Curve/BernsteinPolynom.cpp.s
+src/MeshManipulator/Geometry/Curve/BernsteinPolynom.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Geometry/Curve/BernsteinPolynom.cpp.s
+.PHONY : src/MeshManipulator/Geometry/Curve/BernsteinPolynom.cpp.s
 
-src/Geometry/Curve/BezierCurve.o: src/Geometry/Curve/BezierCurve.cpp.o
-.PHONY : src/Geometry/Curve/BezierCurve.o
+src/MeshManipulator/Geometry/Curve/BezierCurve.o: src/MeshManipulator/Geometry/Curve/BezierCurve.cpp.o
+.PHONY : src/MeshManipulator/Geometry/Curve/BezierCurve.o
 
 # target to build an object file
-src/Geometry/Curve/BezierCurve.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Geometry/Curve/BezierCurve.cpp.o
-.PHONY : src/Geometry/Curve/BezierCurve.cpp.o
+src/MeshManipulator/Geometry/Curve/BezierCurve.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Geometry/Curve/BezierCurve.cpp.o
+.PHONY : src/MeshManipulator/Geometry/Curve/BezierCurve.cpp.o
 
-src/Geometry/Curve/BezierCurve.i: src/Geometry/Curve/BezierCurve.cpp.i
-.PHONY : src/Geometry/Curve/BezierCurve.i
+src/MeshManipulator/Geometry/Curve/BezierCurve.i: src/MeshManipulator/Geometry/Curve/BezierCurve.cpp.i
+.PHONY : src/MeshManipulator/Geometry/Curve/BezierCurve.i
 
 # target to preprocess a source file
-src/Geometry/Curve/BezierCurve.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Geometry/Curve/BezierCurve.cpp.i
-.PHONY : src/Geometry/Curve/BezierCurve.cpp.i
+src/MeshManipulator/Geometry/Curve/BezierCurve.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Geometry/Curve/BezierCurve.cpp.i
+.PHONY : src/MeshManipulator/Geometry/Curve/BezierCurve.cpp.i
 
-src/Geometry/Curve/BezierCurve.s: src/Geometry/Curve/BezierCurve.cpp.s
-.PHONY : src/Geometry/Curve/BezierCurve.s
+src/MeshManipulator/Geometry/Curve/BezierCurve.s: src/MeshManipulator/Geometry/Curve/BezierCurve.cpp.s
+.PHONY : src/MeshManipulator/Geometry/Curve/BezierCurve.s
 
 # target to generate assembly for a file
-src/Geometry/Curve/BezierCurve.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Geometry/Curve/BezierCurve.cpp.s
-.PHONY : src/Geometry/Curve/BezierCurve.cpp.s
+src/MeshManipulator/Geometry/Curve/BezierCurve.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Geometry/Curve/BezierCurve.cpp.s
+.PHONY : src/MeshManipulator/Geometry/Curve/BezierCurve.cpp.s
 
-src/Geometry/Surface/BezierSurface.o: src/Geometry/Surface/BezierSurface.cpp.o
-.PHONY : src/Geometry/Surface/BezierSurface.o
+src/MeshManipulator/Geometry/Surface/BezierSurface.o: src/MeshManipulator/Geometry/Surface/BezierSurface.cpp.o
+.PHONY : src/MeshManipulator/Geometry/Surface/BezierSurface.o
 
 # target to build an object file
-src/Geometry/Surface/BezierSurface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Geometry/Surface/BezierSurface.cpp.o
-.PHONY : src/Geometry/Surface/BezierSurface.cpp.o
+src/MeshManipulator/Geometry/Surface/BezierSurface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Geometry/Surface/BezierSurface.cpp.o
+.PHONY : src/MeshManipulator/Geometry/Surface/BezierSurface.cpp.o
 
-src/Geometry/Surface/BezierSurface.i: src/Geometry/Surface/BezierSurface.cpp.i
-.PHONY : src/Geometry/Surface/BezierSurface.i
+src/MeshManipulator/Geometry/Surface/BezierSurface.i: src/MeshManipulator/Geometry/Surface/BezierSurface.cpp.i
+.PHONY : src/MeshManipulator/Geometry/Surface/BezierSurface.i
 
 # target to preprocess a source file
-src/Geometry/Surface/BezierSurface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Geometry/Surface/BezierSurface.cpp.i
-.PHONY : src/Geometry/Surface/BezierSurface.cpp.i
+src/MeshManipulator/Geometry/Surface/BezierSurface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Geometry/Surface/BezierSurface.cpp.i
+.PHONY : src/MeshManipulator/Geometry/Surface/BezierSurface.cpp.i
 
-src/Geometry/Surface/BezierSurface.s: src/Geometry/Surface/BezierSurface.cpp.s
-.PHONY : src/Geometry/Surface/BezierSurface.s
+src/MeshManipulator/Geometry/Surface/BezierSurface.s: src/MeshManipulator/Geometry/Surface/BezierSurface.cpp.s
+.PHONY : src/MeshManipulator/Geometry/Surface/BezierSurface.s
 
 # target to generate assembly for a file
-src/Geometry/Surface/BezierSurface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Geometry/Surface/BezierSurface.cpp.s
-.PHONY : src/Geometry/Surface/BezierSurface.cpp.s
+src/MeshManipulator/Geometry/Surface/BezierSurface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Geometry/Surface/BezierSurface.cpp.s
+.PHONY : src/MeshManipulator/Geometry/Surface/BezierSurface.cpp.s
 
-src/Mesh/CurveMesh.o: src/Mesh/CurveMesh.cpp.o
-.PHONY : src/Mesh/CurveMesh.o
+src/MeshManipulator/Mesh/CurveMesh.o: src/MeshManipulator/Mesh/CurveMesh.cpp.o
+.PHONY : src/MeshManipulator/Mesh/CurveMesh.o
 
 # target to build an object file
-src/Mesh/CurveMesh.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/CurveMesh.cpp.o
-.PHONY : src/Mesh/CurveMesh.cpp.o
+src/MeshManipulator/Mesh/CurveMesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Mesh/CurveMesh.cpp.o
+.PHONY : src/MeshManipulator/Mesh/CurveMesh.cpp.o
 
-src/Mesh/CurveMesh.i: src/Mesh/CurveMesh.cpp.i
-.PHONY : src/Mesh/CurveMesh.i
+src/MeshManipulator/Mesh/CurveMesh.i: src/MeshManipulator/Mesh/CurveMesh.cpp.i
+.PHONY : src/MeshManipulator/Mesh/CurveMesh.i
 
 # target to preprocess a source file
-src/Mesh/CurveMesh.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/CurveMesh.cpp.i
-.PHONY : src/Mesh/CurveMesh.cpp.i
+src/MeshManipulator/Mesh/CurveMesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Mesh/CurveMesh.cpp.i
+.PHONY : src/MeshManipulator/Mesh/CurveMesh.cpp.i
 
-src/Mesh/CurveMesh.s: src/Mesh/CurveMesh.cpp.s
-.PHONY : src/Mesh/CurveMesh.s
+src/MeshManipulator/Mesh/CurveMesh.s: src/MeshManipulator/Mesh/CurveMesh.cpp.s
+.PHONY : src/MeshManipulator/Mesh/CurveMesh.s
 
 # target to generate assembly for a file
-src/Mesh/CurveMesh.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/CurveMesh.cpp.s
-.PHONY : src/Mesh/CurveMesh.cpp.s
+src/MeshManipulator/Mesh/CurveMesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Mesh/CurveMesh.cpp.s
+.PHONY : src/MeshManipulator/Mesh/CurveMesh.cpp.s
 
-src/Mesh/Mesh.o: src/Mesh/Mesh.cpp.o
-.PHONY : src/Mesh/Mesh.o
+src/MeshManipulator/Mesh/Mesh.o: src/MeshManipulator/Mesh/Mesh.cpp.o
+.PHONY : src/MeshManipulator/Mesh/Mesh.o
 
 # target to build an object file
-src/Mesh/Mesh.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/Mesh.cpp.o
-.PHONY : src/Mesh/Mesh.cpp.o
+src/MeshManipulator/Mesh/Mesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Mesh/Mesh.cpp.o
+.PHONY : src/MeshManipulator/Mesh/Mesh.cpp.o
 
-src/Mesh/Mesh.i: src/Mesh/Mesh.cpp.i
-.PHONY : src/Mesh/Mesh.i
+src/MeshManipulator/Mesh/Mesh.i: src/MeshManipulator/Mesh/Mesh.cpp.i
+.PHONY : src/MeshManipulator/Mesh/Mesh.i
 
 # target to preprocess a source file
-src/Mesh/Mesh.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/Mesh.cpp.i
-.PHONY : src/Mesh/Mesh.cpp.i
+src/MeshManipulator/Mesh/Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Mesh/Mesh.cpp.i
+.PHONY : src/MeshManipulator/Mesh/Mesh.cpp.i
 
-src/Mesh/Mesh.s: src/Mesh/Mesh.cpp.s
-.PHONY : src/Mesh/Mesh.s
+src/MeshManipulator/Mesh/Mesh.s: src/MeshManipulator/Mesh/Mesh.cpp.s
+.PHONY : src/MeshManipulator/Mesh/Mesh.s
 
 # target to generate assembly for a file
-src/Mesh/Mesh.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/Mesh.cpp.s
-.PHONY : src/Mesh/Mesh.cpp.s
+src/MeshManipulator/Mesh/Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Mesh/Mesh.cpp.s
+.PHONY : src/MeshManipulator/Mesh/Mesh.cpp.s
 
-src/Mesh/Mesh2.o: src/Mesh/Mesh2.cpp.o
-.PHONY : src/Mesh/Mesh2.o
+src/MeshManipulator/Mesh/ObjectMesh.o: src/MeshManipulator/Mesh/ObjectMesh.cpp.o
+.PHONY : src/MeshManipulator/Mesh/ObjectMesh.o
 
 # target to build an object file
-src/Mesh/Mesh2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/Mesh2.cpp.o
-.PHONY : src/Mesh/Mesh2.cpp.o
+src/MeshManipulator/Mesh/ObjectMesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Mesh/ObjectMesh.cpp.o
+.PHONY : src/MeshManipulator/Mesh/ObjectMesh.cpp.o
 
-src/Mesh/Mesh2.i: src/Mesh/Mesh2.cpp.i
-.PHONY : src/Mesh/Mesh2.i
+src/MeshManipulator/Mesh/ObjectMesh.i: src/MeshManipulator/Mesh/ObjectMesh.cpp.i
+.PHONY : src/MeshManipulator/Mesh/ObjectMesh.i
 
 # target to preprocess a source file
-src/Mesh/Mesh2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/Mesh2.cpp.i
-.PHONY : src/Mesh/Mesh2.cpp.i
+src/MeshManipulator/Mesh/ObjectMesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Mesh/ObjectMesh.cpp.i
+.PHONY : src/MeshManipulator/Mesh/ObjectMesh.cpp.i
 
-src/Mesh/Mesh2.s: src/Mesh/Mesh2.cpp.s
-.PHONY : src/Mesh/Mesh2.s
+src/MeshManipulator/Mesh/ObjectMesh.s: src/MeshManipulator/Mesh/ObjectMesh.cpp.s
+.PHONY : src/MeshManipulator/Mesh/ObjectMesh.s
 
 # target to generate assembly for a file
-src/Mesh/Mesh2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/Mesh2.cpp.s
-.PHONY : src/Mesh/Mesh2.cpp.s
+src/MeshManipulator/Mesh/ObjectMesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Mesh/ObjectMesh.cpp.s
+.PHONY : src/MeshManipulator/Mesh/ObjectMesh.cpp.s
 
-src/Mesh/SurfaceMesh.o: src/Mesh/SurfaceMesh.cpp.o
-.PHONY : src/Mesh/SurfaceMesh.o
+src/MeshManipulator/Utils/Drawable.o: src/MeshManipulator/Utils/Drawable.cpp.o
+.PHONY : src/MeshManipulator/Utils/Drawable.o
 
 # target to build an object file
-src/Mesh/SurfaceMesh.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/SurfaceMesh.cpp.o
-.PHONY : src/Mesh/SurfaceMesh.cpp.o
+src/MeshManipulator/Utils/Drawable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Utils/Drawable.cpp.o
+.PHONY : src/MeshManipulator/Utils/Drawable.cpp.o
 
-src/Mesh/SurfaceMesh.i: src/Mesh/SurfaceMesh.cpp.i
-.PHONY : src/Mesh/SurfaceMesh.i
+src/MeshManipulator/Utils/Drawable.i: src/MeshManipulator/Utils/Drawable.cpp.i
+.PHONY : src/MeshManipulator/Utils/Drawable.i
 
 # target to preprocess a source file
-src/Mesh/SurfaceMesh.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/SurfaceMesh.cpp.i
-.PHONY : src/Mesh/SurfaceMesh.cpp.i
+src/MeshManipulator/Utils/Drawable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Utils/Drawable.cpp.i
+.PHONY : src/MeshManipulator/Utils/Drawable.cpp.i
 
-src/Mesh/SurfaceMesh.s: src/Mesh/SurfaceMesh.cpp.s
-.PHONY : src/Mesh/SurfaceMesh.s
+src/MeshManipulator/Utils/Drawable.s: src/MeshManipulator/Utils/Drawable.cpp.s
+.PHONY : src/MeshManipulator/Utils/Drawable.s
 
 # target to generate assembly for a file
-src/Mesh/SurfaceMesh.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/SurfaceMesh.cpp.s
-.PHONY : src/Mesh/SurfaceMesh.cpp.s
+src/MeshManipulator/Utils/Drawable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Utils/Drawable.cpp.s
+.PHONY : src/MeshManipulator/Utils/Drawable.cpp.s
 
-src/Mesh/SurfaceMesh2.o: src/Mesh/SurfaceMesh2.cpp.o
-.PHONY : src/Mesh/SurfaceMesh2.o
+src/MeshManipulator/Utils/Scene.o: src/MeshManipulator/Utils/Scene.cpp.o
+.PHONY : src/MeshManipulator/Utils/Scene.o
 
 # target to build an object file
-src/Mesh/SurfaceMesh2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/SurfaceMesh2.cpp.o
-.PHONY : src/Mesh/SurfaceMesh2.cpp.o
+src/MeshManipulator/Utils/Scene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Utils/Scene.cpp.o
+.PHONY : src/MeshManipulator/Utils/Scene.cpp.o
 
-src/Mesh/SurfaceMesh2.i: src/Mesh/SurfaceMesh2.cpp.i
-.PHONY : src/Mesh/SurfaceMesh2.i
+src/MeshManipulator/Utils/Scene.i: src/MeshManipulator/Utils/Scene.cpp.i
+.PHONY : src/MeshManipulator/Utils/Scene.i
 
 # target to preprocess a source file
-src/Mesh/SurfaceMesh2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/SurfaceMesh2.cpp.i
-.PHONY : src/Mesh/SurfaceMesh2.cpp.i
+src/MeshManipulator/Utils/Scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Utils/Scene.cpp.i
+.PHONY : src/MeshManipulator/Utils/Scene.cpp.i
 
-src/Mesh/SurfaceMesh2.s: src/Mesh/SurfaceMesh2.cpp.s
-.PHONY : src/Mesh/SurfaceMesh2.s
+src/MeshManipulator/Utils/Scene.s: src/MeshManipulator/Utils/Scene.cpp.s
+.PHONY : src/MeshManipulator/Utils/Scene.s
 
 # target to generate assembly for a file
-src/Mesh/SurfaceMesh2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Mesh/SurfaceMesh2.cpp.s
-.PHONY : src/Mesh/SurfaceMesh2.cpp.s
+src/MeshManipulator/Utils/Scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Utils/Scene.cpp.s
+.PHONY : src/MeshManipulator/Utils/Scene.cpp.s
 
-src/Utils/Drawable.o: src/Utils/Drawable.cpp.o
-.PHONY : src/Utils/Drawable.o
+src/MeshManipulator/Utils/Shader.o: src/MeshManipulator/Utils/Shader.cpp.o
+.PHONY : src/MeshManipulator/Utils/Shader.o
 
 # target to build an object file
-src/Utils/Drawable.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Utils/Drawable.cpp.o
-.PHONY : src/Utils/Drawable.cpp.o
+src/MeshManipulator/Utils/Shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Utils/Shader.cpp.o
+.PHONY : src/MeshManipulator/Utils/Shader.cpp.o
 
-src/Utils/Drawable.i: src/Utils/Drawable.cpp.i
-.PHONY : src/Utils/Drawable.i
+src/MeshManipulator/Utils/Shader.i: src/MeshManipulator/Utils/Shader.cpp.i
+.PHONY : src/MeshManipulator/Utils/Shader.i
 
 # target to preprocess a source file
-src/Utils/Drawable.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Utils/Drawable.cpp.i
-.PHONY : src/Utils/Drawable.cpp.i
+src/MeshManipulator/Utils/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Utils/Shader.cpp.i
+.PHONY : src/MeshManipulator/Utils/Shader.cpp.i
 
-src/Utils/Drawable.s: src/Utils/Drawable.cpp.s
-.PHONY : src/Utils/Drawable.s
+src/MeshManipulator/Utils/Shader.s: src/MeshManipulator/Utils/Shader.cpp.s
+.PHONY : src/MeshManipulator/Utils/Shader.s
 
 # target to generate assembly for a file
-src/Utils/Drawable.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Utils/Drawable.cpp.s
-.PHONY : src/Utils/Drawable.cpp.s
+src/MeshManipulator/Utils/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Utils/Shader.cpp.s
+.PHONY : src/MeshManipulator/Utils/Shader.cpp.s
 
-src/Utils/Scene.o: src/Utils/Scene.cpp.o
-.PHONY : src/Utils/Scene.o
+src/MeshManipulator/Window/Application.o: src/MeshManipulator/Window/Application.cpp.o
+.PHONY : src/MeshManipulator/Window/Application.o
 
 # target to build an object file
-src/Utils/Scene.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Utils/Scene.cpp.o
-.PHONY : src/Utils/Scene.cpp.o
+src/MeshManipulator/Window/Application.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Window/Application.cpp.o
+.PHONY : src/MeshManipulator/Window/Application.cpp.o
 
-src/Utils/Scene.i: src/Utils/Scene.cpp.i
-.PHONY : src/Utils/Scene.i
-
-# target to preprocess a source file
-src/Utils/Scene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Utils/Scene.cpp.i
-.PHONY : src/Utils/Scene.cpp.i
-
-src/Utils/Scene.s: src/Utils/Scene.cpp.s
-.PHONY : src/Utils/Scene.s
-
-# target to generate assembly for a file
-src/Utils/Scene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Utils/Scene.cpp.s
-.PHONY : src/Utils/Scene.cpp.s
-
-src/Utils/Shader.o: src/Utils/Shader.cpp.o
-.PHONY : src/Utils/Shader.o
-
-# target to build an object file
-src/Utils/Shader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Utils/Shader.cpp.o
-.PHONY : src/Utils/Shader.cpp.o
-
-src/Utils/Shader.i: src/Utils/Shader.cpp.i
-.PHONY : src/Utils/Shader.i
+src/MeshManipulator/Window/Application.i: src/MeshManipulator/Window/Application.cpp.i
+.PHONY : src/MeshManipulator/Window/Application.i
 
 # target to preprocess a source file
-src/Utils/Shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Utils/Shader.cpp.i
-.PHONY : src/Utils/Shader.cpp.i
+src/MeshManipulator/Window/Application.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Window/Application.cpp.i
+.PHONY : src/MeshManipulator/Window/Application.cpp.i
 
-src/Utils/Shader.s: src/Utils/Shader.cpp.s
-.PHONY : src/Utils/Shader.s
-
-# target to generate assembly for a file
-src/Utils/Shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Utils/Shader.cpp.s
-.PHONY : src/Utils/Shader.cpp.s
-
-src/Window/Application.o: src/Window/Application.cpp.o
-.PHONY : src/Window/Application.o
-
-# target to build an object file
-src/Window/Application.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Window/Application.cpp.o
-.PHONY : src/Window/Application.cpp.o
-
-src/Window/Application.i: src/Window/Application.cpp.i
-.PHONY : src/Window/Application.i
-
-# target to preprocess a source file
-src/Window/Application.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Window/Application.cpp.i
-.PHONY : src/Window/Application.cpp.i
-
-src/Window/Application.s: src/Window/Application.cpp.s
-.PHONY : src/Window/Application.s
+src/MeshManipulator/Window/Application.s: src/MeshManipulator/Window/Application.cpp.s
+.PHONY : src/MeshManipulator/Window/Application.s
 
 # target to generate assembly for a file
-src/Window/Application.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/Window/Application.cpp.s
-.PHONY : src/Window/Application.cpp.s
-
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learnopengl.dir/build.make CMakeFiles/learnopengl.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/MeshManipulator/Window/Application.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MeshManipulator.dir/build.make CMakeFiles/MeshManipulator.dir/src/MeshManipulator/Window/Application.cpp.s
+.PHONY : src/MeshManipulator/Window/Application.cpp.s
 
 # Help Target
 help:
@@ -5643,6 +5584,7 @@ help:
 	@echo "... unsupported_examples"
 	@echo "... unsupported_snippets"
 	@echo "... update_mappings"
+	@echo "... BezierSurface"
 	@echo "... CustomizingEigen_Inheritance"
 	@echo "... Cwise_erf"
 	@echo "... Cwise_erfc"
@@ -5651,6 +5593,7 @@ help:
 	@echo "... DenseBase_middleRows_int"
 	@echo "... DenseBase_template_int_middleCols"
 	@echo "... DenseBase_template_int_middleRows"
+	@echo "... MeshManipulator"
 	@echo "... OpenMeshCore"
 	@echo "... OpenMeshCoreStatic"
 	@echo "... OpenMeshTools"
@@ -6015,7 +5958,6 @@ help:
 	@echo "... function_taking_eigenbase"
 	@echo "... function_taking_ref"
 	@echo "... glfw"
-	@echo "... learnopengl"
 	@echo "... make_circulant"
 	@echo "... make_circulant2"
 	@echo "... matrixfree_cg"
@@ -6029,45 +5971,36 @@ help:
 	@echo "... tut_matrix_coefficient_accessors"
 	@echo "... tut_matrix_resize"
 	@echo "... tut_matrix_resize_fixed_size"
-	@echo "... src/Geometry/Curve/BernsteinPolynom.o"
-	@echo "... src/Geometry/Curve/BernsteinPolynom.i"
-	@echo "... src/Geometry/Curve/BernsteinPolynom.s"
-	@echo "... src/Geometry/Curve/BezierCurve.o"
-	@echo "... src/Geometry/Curve/BezierCurve.i"
-	@echo "... src/Geometry/Curve/BezierCurve.s"
-	@echo "... src/Geometry/Surface/BezierSurface.o"
-	@echo "... src/Geometry/Surface/BezierSurface.i"
-	@echo "... src/Geometry/Surface/BezierSurface.s"
-	@echo "... src/Mesh/CurveMesh.o"
-	@echo "... src/Mesh/CurveMesh.i"
-	@echo "... src/Mesh/CurveMesh.s"
-	@echo "... src/Mesh/Mesh.o"
-	@echo "... src/Mesh/Mesh.i"
-	@echo "... src/Mesh/Mesh.s"
-	@echo "... src/Mesh/Mesh2.o"
-	@echo "... src/Mesh/Mesh2.i"
-	@echo "... src/Mesh/Mesh2.s"
-	@echo "... src/Mesh/SurfaceMesh.o"
-	@echo "... src/Mesh/SurfaceMesh.i"
-	@echo "... src/Mesh/SurfaceMesh.s"
-	@echo "... src/Mesh/SurfaceMesh2.o"
-	@echo "... src/Mesh/SurfaceMesh2.i"
-	@echo "... src/Mesh/SurfaceMesh2.s"
-	@echo "... src/Utils/Drawable.o"
-	@echo "... src/Utils/Drawable.i"
-	@echo "... src/Utils/Drawable.s"
-	@echo "... src/Utils/Scene.o"
-	@echo "... src/Utils/Scene.i"
-	@echo "... src/Utils/Scene.s"
-	@echo "... src/Utils/Shader.o"
-	@echo "... src/Utils/Shader.i"
-	@echo "... src/Utils/Shader.s"
-	@echo "... src/Window/Application.o"
-	@echo "... src/Window/Application.i"
-	@echo "... src/Window/Application.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/MeshManipulator/Geometry/Curve/BernsteinPolynom.o"
+	@echo "... src/MeshManipulator/Geometry/Curve/BernsteinPolynom.i"
+	@echo "... src/MeshManipulator/Geometry/Curve/BernsteinPolynom.s"
+	@echo "... src/MeshManipulator/Geometry/Curve/BezierCurve.o"
+	@echo "... src/MeshManipulator/Geometry/Curve/BezierCurve.i"
+	@echo "... src/MeshManipulator/Geometry/Curve/BezierCurve.s"
+	@echo "... src/MeshManipulator/Geometry/Surface/BezierSurface.o"
+	@echo "... src/MeshManipulator/Geometry/Surface/BezierSurface.i"
+	@echo "... src/MeshManipulator/Geometry/Surface/BezierSurface.s"
+	@echo "... src/MeshManipulator/Mesh/CurveMesh.o"
+	@echo "... src/MeshManipulator/Mesh/CurveMesh.i"
+	@echo "... src/MeshManipulator/Mesh/CurveMesh.s"
+	@echo "... src/MeshManipulator/Mesh/Mesh.o"
+	@echo "... src/MeshManipulator/Mesh/Mesh.i"
+	@echo "... src/MeshManipulator/Mesh/Mesh.s"
+	@echo "... src/MeshManipulator/Mesh/ObjectMesh.o"
+	@echo "... src/MeshManipulator/Mesh/ObjectMesh.i"
+	@echo "... src/MeshManipulator/Mesh/ObjectMesh.s"
+	@echo "... src/MeshManipulator/Utils/Drawable.o"
+	@echo "... src/MeshManipulator/Utils/Drawable.i"
+	@echo "... src/MeshManipulator/Utils/Drawable.s"
+	@echo "... src/MeshManipulator/Utils/Scene.o"
+	@echo "... src/MeshManipulator/Utils/Scene.i"
+	@echo "... src/MeshManipulator/Utils/Scene.s"
+	@echo "... src/MeshManipulator/Utils/Shader.o"
+	@echo "... src/MeshManipulator/Utils/Shader.i"
+	@echo "... src/MeshManipulator/Utils/Shader.s"
+	@echo "... src/MeshManipulator/Window/Application.o"
+	@echo "... src/MeshManipulator/Window/Application.i"
+	@echo "... src/MeshManipulator/Window/Application.s"
 .PHONY : help
 
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen
+# Install script for directory: /home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,38 +44,38 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Devel" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/eigen3/unsupported/Eigen" TYPE FILE FILES
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/AdolcForward"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/AlignedVector3"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/ArpackSupport"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/AutoDiff"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/BVH"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/EulerAngles"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/FFT"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/IterativeSolvers"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/KroneckerProduct"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/LevenbergMarquardt"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/MatrixFunctions"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/MoreVectorization"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/MPRealSupport"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/NNLS"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/NonLinearOptimization"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/NumericalDiff"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/OpenGLSupport"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/Polynomials"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/Skyline"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/SparseExtra"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/SpecialFunctions"
-    "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/Splines"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/AdolcForward"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/AlignedVector3"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/ArpackSupport"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/AutoDiff"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/BVH"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/EulerAngles"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/FFT"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/IterativeSolvers"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/KroneckerProduct"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/LevenbergMarquardt"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/MatrixFunctions"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/MoreVectorization"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/MPRealSupport"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/NNLS"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/NonLinearOptimization"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/NumericalDiff"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/OpenGLSupport"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/Polynomials"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/Skyline"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/SparseExtra"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/SpecialFunctions"
+    "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/Splines"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/eigen3/unsupported/Eigen" TYPE DIRECTORY FILES "/home/akhaten/Documents/OpenglProject/libs/eigen/unsupported/Eigen/src" FILES_MATCHING REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/eigen3/unsupported/Eigen" TYPE DIRECTORY FILES "/home/akhaten/Documents/MeshManipulator/libs/eigen/unsupported/Eigen/src" FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/akhaten/Documents/OpenglProject/build/libs/eigen/unsupported/Eigen/CXX11/cmake_install.cmake")
+  include("/home/akhaten/Documents/MeshManipulator/build/libs/eigen/unsupported/Eigen/CXX11/cmake_install.cmake")
 
 endif()
 

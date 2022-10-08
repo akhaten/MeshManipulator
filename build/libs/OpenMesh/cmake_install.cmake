@@ -1,4 +1,4 @@
-# Install script for directory: /home/akhaten/Documents/OpenglProject/libs/OpenMesh
+# Install script for directory: /home/akhaten/Documents/MeshManipulator/libs/OpenMesh
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,14 +43,14 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/libdata/pkgconfig" TYPE FILE FILES "/home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/openmesh.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/libdata/pkgconfig" TYPE FILE FILES "/home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/openmesh.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/OpenMesh/cmake/OpenMeshConfig.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/OpenMesh/cmake/OpenMeshConfig.cmake"
-         "/home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/CMakeFiles/Export/14b769bc31fd504a15bc5c93136aeb1f/OpenMeshConfig.cmake")
+         "/home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/CMakeFiles/Export/14b769bc31fd504a15bc5c93136aeb1f/OpenMeshConfig.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/OpenMesh/cmake/OpenMeshConfig-*.cmake")
       if(_cmake_old_config_files)
@@ -63,18 +63,18 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OpenMesh/cmake" TYPE FILE FILES "/home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/CMakeFiles/Export/14b769bc31fd504a15bc5c93136aeb1f/OpenMeshConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OpenMesh/cmake" TYPE FILE FILES "/home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/CMakeFiles/Export/14b769bc31fd504a15bc5c93136aeb1f/OpenMeshConfig.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OpenMesh/cmake" TYPE FILE FILES "/home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/CMakeFiles/Export/14b769bc31fd504a15bc5c93136aeb1f/OpenMeshConfig-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OpenMesh/cmake" TYPE FILE FILES "/home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/CMakeFiles/Export/14b769bc31fd504a15bc5c93136aeb1f/OpenMeshConfig-debug.cmake")
   endif()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Core/cmake_install.cmake")
-  include("/home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Tools/cmake_install.cmake")
-  include("/home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/src/OpenMesh/Apps/cmake_install.cmake")
-  include("/home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/Doc/cmake_install.cmake")
+  include("/home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Core/cmake_install.cmake")
+  include("/home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Tools/cmake_install.cmake")
+  include("/home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/src/OpenMesh/Apps/cmake_install.cmake")
+  include("/home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/Doc/cmake_install.cmake")
 
 endif()
 

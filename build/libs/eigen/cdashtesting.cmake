@@ -1,6 +1,6 @@
 
-set(CTEST_SOURCE_DIRECTORY  "/home/akhaten/Documents/OpenglProject")
-set(CTEST_BINARY_DIRECTORY  "/home/akhaten/Documents/OpenglProject/build")
+set(CTEST_SOURCE_DIRECTORY  "/home/akhaten/Documents/MeshManipulator")
+set(CTEST_BINARY_DIRECTORY  "/home/akhaten/Documents/MeshManipulator/build")
 set(CTEST_CMAKE_GENERATOR   "Unix Makefiles")
 set(CTEST_BUILD_NAME        "")
 set(CTEST_SITE              "")

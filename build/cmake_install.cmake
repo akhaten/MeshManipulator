@@ -1,4 +1,4 @@
-# Install script for directory: /home/akhaten/Documents/OpenglProject
+# Install script for directory: /home/akhaten/Documents/MeshManipulator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,22 +44,27 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/akhaten/Documents/OpenglProject/build/libs/glfw/cmake_install.cmake")
+  include("/home/akhaten/Documents/MeshManipulator/build/libs/glfw/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/akhaten/Documents/OpenglProject/build/libs/glm/cmake_install.cmake")
+  include("/home/akhaten/Documents/MeshManipulator/build/libs/glm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/akhaten/Documents/OpenglProject/build/libs/eigen/cmake_install.cmake")
+  include("/home/akhaten/Documents/MeshManipulator/build/libs/eigen/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/akhaten/Documents/OpenglProject/build/libs/OpenMesh/cmake_install.cmake")
+  include("/home/akhaten/Documents/MeshManipulator/build/libs/OpenMesh/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/akhaten/Documents/MeshManipulator/build/examples/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -70,5 +75,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/akhaten/Documents/OpenglProject/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/akhaten/Documents/MeshManipulator/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

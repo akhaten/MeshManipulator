@@ -101,5 +101,4 @@ message(${CMAKE_PROJECT_NAME})
 
 add_subdirectory(examples)
 
-# add_executable(${PROJECT_NAME} src/main.cpp ${SRC})
-# target_link_libraries(${PROJECT_NAME} PRIVATE ${EXTERNAL_LIB})
+

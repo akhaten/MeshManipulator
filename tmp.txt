@@ -1,0 +1,83 @@
+cmake_minimum_required(VERSION 3.20)
+
+project(learnopengl)
+
+#find_package(glfw)
+find_package(OpenGL)
+find_package(glew)
+find_package(glm)
+
+#set(HEADERS
+#        include/Mesh/SurfaceMesh.hpp
+#        include/Mesh/CurveMesh.hpp
+#        include/Mesh/Mesh.hpp
+#        include/Utils/Shader.hpp
+#        include/Utils/Scene.hpp
+#        include/Utils/Drawable.hpp
+#        include/Geometry/Curve/BernsteinPolynom.hpp
+#        include/Geometry/Curve/BernsteinPolynom.cpp
+#        include/Geometry/Curve/BezierCurve.hpp
+#        include/Geometry/Curve/BezierCurve.cpp
+#        include/Geometry/Surface/BezierSurface.hpp
+#        include/Geometry/Surface/BezierSurface.cpp
+#        )
+
+set(MESH
+        src/Mesh/SurfaceMesh.hpp
+        src/Mesh/SurfaceMesh.cpp
+        src/Mesh/CurveMesh.hpp
+        src/Mesh/CurveMesh.cpp
+        src/Mesh/Mesh.hpp
+        src/Mesh/Mesh.cpp
+        )
+
+set(UTILS
+        src/Utils/Shader.hpp
+        src/Utils/Shader.cpp
+        src/Utils/Scene.hpp
+        src/Utils/Scene.cpp
+        src/Utils/Drawable.hpp
+        src/Utils/Drawable.cpp
+        )
+
+set(GEOMETRY
+        src/Geometry/Curve/BernsteinPolynom.hpp
+        src/Geometry/Curve/BernsteinPolynom.cpp
+        src/Geometry/Curve/BezierCurve.hpp
+        src/Geometry/Curve/BezierCurve.cpp
+        src/Geometry/Surface/BezierSurface.hpp
+        src/Geometry/Surface/BezierSurface.cpp
+        )
+
+set(APPLICATION
+        src/Window/Application.hpp
+        src/Window/Application.cpp
+        )
+
+set(SRC
+        ${MESH}
+        ${UTILS}
+        ${GEOMETRY}
+        ${APPLICATION}
+        )
+
+
+
+include_directories(
+        ${GLM_INCULDE_DIR}
+        ${GLEW_INCLUDE_DIR}
+        src/Mesh
+        src/Geometry
+        src/Utils
+        src/Window
+)
+
+set(EXTERNAL_LIB
+        glfw
+        OpenGL
+        GLEW
+        )
+
+
+add_executable(${PROJECT_NAME} src/main.cpp ${SRC})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${EXTERNAL_LIB})

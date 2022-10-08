@@ -1,0 +1,80 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"libs/eigen/unsupported/Eigen/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 26,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 31,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Devel",
+			"destination" : "include/eigen3/unsupported/Eigen",
+			"paths" : 
+			[
+				"libs/eigen/unsupported/Eigen/AdolcForward",
+				"libs/eigen/unsupported/Eigen/AlignedVector3",
+				"libs/eigen/unsupported/Eigen/ArpackSupport",
+				"libs/eigen/unsupported/Eigen/AutoDiff",
+				"libs/eigen/unsupported/Eigen/BVH",
+				"libs/eigen/unsupported/Eigen/EulerAngles",
+				"libs/eigen/unsupported/Eigen/FFT",
+				"libs/eigen/unsupported/Eigen/IterativeSolvers",
+				"libs/eigen/unsupported/Eigen/KroneckerProduct",
+				"libs/eigen/unsupported/Eigen/LevenbergMarquardt",
+				"libs/eigen/unsupported/Eigen/MatrixFunctions",
+				"libs/eigen/unsupported/Eigen/MoreVectorization",
+				"libs/eigen/unsupported/Eigen/MPRealSupport",
+				"libs/eigen/unsupported/Eigen/NNLS",
+				"libs/eigen/unsupported/Eigen/NonLinearOptimization",
+				"libs/eigen/unsupported/Eigen/NumericalDiff",
+				"libs/eigen/unsupported/Eigen/OpenGLSupport",
+				"libs/eigen/unsupported/Eigen/Polynomials",
+				"libs/eigen/unsupported/Eigen/Skyline",
+				"libs/eigen/unsupported/Eigen/SparseExtra",
+				"libs/eigen/unsupported/Eigen/SpecialFunctions",
+				"libs/eigen/unsupported/Eigen/Splines"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Devel",
+			"destination" : "include/eigen3/unsupported/Eigen",
+			"paths" : 
+			[
+				"libs/eigen/unsupported/Eigen/src"
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "libs/eigen/unsupported/Eigen",
+		"source" : "libs/eigen/unsupported/Eigen"
+	}
+}

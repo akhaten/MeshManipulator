@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/BezierSurface.dir/main.cpp.o -o BezierSurface  -Wl,-rpath,/home/akhaten/Documents/MeshManipulator/build/Build/lib ../../libMeshManipulator.a ../../Build/lib/libOpenMeshToolsd.so.9.1 ../../Build/lib/libOpenMeshCored.so.9.1 /usr/lib/libOpenGL.so /usr/lib/libGLX.so /usr/lib/libGLU.so ../../libs/glfw/src/libglfw3.a /usr/lib/librt.a -lm -ldl -lOpenGL -lGLEW 

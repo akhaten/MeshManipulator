@@ -42,6 +42,10 @@ set(UTILS
         ${PATH_UTILS}/Scene.cpp
         ${PATH_UTILS}/Drawable.hpp
         ${PATH_UTILS}/Drawable.cpp
+        ${PATH_UTILS}/Camera.hpp
+        ${PATH_UTILS}/Camera.cpp
+        ${PATH_UTILS}/Viewer.hpp
+        ${PATH_UTILS}/Viewer.cpp
         )
 
 set(GEOMETRY
@@ -53,16 +57,18 @@ set(GEOMETRY
         ${PATH_GEOMETRY}/Surface/BezierSurface.cpp
         )
 
-set(APPLICATION
+set(WINDOW
         ${PATH_WINDOW}/Application.hpp
         ${PATH_WINDOW}/Application.cpp
+        # ${PATH_WINDOW}/CallbackFunctions.hpp
+        # ${PATH_WINDOW}/CallbackFunctions.cpp
         )
 
 set(SRC
         ${MESH}
         ${UTILS}
         ${GEOMETRY}
-        ${APPLICATION}
+        ${WINDOW}
 )
 
 set(GLM_INCLUDE_DIR libs/glm)

@@ -2,14 +2,24 @@
 // Created by akhaten on 8/7/22.
 //
 
+
+
 #include "Shader.hpp"
+
 
 Shader::Shader(const GLchar* vertex_shader_source, const GLchar* fragment_shader_source)
 {
 
+    
+
+    
+
+
     GLuint vertex_shader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertex_shader, 1, &vertex_shader_source, NULL);
     glCompileShader(vertex_shader);
+
+    
 
     GLuint fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fragment_shader, 1, &fragment_shader_source, NULL);
@@ -23,6 +33,9 @@ Shader::Shader(const GLchar* vertex_shader_source, const GLchar* fragment_shader
     glDeleteShader(vertex_shader);
     glDeleteShader(fragment_shader);
 
+    this->model_loc = glGetUniformLocation(this->shader_program, "model");
+    this->view_loc = glGetUniformLocation(this->shader_program, "view");
+    this->projection_loc = glGetUniformLocation(this->shader_program, "projection");
 
 
 }
@@ -32,6 +45,22 @@ Shader::~Shader() {}
 void Shader::use()
 {
     glUseProgram(this->shader_program);
+}
+
+void Shader::setBool(const char* name, const bool value)
+{
+    glUniform1i(glGetUniformLocation(this->shader_program, name), (int)value);
+}
+
+void Shader::setInt(const char* name, const int value)
+{
+    glUniform1i(glGetUniformLocation(this->shader_program, name), value);
+}
+
+void Shader::setFloat(const char* name, const float value)
+{
+    glUniform1f(glGetUniformLocation(this->shader_program, name), value);
+
 }
 
 

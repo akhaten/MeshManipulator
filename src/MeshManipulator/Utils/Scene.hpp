@@ -16,9 +16,10 @@ public:
     void draw();
     //void addCamera();
     //void addLight();
+    std::vector<Drawable*> drawables;
 
 private:
-    std::vector<Drawable*> drawables;
+    
     //std::vector<Light*> lights;
     //std::vector<Camera*> cameras;
 

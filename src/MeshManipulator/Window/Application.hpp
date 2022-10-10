@@ -12,19 +12,33 @@
 
 #include "Mesh.hpp"
 #include "Scene.hpp"
+#include "Viewer.hpp"
 
 class Application
 {
 
-public:
-    Application();
-    ~Application();
-    void run();
-    Scene* scene;
+    public:
+        Application(const char* name, int width, int height);
+        ~Application();
+        void setViewer(Viewer* viewer);
+        void addDrawable(Drawable* drawable);
+        void run();
+        Scene* scene;
 
-private:
-    GLFWwindow* window;
-    void processInput(GLFWwindow *window);
+
+    private:
+    
+        GLFWwindow* window;
+        Viewer* viewer;
+        void processMesh();
+        
+        static void framebufferSizeCallback(GLFWwindow* window, int width, int height);
+        static void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
+        static void cursorPosCallback(GLFWwindow* window, double xpos, double ypos);
+
+
+    
+
 
 };
 

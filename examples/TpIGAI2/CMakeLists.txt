@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(BezierSurface)
+project(tp-info2)
 
 set(SRC
     MyViewer.hpp

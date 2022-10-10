@@ -5,9 +5,16 @@
 #ifndef DRAWABLE_HPP
 #define DRAWABLE_HPP
 
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 #include "Mesh.hpp"
 #include "Shader.hpp"
-//#include "Texture.hpp"
+#include "Viewer.hpp"
+
+
+
 
 class Drawable
 {
@@ -16,12 +23,19 @@ public:
     Drawable(Mesh* mesh, Shader* shader);
     ~Drawable();
     void draw();
+    void setViewer(Viewer* viewer);
     //void attachTexture(Texture* texture);
 
-private:
     Mesh* mesh;
     Shader* shader;
-    //Texture* texture;
+
+    glm::mat4 model;
+    glm::mat4 view;
+    glm::mat4 projection;
+
+private:
+    
+    Viewer* viewer;
 
 };
 

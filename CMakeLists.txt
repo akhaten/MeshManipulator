@@ -60,8 +60,6 @@ set(GEOMETRY
 set(WINDOW
         ${PATH_WINDOW}/Application.hpp
         ${PATH_WINDOW}/Application.cpp
-        # ${PATH_WINDOW}/CallbackFunctions.hpp
-        # ${PATH_WINDOW}/CallbackFunctions.cpp
         )
 
 set(SRC

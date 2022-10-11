@@ -17,6 +17,23 @@ MyViewer::MyViewer(Camera* camera):
 
 }
 
+MyViewer::~MyViewer() {}
+
+
+void MyViewer::setWindow(GLFWwindow* window)
+{
+    this->window = window;
+}
+
+void MyViewer::setScene(Scene* scene)
+{
+    this->scene = scene;
+}
+
+/**
+ * CALLBACK
+ */
+
 void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int action, int mods)
 {
 
@@ -31,9 +48,6 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
         int width, height;
         glfwGetWindowSize(window, &width, &height);
         glfwSetCursorPos(window, width/2, height/2);
-
-       
-
         
     }
 
@@ -72,7 +86,6 @@ void MyViewer::processMouse(GLFWwindow *window, double xpos, double ypos)
         glm::mat4 transformation = glm::mat4(1.0f);
         transformation = glm::rotate(transformation, xoffset, glm::vec3(0.0f, 1.0f, 0.0f));
         transformation = glm::rotate(transformation, -yoffset, glm::vec3(1.0f, 0.0f, 0.0f));
-        // transformation = glm::rotate(transformation, xoffset, this->camera->getUp());
         this->camera->update(transformation);
         this->camera->setPosition(this->camera->getTarget()+this->radius*(-glm::normalize(this->camera->getDirection())));
 

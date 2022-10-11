@@ -19,18 +19,27 @@ class Application
 {
 
     public:
+
         Application(const char* name, int width, int height);
         ~Application();
-        void setViewer(Viewer* viewer);
-        void addDrawable(Drawable* drawable);
+
         void run();
-        Scene* scene;
+        
+
+        Scene* getScene();
+        Viewer* getViewer();
+
+    
+        void setViewer(Viewer* viewer);
+
+        
 
 
-    private:
+    protected:
     
         GLFWwindow* window;
         Viewer* viewer;
+        Scene* scene;
         
         static void framebufferSizeCallback(GLFWwindow* window, int width, int height);
         static void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);

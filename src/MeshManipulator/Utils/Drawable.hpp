@@ -11,9 +11,6 @@
 
 #include "Mesh.hpp"
 #include "Shader.hpp"
-#include "Viewer.hpp"
-
-
 
 
 
@@ -23,8 +20,8 @@ class Drawable
 public:
     Drawable(Mesh* mesh, Shader* shader);
     ~Drawable();
-    void draw();
-    void setViewer(Viewer* viewer);
+    void draw(glm::mat4 projection_matrix, glm::mat4 view_matrix);
+
     //void attachTexture(Texture* texture);
 
     Mesh* mesh;
@@ -35,7 +32,6 @@ public:
 
 private:
     
-    Viewer* viewer;
 
 };
 

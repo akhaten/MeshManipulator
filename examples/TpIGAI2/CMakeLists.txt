@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.20)
 project(tp-info2)
 
 set(SRC
+    MyApplication.hpp
+    MyApplication.cpp
     MyViewer.hpp
     MyViewer.cpp
 )

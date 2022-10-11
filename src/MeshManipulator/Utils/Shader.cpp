@@ -11,11 +11,6 @@
 Shader::Shader(const GLchar* vertex_shader_source, const GLchar* fragment_shader_source)
 {
 
-    
-
-    
-
-
     GLuint vertex_shader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertex_shader, 1, &vertex_shader_source, NULL);
     glCompileShader(vertex_shader);
@@ -34,10 +29,9 @@ Shader::Shader(const GLchar* vertex_shader_source, const GLchar* fragment_shader
     glDeleteShader(vertex_shader);
     glDeleteShader(fragment_shader);
 
-    // this->model_loc = glGetUniformLocation(this->shader_program, "model");
-    // this->view_loc = glGetUniformLocation(this->shader_program, "view");
-    // this->projection_loc = glGetUniformLocation(this->shader_program, "projection");
 
+    this->setMat4("view", glm::mat4(1.0f));
+    this->setMat4("model", glm::mat4(1.0f));
 
 }
 

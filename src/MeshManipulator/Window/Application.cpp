@@ -53,21 +53,6 @@ Application::Application(const char* name, int width, int height)
 
 Application::~Application(){}
 
-void Application::setViewer(Viewer* viewer)
-{
-
-    this->viewer = viewer;
-    this->viewer->setWindow(this->window);
-    glfwSetWindowUserPointer(this->window, this->viewer);
-
-    // Camera configuration
-    int width, height;
-    glfwGetWindowSize(this->window, &width, &height);
-    Camera* camera = this->viewer->getCamera();
-    camera->setAspect((float)width, (float)height);
-
-}
-
 void Application::run()
 {
 
@@ -101,6 +86,41 @@ void Application::run()
 }
 
 
+Scene* Application::getScene()
+{
+    return this->scene;
+}
+
+
+Viewer* Application::getViewer()
+{
+    return this->viewer;
+}
+
+
+void Application::setViewer(Viewer* viewer)
+{
+
+    this->viewer = viewer;
+    // this->viewer->setWindow(this->window);
+    glfwSetWindowUserPointer(this->window, this->viewer);
+
+    // Camera configuration
+    int width, height;
+    glfwGetWindowSize(this->window, &width, &height);
+    Camera* camera = this->viewer->getCamera();
+    camera->setAspect((float)width, (float)height);
+
+    this->scene->setViewer(this->viewer);
+
+}
+
+
+/**
+ * CALLBACKS
+ */
+
+
 void Application::framebufferSizeCallback(GLFWwindow* window, int width, int height)
 {
     
@@ -121,12 +141,6 @@ void Application::cursorPosCallback(GLFWwindow* window, double xpos, double ypos
 {
     Viewer* callback_viewer = (Viewer*) glfwGetWindowUserPointer(window);
     callback_viewer->processMouse(window, xpos, ypos);
-}
-
-void Application::addDrawable(Drawable* drawable)
-{
-    drawable->setViewer(this->viewer);
-    this->scene->addDrawable(drawable);
 }
 
 

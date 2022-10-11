@@ -37,26 +37,9 @@ Camera* Viewer::getCamera()
     return this->camera;
 }
 
-// Scene* Viewer::getScene()
-// {
-//     return this->scene;
-// }
-
-
-void Viewer::setWindow(GLFWwindow* window)
-{
-    this->window = window;
-}
-
 void Viewer::setCamera(Camera* camera)
 {
     this->camera = camera;
 }
-
-// void Viewer::setScene(Scene* scene)
-// {
-//     this->scene = scene;
-// }
- // void setWindow(GLFWwindow* window);
 
 

@@ -6,21 +6,28 @@
 #define SCENE_HPP
 
 #include "Drawable.hpp"
+#include "Viewer.hpp"
 
 class Scene
 {
-public:
-    Scene();
-    ~Scene();
-    void addDrawable(Drawable* drawable);
-    void draw();
+    public:
 
-    std::vector<Drawable*> drawables;
+        Scene();
+        ~Scene();
 
-private:
-    
-    //std::vector<Light*> lights;
-    //std::vector<Camera*> cameras;
+        void addDrawable(Drawable* drawable);
+        void draw();
+
+        void setViewer(Viewer* viewer);
+
+        
+
+    private:
+
+        Viewer* viewer;
+        std::vector<Drawable*> drawables;
+        //std::vector<Light*> lights;glm::mat4 
+        //std::vector<Camera*> cameras;
 
 };
 

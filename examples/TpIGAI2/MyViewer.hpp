@@ -6,6 +6,8 @@
  */
 #include <MeshManipulator/Utils/Shader.hpp>
 #include <MeshManipulator/Utils/Viewer.hpp>
+#include <MeshManipulator/Utils/Drawable.hpp>
+#include <MeshManipulator/Utils/Scene.hpp>
 
 
 
@@ -16,12 +18,19 @@ class MyViewer:
     public:
     
         MyViewer(Camera* camera);
+        ~MyViewer();
 
         void processKeyboard(GLFWwindow *window, int key, int scancode, int action, int mods) override;
         void processMouse(GLFWwindow *window, double xpos, double ypos) override;
 
+        void setScene(Scene* scene);
+        void setWindow(GLFWwindow* window);
+
 
     private:
+
+        GLFWwindow* window;
+        Scene* scene;
 
         float radius;
         double lastX;

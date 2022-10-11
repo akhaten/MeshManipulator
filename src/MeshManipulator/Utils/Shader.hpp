@@ -26,9 +26,6 @@ public:
 
     GLuint shader_program;
     
-    // GLuint model_loc;
-    // GLuint view_loc;
-    // GLuint projection_loc;
 
 
 private:

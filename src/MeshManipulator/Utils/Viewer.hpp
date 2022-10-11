@@ -23,8 +23,6 @@ class Viewer
 
         Camera* getCamera();
 
-
-        void setWindow(GLFWwindow* window);
         void setCamera(Camera* camera);
 
 
@@ -32,8 +30,9 @@ class Viewer
         virtual void processMouse(GLFWwindow *window, double xpos, double ypos) = 0;
 
     protected:
+    
         Camera* camera;
-        GLFWwindow* window;
+        
 
 
 };

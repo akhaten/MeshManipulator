@@ -8,7 +8,8 @@
 
 
 
-#include <MeshManipulator/Window/Application.hpp>
+// #include <MeshManipulator/Window/Application.hpp>
+#include "MyApplication.hpp"
 
 #include <MeshManipulator/Utils/Scene.hpp>
 #include <MeshManipulator/Utils/Drawable.hpp>
@@ -191,7 +192,7 @@ int main(int argc, char** argv)
     
 
 
-    Application* app = new Application("TP-IGAI2", 800, 600);
+    MyApplication* app = new MyApplication("TP-IGAI2", 800, 600);
 
 
     Camera* camera = new Camera(
@@ -231,7 +232,10 @@ int main(int argc, char** argv)
         }
     };
 
-    app->addDrawable(
+
+    Scene* scene = app->getScene();
+
+    scene->addDrawable(
         new Drawable(
             makeBezierObjectMesh(control_points, 10),
             makeDynamicShader()

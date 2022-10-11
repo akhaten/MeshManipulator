@@ -15,18 +15,13 @@ Drawable::Drawable(Mesh* mesh, Shader* shader)
 
 Drawable::~Drawable() {}
 
-void Drawable::setViewer(Viewer* viewer)
-{
-    this->viewer = viewer;
-}
 
-
-void Drawable::draw()
+void Drawable::draw(glm::mat4 projection_matrix, glm::mat4 view_matrix)
 {
 
     this->shader->setMat4("model", this->model);
-    this->shader->setMat4("view", this->viewer->viewMatrix());
-    this->shader->setMat4("projection", this->viewer->projectionMatrix());
+    this->shader->setMat4("view", view_matrix);
+    this->shader->setMat4("projection", projection_matrix);
     this->shader->use();
     this->mesh->draw();
 

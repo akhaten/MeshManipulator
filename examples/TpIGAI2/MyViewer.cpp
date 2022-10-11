@@ -17,11 +17,6 @@ MyViewer::MyViewer(Camera* camera):
 
 }
 
-// void MyViewer::setWindow(GLFWwindow* window)
-// {
-//     Viewer::setWindow(window);
-// }
-
 void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int action, int mods)
 {
 

@@ -9,25 +9,27 @@ Viewer::Viewer(Camera* camera)
 
 Viewer::~Viewer(){}
 
-glm::mat4 Viewer::getView()
-{
-    glm::vec3 position = camera->getPosition();
-    glm::vec3 target = camera->getTarget();
-    glm::vec3 up = camera->getUp();
-    return glm::lookAt(position, position+camera->getDirection(), up);
-}
-
-glm::mat4 Viewer::getProjectionMatrix()
+glm::mat4 Viewer::viewMatrix()
 {
 
-    int width, height;
-    glfwGetWindowSize(this->window, &width, &height);
-    return glm::perspective(glm::radians(45.0f), (float)width / (float)height, 0.1f, 100.0f);
+    return glm::lookAt(
+        this->camera->getPosition(),
+        this->camera->getPosition()+this->camera->getDirection(),
+        this->camera->getUp()
+    );
 
 }
-void Viewer::setCamera(Camera* camera)
+
+glm::mat4 Viewer::projectionMatrix()
 {
-    this->camera = camera;
+
+    return glm::perspective(
+        this->camera->getFov(),
+        this->camera->getAspect(),
+        this->camera->getNear(),
+        this->camera->getFar()
+    );
+
 }
 
 Camera* Viewer::getCamera()
@@ -35,7 +37,26 @@ Camera* Viewer::getCamera()
     return this->camera;
 }
 
+// Scene* Viewer::getScene()
+// {
+//     return this->scene;
+// }
+
+
 void Viewer::setWindow(GLFWwindow* window)
 {
     this->window = window;
 }
+
+void Viewer::setCamera(Camera* camera)
+{
+    this->camera = camera;
+}
+
+// void Viewer::setScene(Scene* scene)
+// {
+//     this->scene = scene;
+// }
+ // void setWindow(GLFWwindow* window);
+
+

@@ -6,6 +6,8 @@
 #define SHADER_HPP
 
 #include <GL/glew.h>
+#include <glm/glm.hpp>
+
 
 
 class Shader
@@ -20,13 +22,13 @@ public:
     void setBool(const char* name, const bool value);
     void setInt(const char* name, const int value);
     void setFloat(const char* name, const float value);
-    // void setMat4(const char* name, const glm::mat4& value);
+    void setMat4(const char* name, const glm::mat4 value);
 
     GLuint shader_program;
     
-    GLuint model_loc;
-    GLuint view_loc;
-    GLuint projection_loc;
+    // GLuint model_loc;
+    // GLuint view_loc;
+    // GLuint projection_loc;
 
 
 private:

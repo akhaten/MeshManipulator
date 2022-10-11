@@ -59,19 +59,46 @@ CurveMesh* makeBezierCurveMesh(std::vector<glm::vec3> control_points, const unsi
 
 }
 
-Shader* makeShader()
+Shader* makeDynamicShader()
 {
 
     const GLchar* vertex_shader_source =
             "#version 460 core\n"
             "layout (location = 0) in vec3 aPos;\n"
-            "uniform mat4 model;"
-            "uniform mat4 view;"
-            "uniform mat4 projection;"
+            "uniform mat4 model;\n"
+            "uniform mat4 view;\n"
+            "uniform mat4 projection;\n"
             "void main()\n"
             "{\n"
-            "gl_Position = projection * view * model * vec4(aPos, 1.0);"
-            // "gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
+            "gl_Position = projection * view * model * vec4(aPos, 1.0f);\n"
+            // "gl_Position = projection * view * model * vec4(aPos, 1.0f);\n"
+            "}\n";
+
+    const GLchar* fragment_shader_source =
+            "#version 460 core\n"
+            "out vec4 FragColor;\n"
+            "void main()\n"
+            "{\n"
+            "FragColor = vec4(1.0f, 1.0f, 1.0f, 1.0f);\n"
+            "}\n";
+
+    Shader* shader = new Shader(vertex_shader_source, fragment_shader_source);
+    return shader;
+}
+
+
+Shader* makeStaticShader()
+{
+
+    const GLchar* vertex_shader_source =
+            "#version 460 core\n"
+            "layout (location = 0) in vec3 aPos;\n"
+            "uniform mat4 model;\n"
+            "uniform mat4 view;\n"
+            "uniform mat4 projection;\n"
+            "void main()\n"
+            "{\n"
+            "gl_Position =   projection * model * vec4(aPos.xy, 0.0f, 1.0f);"
             "}\n";
 
     const GLchar* fragment_shader_source =
@@ -86,6 +113,7 @@ Shader* makeShader()
     return shader;
 
 }
+
 
 ObjectMesh* makeBezierObjectMesh(std::vector<std::vector<glm::vec3>> control_points, const unsigned int nb_segments)
 {
@@ -174,8 +202,7 @@ int main(int argc, char** argv)
     MyViewer* viewer = new MyViewer(camera);
 
     app->setViewer(viewer);
-
-    Shader* shader = makeShader();
+     
 
     std::vector<std::vector<glm::vec3>> control_points = {
         {
@@ -207,11 +234,31 @@ int main(int argc, char** argv)
     app->addDrawable(
         new Drawable(
             makeBezierObjectMesh(control_points, 10),
-            shader
+            makeDynamicShader()
         )
     );
 
+    // std::vector<glm::vec3> curve_vertices =
+    // {
+    //     glm::normalize(glm::vec3(0.0f, 0.5f, 0.0f)),
+    //     glm::normalize(glm::vec3(1.0f, 0.5f, 0.0f)),
+    // };
+
+    // app->addDrawable(
+    //     new Drawable(
+    //         new CurveMesh(curve_vertices),
+    //         makeStaticShader()
+    //     )
+    // );
+
     app->run();
+
+
+
+    
+
+
+
 
 }
 

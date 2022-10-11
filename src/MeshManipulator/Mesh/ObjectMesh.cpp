@@ -5,18 +5,15 @@
 #include "ObjectMesh.hpp"
 
 
-ObjectMesh::ObjectMesh(
-    std::vector<glm::vec3> vertices, 
-    std::vector<unsigned int> indices
-){
+ObjectMesh::ObjectMesh(std::vector<glm::vec3> vertices, std::vector<unsigned int> indices)
+{
     this->vertices = vertices;
     this->indices = indices;
     this->loadDatas();
 }
 
-ObjectMesh::ObjectMesh(
-    MyOpenMesh* my_mesh
-){
+ObjectMesh::ObjectMesh(MyOpenMesh* my_mesh)
+{
 
     this->my_mesh = my_mesh;
 
@@ -24,6 +21,7 @@ ObjectMesh::ObjectMesh(
     for(auto point : this->my_mesh->vertices()){
         auto p = this->my_mesh->point(point);
         this->vertices.push_back(glm::vec3(p[0], p[1], p[2]));
+        // this->vertices.push_back(p);
     }
 
     std::vector<unsigned int> indices;

@@ -14,8 +14,7 @@ public:
     ~Scene();
     void addDrawable(Drawable* drawable);
     void draw();
-    //void addCamera();
-    //void addLight();
+
     std::vector<Drawable*> drawables;
 
 private:

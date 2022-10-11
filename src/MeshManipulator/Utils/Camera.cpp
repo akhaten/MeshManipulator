@@ -13,25 +13,45 @@ Camera::Camera(glm::vec3 position, glm::vec3 target)
     this->right = glm::normalize(glm::cross(this->world_up, this->direction));
     this->up = glm::normalize(glm::cross(this->direction, this->right));
 
-    // this->matrix[0] = glm::vec4(this->right, 0.0f);
-    // this->matrix[1] = glm::vec4(this->up, 0.0f);
-    // this->matrix[2] = glm::vec4(this->direction, 0.0f);
-    // this->matrix[3] = glm::vec4(this->position, 1.0f);
 
+    this->matrix = glm::mat4(1.0f);
     this->setRight(this->right);
     this->setUp(this->up);
     this->setDirection(this->direction);
     this->setPosition(this->position);
 
+    // Default
+    this->fov = glm::radians(45.0f);
+    this->near = 0.1f;
+    this->far = 100.0f;
 
-    // this->matrix = glm::transpose(this->matrix);
-
-    std::cout << "position : " << position.x << ", " << position.y << ", " << position.z << std::endl;
-    std::cout << "direction : " << direction.x << ", " << direction.y << ", " << direction.z << std::endl;
-    // std::cout << position.x << ", " << position.y << ", " << position.z << std::endl;
-    // std::cout << position.x << ", " << position.y << ", " << position.z << std::endl;
 }
 
+Camera::~Camera() {}
+
+void Camera::update(glm::mat4 transformation)
+{
+    this->matrix = transformation * this->matrix;
+}
+
+glm::mat4 Camera::viewMatrix()
+{
+    return glm::lookAt(
+        this->getPosition(),
+        this->getPosition()+this->getDirection(),
+        this->getUp()
+    );
+}
+
+glm::mat4 Camera::projectionMatrix()
+{
+    return glm::perspective(this->fov, this->aspect, this->near, this->far);
+}
+
+
+/**
+ * GETTERS
+ */
 
 glm::vec3 Camera::getTarget()
 {
@@ -63,12 +83,34 @@ glm::vec3 Camera::getWorldUp()
     return this->world_up;
 }
 
+float Camera::getFov()
+{
+    return this->fov;
+}
+
+float Camera::getNear()
+{
+    return this->near;
+}
+
+float Camera::getAspect()
+{
+    return this->width/this->height;
+}
+
+float Camera::getFar()
+{
+    return this->far;
+}
+
+/**
+ * SETTERS
+ */
 
 void Camera::setTarget(glm::vec3 target)
 {
     this->target = target;
 }
-
 
 void Camera::setMatrix(unsigned int index, glm::vec3 value)
 {
@@ -76,14 +118,9 @@ void Camera::setMatrix(unsigned int index, glm::vec3 value)
         this->matrix[i][index] = value[i];
 }
 
-void Camera::setPosition(glm::vec3 position)
+void Camera::setRight(glm::vec3 right)
 {
-    this->setMatrix(3, position);
-}
-
-void Camera::setDirection(glm::vec3 direction)
-{
-    this->setMatrix(2, direction);
+    this->setMatrix(0, right);
 }
 
 void Camera::setUp(glm::vec3 up)
@@ -91,15 +128,38 @@ void Camera::setUp(glm::vec3 up)
     this->setMatrix(1, up);
 }
 
-void Camera::setRight(glm::vec3 right)
+void Camera::setDirection(glm::vec3 direction)
 {
-    this->setMatrix(0, right);
+    this->setMatrix(2, direction);
 }
 
-void Camera::update(glm::mat4 transformation)
+void Camera::setPosition(glm::vec3 position)
 {
-    this->matrix = transformation * this->matrix;
+    this->setMatrix(3, position);
 }
+
+void Camera::setNear(const float near)
+{
+    this->near = near;
+}
+
+void Camera::setAspect(const float width, const float height)
+{
+    this->width = width;
+    this->height = height;
+}
+
+void Camera::setFar(const float far)
+{
+    this->far = far;
+}
+
+
+
+
+
+
+
 
 
 

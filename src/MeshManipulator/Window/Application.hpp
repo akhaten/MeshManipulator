@@ -6,9 +6,10 @@
 #define APPLICATION_HPP
 
 
-#include <vector>
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <vector>
 
 #include "Mesh.hpp"
 #include "Scene.hpp"
@@ -30,7 +31,6 @@ class Application
     
         GLFWwindow* window;
         Viewer* viewer;
-        void processMesh();
         
         static void framebufferSizeCallback(GLFWwindow* window, int width, int height);
         static void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);

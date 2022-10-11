@@ -3,6 +3,7 @@
 //
 
 #include "Scene.hpp"
+#include <iostream>
 
 Scene::Scene() {}
 
@@ -16,5 +17,9 @@ void Scene::addDrawable(Drawable *drawable)
 void Scene::draw()
 {
     for(unsigned int index = 0; index < this->drawables.size(); ++index)
+    {
+       
         this->drawables[index]->draw();
+    }
+    
 }

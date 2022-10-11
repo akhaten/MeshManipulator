@@ -5,6 +5,7 @@
 
 
 #include "Shader.hpp"
+#include <glm/gtc/type_ptr.hpp>
 
 
 Shader::Shader(const GLchar* vertex_shader_source, const GLchar* fragment_shader_source)
@@ -33,9 +34,9 @@ Shader::Shader(const GLchar* vertex_shader_source, const GLchar* fragment_shader
     glDeleteShader(vertex_shader);
     glDeleteShader(fragment_shader);
 
-    this->model_loc = glGetUniformLocation(this->shader_program, "model");
-    this->view_loc = glGetUniformLocation(this->shader_program, "view");
-    this->projection_loc = glGetUniformLocation(this->shader_program, "projection");
+    // this->model_loc = glGetUniformLocation(this->shader_program, "model");
+    // this->view_loc = glGetUniformLocation(this->shader_program, "view");
+    // this->projection_loc = glGetUniformLocation(this->shader_program, "projection");
 
 
 }
@@ -61,6 +62,11 @@ void Shader::setFloat(const char* name, const float value)
 {
     glUniform1f(glGetUniformLocation(this->shader_program, name), value);
 
+}
+
+void Shader::setMat4(const char* name, const glm::mat4 value)
+{
+    glUniformMatrix4fv(glGetUniformLocation(this->shader_program, name), 1, GL_FALSE, glm::value_ptr(value));
 }
 
 

@@ -13,6 +13,8 @@
 
 #include <iostream>
 
+// #include "Scene.hpp"
+
 
 // #include "CallbackFunctions.hpp"
 
@@ -27,20 +29,14 @@ Application::Application(const char* name, int width, int height)
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 
-  
     this->window = glfwCreateWindow(width, height, name, NULL, NULL);
 
     glfwMakeContextCurrent(this->window);
 
     // Callback configuration
-    glfwSetFramebufferSizeCallback(this->window, framebufferSizeCallback);
-    glfwSetKeyCallback(this->window, keyCallback);
-    glfwSetCursorPosCallback(this->window, cursorPosCallback);
-   
-    
-    // glfwSetCursorPosCallback(this->window, processMouse);
-    
-    
+    glfwSetFramebufferSizeCallback(this->window, this->framebufferSizeCallback);
+    glfwSetKeyCallback(this->window, this->keyCallback);
+    glfwSetCursorPosCallback(this->window, this->cursorPosCallback);
 
     //Now we have a valid context as current, let's allow glew to do its job
     glewExperimental = GL_TRUE; //Ensure it get all pointers
@@ -59,9 +55,17 @@ Application::~Application(){}
 
 void Application::setViewer(Viewer* viewer)
 {
+
     this->viewer = viewer;
     this->viewer->setWindow(this->window);
     glfwSetWindowUserPointer(this->window, this->viewer);
+
+    // Camera configuration
+    int width, height;
+    glfwGetWindowSize(this->window, &width, &height);
+    Camera* camera = this->viewer->getCamera();
+    camera->setAspect((float)width, (float)height);
+
 }
 
 void Application::run()
@@ -96,28 +100,20 @@ void Application::run()
 
 }
 
-void Application::processMesh()
-{
-
-    int width;
-    int height;
-    glfwGetWindowSize(this->window, &width, &height);
-    
-    for(auto object_drawable : scene->drawables){    
-        glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)width / (float)height, 0.1f, 100.0f);
-        object_drawable->projection = projection;
-    }
-
-}
 
 void Application::framebufferSizeCallback(GLFWwindow* window, int width, int height)
 {
+    
     glViewport(0, 0, width, height);
+    Viewer* callback_viewer = (Viewer*) glfwGetWindowUserPointer(window);
+    Camera* callback_camera = callback_viewer->getCamera();
+    callback_camera->setAspect(width, height);
+
 }
 
 void Application::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)
 {
-    Viewer* callback_viewer = (Viewer*) glfwGetWindowUserPointer(window);;
+    Viewer* callback_viewer = (Viewer*) glfwGetWindowUserPointer(window);
     callback_viewer->processKeyboard(window, key, scancode, action, mods);   
 }
 

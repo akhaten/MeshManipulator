@@ -17,20 +17,21 @@
 class Drawable
 {
 
-public:
-    Drawable(Mesh* mesh, Shader* shader);
-    ~Drawable();
-    void draw(glm::mat4 projection_matrix, glm::mat4 view_matrix);
+    public:
 
-    //void attachTexture(Texture* texture);
+        Drawable(Mesh* mesh);
+        ~Drawable();
 
-    Mesh* mesh;
-    Shader* shader;
+        glm::mat4 modelMatrix();
 
-    glm::mat4 model;
-    
+        Mesh* getMesh();
 
-private:
+        
+        
+
+    private:
+        Mesh* mesh;
+        glm::mat4 model;
     
 
 };

@@ -5,9 +5,11 @@
  * First include else probleme glew include before gl
  */
 #include <MeshManipulator/Utils/Shader.hpp>
-#include <MeshManipulator/Utils/Viewer.hpp>
+#include <MeshManipulator/Window/Viewer.hpp>
 #include <MeshManipulator/Utils/Drawable.hpp>
 #include <MeshManipulator/Utils/Scene.hpp>
+
+#include <MeshManipulator/Mesh/ObjectMesh.hpp>
 
 
 
@@ -31,6 +33,7 @@ class MyViewer:
 
         GLFWwindow* window;
         Scene* scene;
+        ObjectMesh* obj_mesh;
 
         float radius;
         double lastX;

@@ -7,6 +7,7 @@
 
 #include "Drawable.hpp"
 #include "Viewer.hpp"
+#include "Renderer.hpp"
 
 class Scene
 {
@@ -18,6 +19,8 @@ class Scene
         void addDrawable(Drawable* drawable);
         void draw();
 
+        Renderer* getRenderer();
+
         void setViewer(Viewer* viewer);
 
         
@@ -26,8 +29,8 @@ class Scene
 
         Viewer* viewer;
         std::vector<Drawable*> drawables;
-        //std::vector<Light*> lights;glm::mat4 
-        //std::vector<Camera*> cameras;
+        Renderer* renderer;
+     
 
 };
 

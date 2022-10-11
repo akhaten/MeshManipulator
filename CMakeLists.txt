@@ -44,8 +44,8 @@ set(UTILS
         ${PATH_UTILS}/Drawable.cpp
         ${PATH_UTILS}/Camera.hpp
         ${PATH_UTILS}/Camera.cpp
-        ${PATH_UTILS}/Viewer.hpp
-        ${PATH_UTILS}/Viewer.cpp
+        ${PATH_UTILS}/Renderer.hpp
+        ${PATH_UTILS}/Renderer.cpp
         )
 
 set(GEOMETRY
@@ -60,6 +60,8 @@ set(GEOMETRY
 set(WINDOW
         ${PATH_WINDOW}/Application.hpp
         ${PATH_WINDOW}/Application.cpp
+        ${PATH_WINDOW}/Viewer.hpp
+        ${PATH_WINDOW}/Viewer.cpp
         )
 
 set(SRC

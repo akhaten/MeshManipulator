@@ -237,8 +237,7 @@ int main(int argc, char** argv)
 
     scene->addDrawable(
         new Drawable(
-            makeBezierObjectMesh(control_points, 10),
-            makeDynamicShader()
+            makeBezierObjectMesh(control_points, 10)
         )
     );
 

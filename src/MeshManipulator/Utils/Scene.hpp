@@ -23,12 +23,13 @@ class Scene
 
         void setViewer(Viewer* viewer);
 
+        std::vector<Drawable*> drawables;
+
         
 
     private:
 
         Viewer* viewer;
-        std::vector<Drawable*> drawables;
         Renderer* renderer;
      
 

@@ -7,6 +7,8 @@ set(SRC
     MyApplication.cpp
     MyViewer.hpp
     MyViewer.cpp
+    Operations.hpp
+    Operations.cpp
 )
 
 add_executable(${PROJECT_NAME} main.cpp ${SRC})

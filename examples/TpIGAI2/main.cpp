@@ -1,269 +1,156 @@
-#include <iostream>
-#include <vector>
+// #include <iostream>
+// #include <vector>
 
 
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
+// #include <glm/glm.hpp>
+// #include <glm/gtc/matrix_transform.hpp>
+// #include <glm/gtc/type_ptr.hpp>
 
 
 
-// #include <MeshManipulator/Window/Application.hpp>
-#include "MyApplication.hpp"
+// // #include <MeshManipulator/Window/Application.hpp>
+// #include "MyApplication.hpp"
 
-#include <MeshManipulator/Utils/Scene.hpp>
-#include <MeshManipulator/Utils/Drawable.hpp>
-#include <MeshManipulator/Utils/Shader.hpp>
+// #include <MeshManipulator/Utils/Scene.hpp>
+// #include <MeshManipulator/Utils/Drawable.hpp>
+// #include <MeshManipulator/Utils/Shader.hpp>
+// #include <MeshManipulator/Utils/Camera.hpp>
 
-#include <MeshManipulator/Mesh/Mesh.hpp>
-#include <MeshManipulator/Mesh/CurveMesh.hpp>
-#include <MeshManipulator/Mesh/ObjectMesh.hpp>
-#include <MeshManipulator/Geometry/Curve/BezierCurve.hpp>
-#include <MeshManipulator/Geometry/Surface/BezierSurface.hpp>
+// #include <MeshManipulator/Mesh/Mesh.hpp>
+// #include <MeshManipulator/Mesh/CurveMesh.hpp>
+// #include <MeshManipulator/Mesh/ObjectMesh.hpp>
+// #include <MeshManipulator/Geometry/Curve/BezierCurve.hpp>
+// #include <MeshManipulator/Geometry/Surface/BezierSurface.hpp>
 
-#include <OpenMesh/Core/IO/MeshIO.hh>
-#include <OpenMesh/Core/Mesh/PolyMesh_ArrayKernelT.hh>
-
-
-#include "MyViewer.hpp"
-#include "Camera.hpp"
+// #include "MyViewer.hpp"
 
 
-// struct MyTrait:
-//     OpenMesh::DefaultTraits
+// int main(int argc, char** argv)
 // {
-//     using Point = glm::vec3;
-// };
 
-// using MyOpenMesh = OpenMesh::PolyMesh_ArrayKernelT<MyTrait>;
+//     MyApplication* app = new MyApplication("TP-IGAI2", 800, 600);
+//     Scene* scene = app->getScene();
 
-// typedef OpenMesh::PolyMesh_ArrayKernelT<MyTrait> MyOpenMesh;
+//     Camera* camera = new Camera(
+//         glm::vec3(0.0f, 0.0f, -3.0f),
+//         glm::vec3(0.0f, 0.0f, 0.0f)
+//     );
 
-// typedef OpenMesh::PolyMesh_ArrayKernelT<> MyOpenMesh;
+//     MyViewer* viewer = new MyViewer(camera);
 
-
-CurveMesh* makeBezierCurveMesh(std::vector<glm::vec3> control_points, const unsigned int nb_segments)
-{
-
-    BezierCurve* bezier_curve = new BezierCurve(control_points);
-    std::vector<glm::vec3> curve_points;
-
-    for(unsigned int i = 0; i <= nb_segments;  ++i)
-    {
-        curve_points.push_back(bezier_curve->eval((float)i/nb_segments));
-    }
-
-    CurveMesh* curve = new CurveMesh(curve_points);
-
-
-    return curve;
-
-}
-
-Shader* makeDynamicShader()
-{
-
-    const GLchar* vertex_shader_source =
-            "#version 460 core\n"
-            "layout (location = 0) in vec3 aPos;\n"
-            "uniform mat4 model;\n"
-            "uniform mat4 view;\n"
-            "uniform mat4 projection;\n"
-            "void main()\n"
-            "{\n"
-            "gl_Position = projection * view * model * vec4(aPos, 1.0f);\n"
-            // "gl_Position = projection * view * model * vec4(aPos, 1.0f);\n"
-            "}\n";
-
-    const GLchar* fragment_shader_source =
-            "#version 460 core\n"
-            "out vec4 FragColor;\n"
-            "void main()\n"
-            "{\n"
-            "FragColor = vec4(1.0f, 1.0f, 1.0f, 1.0f);\n"
-            "}\n";
-
-    Shader* shader = new Shader(vertex_shader_source, fragment_shader_source);
-    return shader;
-}
-
-
-Shader* makeStaticShader()
-{
-
-    const GLchar* vertex_shader_source =
-            "#version 460 core\n"
-            "layout (location = 0) in vec3 aPos;\n"
-            "uniform mat4 model;\n"
-            "uniform mat4 view;\n"
-            "uniform mat4 projection;\n"
-            "void main()\n"
-            "{\n"
-            "gl_Position =   projection * model * vec4(aPos.xy, 0.0f, 1.0f);"
-            "}\n";
-
-    const GLchar* fragment_shader_source =
-            "#version 460 core\n"
-            "out vec4 FragColor;\n"
-            "void main()\n"
-            "{\n"
-            "FragColor = vec4(1.0f, 1.0f, 1.0f, 1.0f);\n"
-            "}\n";
-
-    Shader* shader = new Shader(vertex_shader_source, fragment_shader_source);
-    return shader;
-
-}
-
-
-ObjectMesh* makeBezierObjectMesh(std::vector<std::vector<glm::vec3>> control_points, const unsigned int nb_segments)
-{
-
-
-    BezierSurface* bezier_surface = new BezierSurface(control_points, nb_segments);
-
-    MyOpenMesh mesh;
-    
-    std::vector<MyOpenMesh::VertexHandle> surface_points;
-
-    for(unsigned int index_bezier = 0; index_bezier <= nb_segments; ++index_bezier)
-    {
-        for(unsigned int i = 0; i <= nb_segments;  ++i)
-        {
-            glm::vec3 point = bezier_surface->eval(index_bezier, (float)i/nb_segments);
-            surface_points.push_back(mesh.add_vertex(MyOpenMesh::Point(point.x, point.y, point.z)));
-        }
-    }
-
-
-
-    // std::vector<unsigned int> indices;
-    unsigned int nb_point_bezier = nb_segments+1;
-
-
-    std::vector<MyOpenMesh::VertexHandle> triangle_face;
-
-    for(unsigned int j = 0; j < nb_segments; ++j) {
-
-        for (unsigned int i = 0; i < nb_segments; ++i) {
-
-            unsigned int k = j*nb_point_bezier;
-
-            triangle_face.clear();
-            triangle_face.push_back(surface_points[i+k]);
-            triangle_face.push_back(surface_points[i+1+k]);
-            triangle_face.push_back(surface_points[i+nb_point_bezier+k]);
-            mesh.add_face(triangle_face);
-
-            triangle_face.clear();
-            triangle_face.push_back(surface_points[i+k+1]);
-            triangle_face.push_back(surface_points[i+1+k+nb_point_bezier]);
-            triangle_face.push_back(surface_points[i+nb_point_bezier+k]);
-            mesh.add_face(triangle_face);
-
-        }
-
-    }
-
-
-    // std::vector<glm::vec3> points;
-    // for(auto point : mesh.vertices()){
-    //     auto p = mesh.point(point);
-    //     points.push_back(glm::vec3(p[0], p[1], p[2]));
-    // }
-
-    // std::vector<unsigned int> indices;
-    // for(auto face : mesh.faces()){
-    //     for(auto pt : face.vertices())
-    //         indices.push_back(pt.idx());
-    // }
-
-
-    // ObjectMesh* bezier_surface_mesh = new ObjectMesh(points, indices);
-    ObjectMesh* bezier_surface_mesh = new ObjectMesh(&mesh);
-    return bezier_surface_mesh;
-
-}
-
-int main(int argc, char** argv)
-{
-
-    
-    
-
-
-    MyApplication* app = new MyApplication("TP-IGAI2", 800, 600);
-
-
-    Camera* camera = new Camera(
-        glm::vec3(0.0f, 0.0f, -3.0f),
-        glm::vec3(0.0f, 0.0f, 0.0f)
-    );
-
-    MyViewer* viewer = new MyViewer(camera);
-
-    app->setViewer(viewer);
+//     app->setViewer(viewer);
      
 
-    std::vector<std::vector<glm::vec3>> control_points = {
-        {
-            glm::normalize(glm::vec3(-1.5f, -1.5f, 4.0f)),
-            glm::normalize(glm::vec3(-0.5f, -1.5f ,2.0)),
-            glm::normalize(glm::vec3(0.5f, -1.5f ,-1.0f)),
-            glm::normalize(glm::vec3(1.5f, -1.5f, 2.0f))
-        },
-        {
-            glm::normalize(glm::vec3(-1.5f, -0.5f, 1.0f)),
-            glm::normalize(glm::vec3(-0.5f, -0.5f, 3.0f)),
-            glm::normalize(glm::vec3(0.5f, -0.5f, 0.0f)),
-            glm::normalize(glm::vec3(1.5f, -0.5f, -1.0f))
-        },
-        {
-            glm::normalize(glm::vec3(-1.5f, 0.5f, 4.0f)),
-            glm::normalize(glm::vec3(-0.5f, 0.5f, 0.0f)),
-            glm::normalize(glm::vec3(0.5f, 0.5f, 3.0f)),
-            glm::normalize(glm::vec3(1.5f, 0.5f, 4.0f))
-        },
-        {
-            glm::normalize(glm::vec3(-1.5f, 1.5f, -2.0f)),
-            glm::normalize(glm::vec3(-0.5f, 1.5f, -2.0f)),
-            glm::normalize(glm::vec3(0.5f, 1.5f, 0.0f)),
-            glm::normalize(glm::vec3(1.5f, 1.5f, -1.0f))
-        }
-    };
+//     ObjectMesh* humanoid = new ObjectMesh(
+//         "/home/akhaten/Documents/m2s1/informatique_graphique2/tps/MeshManipulator/examples/TpIGAI2/obj_files/airboat.obj"
+//     );
+
+//     scene->addDrawable(new Drawable(humanoid));
+
+//     app->run();
+
+//     return 0;
+
+// }
+
+#include <iostream>
+// -------------------- OpenMesh
+#include <OpenMesh/Core/IO/MeshIO.hh>
+#include <OpenMesh/Core/Mesh/PolyMesh_ArrayKernelT.hh>
+// ----------------------------------------------------------------------------
+typedef OpenMesh::PolyMesh_ArrayKernelT<>  MyMesh;
+// ----------------------------------------------------------------------------
+// Build a simple cube and write it to std::cout
+
+#include <set>
+  
+int main()
+{
+  MyMesh mesh;
+  // generate vertices
+  MyMesh::VertexHandle vhandle[8];
+  vhandle[0] = mesh.add_vertex(MyMesh::Point(-1, -1,  1));
+  vhandle[1] = mesh.add_vertex(MyMesh::Point( 1, -1,  1));
+  vhandle[2] = mesh.add_vertex(MyMesh::Point( 1,  1,  1));
+  vhandle[3] = mesh.add_vertex(MyMesh::Point(-1,  1,  1));
+  vhandle[4] = mesh.add_vertex(MyMesh::Point(-1, -1, -1));
+  vhandle[5] = mesh.add_vertex(MyMesh::Point( 1, -1, -1));
+  vhandle[6] = mesh.add_vertex(MyMesh::Point( 1,  1, -1));
+  vhandle[7] = mesh.add_vertex(MyMesh::Point(-1,  1, -1));
+  // generate (quadrilateral) faces
+  std::vector<MyMesh::VertexHandle>  face_vhandles;
+  face_vhandles.clear();
+  face_vhandles.push_back(vhandle[0]);
+  face_vhandles.push_back(vhandle[1]);
+  face_vhandles.push_back(vhandle[2]);
+  face_vhandles.push_back(vhandle[3]);
+  mesh.add_face(face_vhandles);
+ 
+  face_vhandles.clear();
+  face_vhandles.push_back(vhandle[7]);
+  face_vhandles.push_back(vhandle[6]);
+  face_vhandles.push_back(vhandle[5]);
+  face_vhandles.push_back(vhandle[4]);
+  mesh.add_face(face_vhandles);
+  face_vhandles.clear();
+  face_vhandles.push_back(vhandle[1]);
+  face_vhandles.push_back(vhandle[0]);
+  face_vhandles.push_back(vhandle[4]);
+  face_vhandles.push_back(vhandle[5]);
+  mesh.add_face(face_vhandles);
+  face_vhandles.clear();
+  face_vhandles.push_back(vhandle[2]);
+  face_vhandles.push_back(vhandle[1]);
+  face_vhandles.push_back(vhandle[5]);
+  face_vhandles.push_back(vhandle[6]);
+  mesh.add_face(face_vhandles);
+  face_vhandles.clear();
+  face_vhandles.push_back(vhandle[3]);
+  face_vhandles.push_back(vhandle[2]);
+  face_vhandles.push_back(vhandle[6]);
+  face_vhandles.push_back(vhandle[7]);
+  mesh.add_face(face_vhandles);
+  face_vhandles.clear();
+  face_vhandles.push_back(vhandle[0]);
+  face_vhandles.push_back(vhandle[3]);
+  face_vhandles.push_back(vhandle[7]);
+  face_vhandles.push_back(vhandle[4]);
+  mesh.add_face(face_vhandles);
+  // write mesh to output.obj
+
+//   for(MyMesh::VertexIter v_it = mesh.vertices_sbegin(); v_it != mesh.vertices_end(); ++v_it){
+//     std::cout << (v_it->handle()).idx() << std::endl;
+//   }
+  
+  // for(auto v : mesh.vertices())
+  //   std::cout << v.idx() << std::endl;
 
 
-    Scene* scene = app->getScene();
+  // std::vector<std::vector<unsigned int>> rings;
+  // std::vector<unsigned int> ring;
+  // ring.push_back(0);
+  // rings.push_back(ring);
+  // ring.clear();
+  // std::cout << rings[0].size() << std::endl;
 
-    scene->addDrawable(
-        new Drawable(
-            makeBezierObjectMesh(control_points, 10)
-        )
-    );
+  std::set<unsigned int> s1;
+  std::set<unsigned int> s2;
 
-    // std::vector<glm::vec3> curve_vertices =
-    // {
-    //     glm::normalize(glm::vec3(0.0f, 0.5f, 0.0f)),
-    //     glm::normalize(glm::vec3(1.0f, 0.5f, 0.0f)),
-    // };
+  std::set<unsigned int> res;
 
-    // app->addDrawable(
-    //     new Drawable(
-    //         new CurveMesh(curve_vertices),
-    //         makeStaticShader()
-    //     )
-    // );
+  s1.insert(0);
+  s1.insert(1);
+  s2.insert(1);
 
-    app->run();
+  // std::cout << s1.size() << std::endl;
+  // std::cout << s2.size() << std::endl;
 
+  std::set_union(s1.begin(), s1.end(), res.begin(), res.end(), std::inserter(res, res.begin()));
+  std::set_union(s2.begin(), s2.end(), res.begin(), res.end(), std::inserter(res, res.begin()));
 
-
-    
-
-
-
+  for(unsigned int i : res)
+    std::cout << i << std::endl;
 
 }
-
 
 

@@ -1,11 +1,25 @@
 cmake_minimum_required(VERSION 3.20)
 
+
+# set(GLFW_BUILD_DOCS OFF)
+# set(GLM_BUILD_DOCS OFF)
+# set(EIGEN_BUILD_DOC OFF)
+# set(EIGEN_BUILD_DOCS OFF)
+# set(OPENMESH_DOCS false)
+#  -DEIGEN_BUILD_DOC=ON -DEIGEN_BUILD_DOCS=OFF -DEIGEN_DOC_USE_MATHJAX=ON -DEIGEN_INTERNAL_DOCUMENTATION=OFF -DGLFW_BUILD_DOCS=ON -DGLM_BUILD_DOCS=OFF -DOPENMESH_DOCS=OFF
+
 project(MeshManipulator)
+
+set(CMAKE_C_COMPILER "/usr/bin/gcc")
+set(CMAKE_CXX_COMPILER "/usr/bin/g++")
+
+# add_subdirectory(docs)
 
 add_subdirectory(libs/glfw)
 add_subdirectory(libs/glm)
 add_subdirectory(libs/eigen)
 add_subdirectory(libs/OpenMesh)
+
 
 #include_directories(libs/glfw/include)
 #include_directories(libs/glm)
@@ -24,6 +38,8 @@ set(PATH_WINDOW ${PATH_MESH_MANIPULATOR}/Window)
 
 find_package(OpenGL)
 find_package(GLEW REQUIRED)
+
+add_definitions(-DOM_STATIC_BUILD)
 
 
 set(MESH
@@ -47,6 +63,8 @@ set(UTILS
         ${PATH_UTILS}/Renderer.hpp
         ${PATH_UTILS}/Renderer.cpp
         )
+
+
 
 set(GEOMETRY
         ${PATH_GEOMETRY}/Curve/BernsteinPolynom.hpp
@@ -102,8 +120,6 @@ set(EXTERNAL_LIB
 add_library(${PROJECT_NAME} ${SRC})
 target_include_directories(${PROJECT_NAME} PUBLIC ${PATH_SRC})
 target_link_libraries(${PROJECT_NAME} PUBLIC ${EXTERNAL_LIB})
-
-message(${CMAKE_PROJECT_NAME})
 
 add_subdirectory(examples)
 

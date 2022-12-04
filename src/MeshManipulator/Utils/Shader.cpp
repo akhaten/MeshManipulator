@@ -39,6 +39,7 @@ Shader::~Shader() {}
 
 void Shader::use()
 {
+    
     glUseProgram(this->shader_program);
 }
 

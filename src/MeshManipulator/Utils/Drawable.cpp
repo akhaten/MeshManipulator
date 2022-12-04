@@ -4,7 +4,7 @@
 
 #include "Drawable.hpp"
 
-Drawable::Drawable(Mesh* mesh)
+Drawable::Drawable(ObjectMesh* mesh)
 {
 
     this->mesh = mesh;
@@ -19,7 +19,7 @@ glm::mat4 Drawable::modelMatrix()
     return this->model;
 }
 
-Mesh* Drawable::getMesh()
+ObjectMesh* Drawable::getMesh()
 {
     return this->mesh;
 }

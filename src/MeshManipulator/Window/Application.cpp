@@ -28,6 +28,7 @@ Application::Application(const char* name, int width, int height)
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
+    
 
     this->window = glfwCreateWindow(width, height, name, NULL, NULL);
 
@@ -46,7 +47,8 @@ Application::Application(const char* name, int width, int height)
         std::cout << "pb glew" << std::endl;
         exit(EXIT_FAILURE); //or any handling here
     }
-
+    
+    glEnable(GL_DEPTH_TEST);
     this->scene = new Scene();
 
 }

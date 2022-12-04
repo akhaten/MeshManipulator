@@ -29,13 +29,20 @@ class ObjectMesh:
 {
     
 public:
-    ObjectMesh(std::vector<glm::vec3> vertices, std::vector<unsigned int> indices);
+
+    // ObjectMesh(std::vector<glm::vec3> vertices, std::vector<unsigned int> indices);
+    ObjectMesh(char* pathfile);
     ObjectMesh(MyOpenMesh* my_mesh);
     ~ObjectMesh();
+
     void draw() override;
+
+    MyOpenMesh* getMyOpenMesh();
+    
 
 private:
     MyOpenMesh* my_mesh;
+    void toOpenGL();
 
 };
 

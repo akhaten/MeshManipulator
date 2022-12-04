@@ -9,7 +9,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "Mesh.hpp"
+#include "ObjectMesh.hpp"
 #include "Shader.hpp"
 
 
@@ -19,18 +19,18 @@ class Drawable
 
     public:
 
-        Drawable(Mesh* mesh);
+        Drawable(ObjectMesh* mesh);
         ~Drawable();
 
         glm::mat4 modelMatrix();
 
-        Mesh* getMesh();
+        ObjectMesh* getMesh();
 
         
         
 
     private:
-        Mesh* mesh;
+        ObjectMesh* mesh;
         glm::mat4 model;
     
 

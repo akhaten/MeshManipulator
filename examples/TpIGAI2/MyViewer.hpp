@@ -28,12 +28,15 @@ class MyViewer:
         void setScene(Scene* scene);
         void setWindow(GLFWwindow* window);
 
+        void setMyOpenMesh(MyOpenMesh* obj_mesh);
+
 
     private:
 
+
         GLFWwindow* window;
         Scene* scene;
-        ObjectMesh* obj_mesh;
+        
 
         float radius;
         double lastX;
@@ -43,6 +46,18 @@ class MyViewer:
 
         // Shader* shaderSelector();
         // void moveSelector();
+
+        MyOpenMesh* obj_mesh;
+
+    
+        /**
+         * rings has a list
+        */
+        std::vector<std::vector<unsigned int>> rings;
+        std::vector<unsigned int> one_ring(unsigned int index);
+        void laplacian(MyOpenMesh* open_mesh, float alpha);
+        void deformation(MyOpenMesh* open_mesh, unsigned int index, unsigned int rings);
+
 
         
 

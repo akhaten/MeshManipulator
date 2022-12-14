@@ -7,8 +7,8 @@ set(SRC
     MyApplication.cpp
     MyViewer.hpp
     MyViewer.cpp
-    #RingManager.cpp
-    #RingManager.h
+    RingManager.hpp
+    RingManager.cpp
 )
 
 add_executable(${PROJECT_NAME} main.cpp ${SRC})

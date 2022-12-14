@@ -31,7 +31,7 @@ void MyViewer::setScene(Scene* scene)
     this->scene = scene;
 }
 
-void MyViewer::setMyOpenMesh(MyOpenMesh* obj_mesh)
+void MyViewer::setObjectMesh(ObjectMesh* obj_mesh)
 {
     this->obj_mesh = obj_mesh;
 }
@@ -154,9 +154,16 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
         target += glm::vec3(1.0f, 0.0f, 0.0f);
         this->camera->setTarget(target);
         this->camera->setPosition(
-                this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+            this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
         );
 
+    }
+
+    if(key == GLFW_KEY_L && action == GLFW_PRESS)
+    {
+        //std::cout << "Before Laplacian" << std::endl;
+        this->laplacian(this->obj_mesh, 0.5f);
+        //std::cout << "After Laplacian" << std::endl;
     }
 
 }
@@ -194,44 +201,53 @@ void MyViewer::processMouse(GLFWwindow *window, double xpos, double ypos)
 
 }
 
-
-/*
-void MyViewer::laplacian(MyOpenMesh* open_mesh, float alpha)
-{
-
-    std::vector<MyOpenMesh::Point> new_vertices;
-    
-    for(MyOpenMesh::VertexIter v_it = open_mesh->vertices_sbegin(); v_it != open_mesh->vertices_end(); ++v_it){
-
-        MyOpenMesh::Point vertex_current = open_mesh->point(*v_it);
-        // unsigned int vertex_current_index = v_it.handle().idx();
-        
-        MyOpenMesh::Point center_of_gravity(0, 0, 0);
-        unsigned int valence = 0;
-
-        for(MyOpenMesh::VertexVertexIter vv_it = open_mesh->vv_iter(*v_it); vv_it.is_valid(); ++vv_it){
-            center_of_gravity +=  open_mesh->point(*vv_it);
-            ++valence;
-        }
-        
-        center_of_gravity /= valence;
-        new_vertices.push_back(alpha*vertex_current+(1-alpha)*center_of_gravity);
-    
-    }
-
-    unsigned int index = 0;
-
-    for(MyOpenMesh::VertexIter v_it = open_mesh->vertices_sbegin(); v_it != open_mesh->vertices_end(); ++v_it){
-        open_mesh->point(*v_it) = new_vertices[++index];
-    }
+void MyViewer::deformation(MyOpenMesh* open_mesh, unsigned int index, unsigned int rings){
 
 }
 
-std::vector<unsigned int> MyViewer::one_ring(unsigned int index)
+void MyViewer::laplacian(ObjectMesh* obj_mesh, float alpha)
+{
+
+    MyOpenMesh* open_mesh = this->obj_mesh->getMyOpenMesh();
+
+    std::vector<MyOpenMesh::Point> new_vertices;
+
+    MyOpenMesh::VertexIter v_it;
+    MyOpenMesh::VertexIter v_end = open_mesh->vertices_end();
+    MyOpenMesh::Point vertex_current;
+    MyOpenMesh::VertexVertexIter vv_it;
+
+    for(v_it = open_mesh->vertices_sbegin(); v_it != v_end; ++v_it){
+
+        MyOpenMesh::Point center_of_gravity(0, 0, 0);
+        unsigned int valence = 0;
+
+        for(vv_it = open_mesh->vv_iter(*v_it); vv_it.is_valid(); ++vv_it){
+            center_of_gravity += open_mesh->point(*vv_it);
+            ++valence;
+        }
+
+        center_of_gravity /= valence;
+        new_vertices.push_back(alpha*vertex_current+(1-alpha)*center_of_gravity);
+
+    }
+
+    // Change points
+    unsigned int index = 0;
+
+    for(v_it = open_mesh->vertices_begin(); v_it != v_end; ++v_it){
+        open_mesh->point(*v_it) = new_vertices[++index];
+    }
+
+    obj_mesh->update();
+
+}
+
+/*std::vector<unsigned int> MyViewer::one_ring(unsigned int index, unsigned int nb_ring)
 {
     // Clear rings
 
-    for(std::vector<unsigned int> ring : this->rings)
+    for(std::set<unsigned int> ring : this->rings)
         ring.clear();
     this->rings.clear();
 
@@ -255,10 +271,10 @@ std::vector<unsigned int> MyViewer::one_ring(unsigned int index)
     ring.clear();
 
     // Others rings :
+    for(unsigned int id_ring = 1; id_ring < )
+}*/
 
-}
-
-void MyViewer::deformation(MyOpenMesh* open_mesh, unsigned int index, unsigned int rings)
+/*void MyViewer::deformation(MyOpenMesh* open_mesh, unsigned int index, unsigned int rings)
 {
 
     // Clear rings

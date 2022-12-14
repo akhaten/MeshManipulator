@@ -24,9 +24,16 @@ ObjectMesh::ObjectMesh(MyOpenMesh* my_mesh)
     
 }
 
+void ObjectMesh::update()
+{
+    this->toOpenGL();
+}
+
 void ObjectMesh::toOpenGL()
 {
 
+    this->vertices.clear();
+    this->indices.clear();
 
     for(auto point : this->my_mesh->vertices()){
         auto p = this->my_mesh->point(point);

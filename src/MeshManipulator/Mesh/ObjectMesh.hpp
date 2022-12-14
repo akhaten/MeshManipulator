@@ -38,6 +38,7 @@ public:
     void draw() override;
 
     MyOpenMesh* getMyOpenMesh();
+    void update();
     
 
 private:

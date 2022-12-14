@@ -7,7 +7,9 @@ set(SRC
     MyApplication.cpp
     MyViewer.hpp
     MyViewer.cpp
-        )
+    #RingManager.cpp
+    #RingManager.h
+)
 
 add_executable(${PROJECT_NAME} main.cpp ${SRC})
 target_link_libraries(${PROJECT_NAME} PRIVATE MeshManipulator)

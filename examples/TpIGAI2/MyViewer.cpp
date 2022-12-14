@@ -12,8 +12,9 @@ MyViewer::MyViewer(Camera* camera):
 {
 
     this->sensitivity = 2.0f;
-    this->radius = 30.0f;
+    this->radius = 5.0f;
     this->camera_mod = false;
+    this->moveset_mode = false;
 
 }
 
@@ -42,6 +43,8 @@ void MyViewer::setMyOpenMesh(MyOpenMesh* obj_mesh)
 void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int action, int mods)
 {
 
+    // ROTATION
+
     if(key == GLFW_KEY_LEFT_SHIFT && action == GLFW_PRESS)
     {
         this->camera_mod = true;
@@ -63,7 +66,98 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
         glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
     }
 
-    
+
+    // ZOOM
+
+    if(key == GLFW_KEY_UP && action == GLFW_PRESS)
+    {
+
+        if(!this->moveset_mode){
+
+            if(this->radius-1.0f < 0.0f){
+                this->radius = 0.0f;
+                this->camera->setPosition(
+                        this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+                );
+            }
+
+            if(this->radius > 0.0f) {
+                this->radius -= 1.0f;
+                this->camera->setPosition(
+                        this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+                );
+            }
+
+        }else{
+
+            glm::vec3 target = this->camera->getTarget();
+            //std::cout << target.x << ";" << target.y << ";" << target.z << std::endl;
+            target += glm::vec3(0.0f, 1.0f, 0.0f);
+            this->camera->setTarget(target);
+            this->camera->setPosition(
+                    this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+            );
+
+        }
+
+    }
+
+    if(key == GLFW_KEY_DOWN && action == GLFW_PRESS)
+    {
+
+        if(!this->moveset_mode) {
+
+            this->radius += 1.0f;
+            this->camera->setPosition(
+                    this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+            );
+
+        }else{
+
+            glm::vec3 target = this->camera->getTarget();
+            //std::cout << target.x << ";" << target.y << ";" << target.z << std::endl;
+            target += glm::vec3(0.0f, -1.0f, 0.0f);
+            this->camera->setTarget(target);
+            this->camera->setPosition(
+                    this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+            );
+
+        }
+
+    }
+
+    // MOVESET
+
+    if(key == GLFW_KEY_LEFT_CONTROL && action == GLFW_PRESS)
+    {
+        this->moveset_mode = !this->moveset_mode;
+    }
+
+    if(this->moveset_mode && key == GLFW_KEY_LEFT && action == GLFW_PRESS)
+    {
+
+        glm::vec3 target = this->camera->getTarget();
+        //std::cout << target.x << ";" << target.y << ";" << target.z << std::endl;
+        target += glm::vec3(-1.0f, 0.0f, 0.0f);
+        this->camera->setTarget(target);
+        this->camera->setPosition(
+            this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+        );
+
+    }
+
+    if(this->moveset_mode && key == GLFW_KEY_RIGHT && action == GLFW_PRESS)
+    {
+
+        glm::vec3 target = this->camera->getTarget();
+        //std::cout << target.x << ";" << target.y << ";" << target.z << std::endl;
+        target += glm::vec3(1.0f, 0.0f, 0.0f);
+        this->camera->setTarget(target);
+        this->camera->setPosition(
+                this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+        );
+
+    }
 
 }
 
@@ -79,14 +173,14 @@ void MyViewer::processMouse(GLFWwindow *window, double xpos, double ypos)
         double cursor_x, cursor_y;
         glfwGetCursorPos(window, &cursor_x, &cursor_y);
         
-        float xoffset = cursor_x - ((float)width / 2);
-        float yoffset = cursor_y - ((float)height / 2);
+        float xoffset = (float)cursor_x - ((float)width / 2);
+        float yoffset = (float)cursor_y - ((float)height / 2);
 
         xoffset *= this->sensitivity;
         yoffset *= this->sensitivity;
 
-        xoffset /= width;
-        yoffset /= height;
+        xoffset /= (float)width;
+        yoffset /= (float)height;
 
         glm::mat4 transformation = glm::mat4(1.0f);
         transformation = glm::rotate(transformation, xoffset, glm::vec3(0.0f, 1.0f, 0.0f));
@@ -94,14 +188,14 @@ void MyViewer::processMouse(GLFWwindow *window, double xpos, double ypos)
         this->camera->update(transformation);
         this->camera->setPosition(this->camera->getTarget()+this->radius*(-glm::normalize(this->camera->getDirection())));
 
-        glfwSetCursorPos(window, width/2, height/2);
+        glfwSetCursorPos(window, (float)width/2, (float)height/2);
     
     }
 
 }
 
 
-
+/*
 void MyViewer::laplacian(MyOpenMesh* open_mesh, float alpha)
 {
 
@@ -133,7 +227,6 @@ void MyViewer::laplacian(MyOpenMesh* open_mesh, float alpha)
 
 }
 
-
 std::vector<unsigned int> MyViewer::one_ring(unsigned int index)
 {
     // Clear rings
@@ -151,11 +244,11 @@ std::vector<unsigned int> MyViewer::one_ring(unsigned int index)
     ring.clear();
 
     // Select the good vertex
-    MyOpenMesh::VertexIter v_it = open_mesh->vertices_sbegin() + index;
+    MyOpenMesh::VertexIter v_it = this->obj_mesh->vertices_sbegin() + index;
 
 
     // First ring
-    for(MyOpenMesh::VertexVertexIter vv_it = open_mesh->vv_iter(*v_it); vv_it.is_valid(); ++vv_it)
+    for(MyOpenMesh::VertexVertexIter vv_it = this->obj_mesh->vv_iter(*v_it); vv_it.is_valid(); ++vv_it)
         ring.push_back(vv_it.handle().idx());
 
     this->rings.push_back(ring);
@@ -202,7 +295,7 @@ void MyViewer::deformation(MyOpenMesh* open_mesh, unsigned int index, unsigned i
     
 
 
-}
+}*/
 
 // void MyViewer::one_ring(MyOpenMesh::Vertex v){
 

@@ -43,6 +43,9 @@ class MyViewer:
         double lastY;
         float sensitivity;
         bool camera_mod;
+        bool moveset_mode;
+        //bool zoom_mod;
+
 
         // Shader* shaderSelector();
         // void moveSelector();
@@ -53,10 +56,10 @@ class MyViewer:
         /**
          * rings has a list
         */
-        std::vector<std::vector<unsigned int>> rings;
+        /*std::vector<std::vector<unsigned int>> rings;
         std::vector<unsigned int> one_ring(unsigned int index);
         void laplacian(MyOpenMesh* open_mesh, float alpha);
-        void deformation(MyOpenMesh* open_mesh, unsigned int index, unsigned int rings);
+        void deformation(MyOpenMesh* open_mesh, unsigned int index, unsigned int rings);*/
 
 
         

@@ -1,51 +1,52 @@
+{ pkgs ? import <nixpkgs> {} }:
 
 let
-
-    pkgs = import <nixpkgs> {
-        overlays = [];
-    };
-
+    OpenMesh = pkgs.callPackage ./nix-libs/OpenMesh.nix {} ;
 in
 
 pkgs.mkShell {
+# pkgs.stdenv.mkDerivation {
 
-
-    
     buildInputs = with pkgs; [
 
         # GLFW Dependencies
-        ## glfw
-        xorg.libX11
-        xorg.libXrandr
-        xorg.libXinerama
-        xorg.libXcursor
-        xorg.libXi
-        xorg.libXext
+        glfw
+        # xorg.libX11
+        # xorg.libXrandr
+        # xorg.libXinerama
+        # xorg.libXcursor
+        # xorg.libXi
+        # xorg.libXext
 
         # GLM Dependencies
-        ## glm
+        glm
         ## Nothing
 
         # OPENMESH Dependencies
+        OpenMesh
+
+        # (pkgs.callPackage ./nix-libs/OpenMesh.nix)
         ## Nothing
 
         # EIGEN Dependencies
-        ## eigen
+        eigen
         ## Nothing
 
         # GLEW Dependencies
-        ## glew
+        glew
         # xlibsWrapper
         # libXmu
         # libXi
 
         # OPENGL Dependencies
         mesa
-        glew
 
         # C++ Tools
         cmake
-        gcc11
+        #gcc11
+        clang
+        doxygen
+        # valgrind
 
         # Qt
         # qt5.full

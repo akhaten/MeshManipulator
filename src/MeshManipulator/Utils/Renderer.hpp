@@ -1,10 +1,10 @@
 #ifndef RENDERER_HPP
 #define RENDERER_HPP
 
-#include "Shader.hpp"
-#include "Viewer.hpp"
-#include "Mesh.hpp"
-#include "Drawable.hpp"
+#include "MeshManipulator/Utils/Shader.hpp"
+#include "MeshManipulator/Window/Viewer.hpp"
+#include "MeshManipulator/Mesh/Mesh.hpp"
+#include "MeshManipulator/Utils/Drawable.hpp"
 
 
 class Renderer

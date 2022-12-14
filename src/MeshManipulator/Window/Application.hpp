@@ -11,9 +11,9 @@
 #include <GLFW/glfw3.h>
 #include <vector>
 
-#include "Mesh.hpp"
-#include "Scene.hpp"
-#include "Viewer.hpp"
+#include "MeshManipulator/Mesh/Mesh.hpp"
+#include "MeshManipulator/Utils/Scene.hpp"
+#include "MeshManipulator/Window/Viewer.hpp"
 
 class Application
 {

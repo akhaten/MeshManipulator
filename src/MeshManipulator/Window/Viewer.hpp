@@ -3,7 +3,7 @@
 
 
 #include <GLFW/glfw3.h>
-#include "Camera.hpp"
+#include "MeshManipulator/Utils/Camera.hpp"
 
 
 

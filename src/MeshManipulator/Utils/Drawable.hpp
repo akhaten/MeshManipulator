@@ -9,7 +9,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "ObjectMesh.hpp"
+#include "MeshManipulator/Mesh/ObjectMesh.hpp"
 #include "Shader.hpp"
 
 

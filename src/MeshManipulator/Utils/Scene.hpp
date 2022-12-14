@@ -5,10 +5,9 @@
 #ifndef SCENE_HPP
 #define SCENE_HPP
 
-#include "Drawable.hpp"
-#include "Viewer.hpp"
-#include "Renderer.hpp"
-
+#include "MeshManipulator/Utils/Drawable.hpp"
+#include "MeshManipulator/Window/Viewer.hpp"
+#include "MeshManipulator/Utils/Renderer.hpp"
 class Scene
 {
     public:

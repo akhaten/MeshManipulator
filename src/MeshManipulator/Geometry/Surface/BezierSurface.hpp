@@ -8,7 +8,7 @@
 #include <vector>
 #include <glm/glm.hpp>
 
-#include "Curve/BezierCurve.hpp"
+#include "MeshManipulator/Geometry/Curve/BezierCurve.hpp"
 
 class BezierSurface
 {

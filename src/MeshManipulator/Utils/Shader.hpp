@@ -1,6 +1,7 @@
-//
-// Created by akhaten on 8/7/22.
-//
+/**
+ * @author akhaten
+ * @file Shader.hpp
+ */
 
 #ifndef SHADER_HPP
 #define SHADER_HPP

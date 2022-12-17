@@ -1,6 +1,7 @@
-//
-// Created by akhaten on 9/1/22.
-//
+/**
+ * @author akhaten
+ * @file Application.hpp
+ */
 
 #ifndef APPLICATION_HPP
 #define APPLICATION_HPP

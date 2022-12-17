@@ -18,7 +18,7 @@ class RingManager {
         ~RingManager();
 
 
-        void compute(unsigned int id_vertex, int nb_ring);
+        void compute(unsigned int id_vertex, unsigned int nb_ring);
 
         /**
          * Get ring from id

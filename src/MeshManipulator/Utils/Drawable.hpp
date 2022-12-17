@@ -1,6 +1,7 @@
-//
-// Created by akhaten on 9/1/22.
-//
+/**
+ * @author akhaten
+ * @file Drawable.hpp
+ */
 
 #ifndef DRAWABLE_HPP
 #define DRAWABLE_HPP

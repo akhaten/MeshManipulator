@@ -1,6 +1,7 @@
-//
-// Created by akhaten on 8/7/22.
-//
+/**
+ * @author akhaten
+ * @file BezierSurface.hpp
+ */
 
 #ifndef BEZIER_SURFACE_HPP
 #define BEZIER_SURFACE_HPP

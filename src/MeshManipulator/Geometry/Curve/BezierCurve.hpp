@@ -1,6 +1,7 @@
-//
-// Created by akhaten on 8/7/22.
-//
+/**
+ * @author akhaten
+ * @file BezierCurve.hpp
+ */
 
 #ifndef BEZIER_CURVE_HPP
 #define BEZIER_CURVE_HPP

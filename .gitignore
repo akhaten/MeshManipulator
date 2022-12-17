@@ -4,3 +4,6 @@ build/
 .ccls-cache/
 .idea/
 cmake-build-debug/
+Dockerfile
+build2
+.devcontainer

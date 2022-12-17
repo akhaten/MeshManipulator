@@ -1,3 +1,8 @@
+/**
+ * @author akhaten
+ * @file Viewer.hpp
+ */
+
 #ifndef VIEWER_HPP
 #define VIEWER_HPP
 
@@ -5,7 +10,10 @@
 #include <GLFW/glfw3.h>
 #include "MeshManipulator/Utils/Camera.hpp"
 
-
+// struct VertexRing {
+//     unsigned int id_vertex_om;
+//     unsigned int index_in_matrix;
+// };
 
 
 class Viewer

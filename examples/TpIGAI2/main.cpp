@@ -34,7 +34,7 @@ int main(int argc, char** argv)
     Scene* scene = app->getScene();
 
     Camera* camera = new Camera(
-        glm::vec3(0.0f, 0.0f, -3.0f),
+        glm::vec3(0.0f, 0.0f, -0.1f),
         glm::vec3(0.0f, 0.0f, 0.0f)
     );
 
@@ -45,7 +45,7 @@ int main(int argc, char** argv)
     
 
     ObjectMesh* humanoid = new ObjectMesh(
-        "/home/akhaten/Documents/github/MeshManipulator/examples/TpIGAI2/obj_files/alien.obj"
+        "/home/akhaten/Documents/github/MeshManipulator/examples/TpIGAI2/obj_files/bunny.obj"
     );
 
     viewer->setObjectMesh(humanoid);

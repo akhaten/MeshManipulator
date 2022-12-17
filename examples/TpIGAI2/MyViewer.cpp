@@ -12,9 +12,12 @@ MyViewer::MyViewer(Camera* camera):
 {
 
     this->sensitivity = 2.0f;
-    this->radius = 5.0f;
+    this->radius = 0.01f;
     this->camera_mod = false;
     this->moveset_mode = false;
+    /*this->camera->setPosition(
+            this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+    );*/
 
 }
 
@@ -34,6 +37,7 @@ void MyViewer::setScene(Scene* scene)
 void MyViewer::setObjectMesh(ObjectMesh* obj_mesh)
 {
     this->obj_mesh = obj_mesh;
+    this->ring_manager = new RingManager(this->obj_mesh->getMyOpenMesh());
 }
 
 /**
@@ -68,21 +72,20 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
 
 
     // ZOOM
-
+    float shift = 0.05f;
     if(key == GLFW_KEY_UP && action == GLFW_PRESS)
     {
 
         if(!this->moveset_mode){
 
-            if(this->radius-1.0f < 0.0f){
+
+            if(this->radius-shift < 0.0f){
                 this->radius = 0.0f;
                 this->camera->setPosition(
                         this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
                 );
-            }
-
-            if(this->radius > 0.0f) {
-                this->radius -= 1.0f;
+            }else if(this->radius > 0.0f) {
+                this->radius -= shift;
                 this->camera->setPosition(
                         this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
                 );
@@ -92,7 +95,7 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
 
             glm::vec3 target = this->camera->getTarget();
             //std::cout << target.x << ";" << target.y << ";" << target.z << std::endl;
-            target += glm::vec3(0.0f, 1.0f, 0.0f);
+            target += glm::vec3(0.0f, shift, 0.0f);
             this->camera->setTarget(target);
             this->camera->setPosition(
                     this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
@@ -107,7 +110,7 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
 
         if(!this->moveset_mode) {
 
-            this->radius += 1.0f;
+            this->radius += shift;
             this->camera->setPosition(
                     this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
             );
@@ -116,7 +119,7 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
 
             glm::vec3 target = this->camera->getTarget();
             //std::cout << target.x << ";" << target.y << ";" << target.z << std::endl;
-            target += glm::vec3(0.0f, -1.0f, 0.0f);
+            target += glm::vec3(0.0f, -shift, 0.0f);
             this->camera->setTarget(target);
             this->camera->setPosition(
                     this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
@@ -138,7 +141,7 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
 
         glm::vec3 target = this->camera->getTarget();
         //std::cout << target.x << ";" << target.y << ";" << target.z << std::endl;
-        target += glm::vec3(-1.0f, 0.0f, 0.0f);
+        target += glm::vec3(-shift, 0.0f, 0.0f);
         this->camera->setTarget(target);
         this->camera->setPosition(
             this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
@@ -151,7 +154,7 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
 
         glm::vec3 target = this->camera->getTarget();
         //std::cout << target.x << ";" << target.y << ";" << target.z << std::endl;
-        target += glm::vec3(1.0f, 0.0f, 0.0f);
+        target += glm::vec3(shift, 0.0f, 0.0f);
         this->camera->setTarget(target);
         this->camera->setPosition(
             this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
@@ -162,9 +165,18 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
     if(key == GLFW_KEY_L && action == GLFW_PRESS)
     {
         //std::cout << "Before Laplacian" << std::endl;
-        this->laplacian(this->obj_mesh, 0.5f);
+        this->laplacian(this->obj_mesh, 0.3f);
         //std::cout << "After Laplacian" << std::endl;
     }
+
+    if(key == GLFW_KEY_D && action == GLFW_PRESS)
+    {
+        std::cout << "Before Deformation" << std::endl;
+        this->deformation(this->obj_mesh, 500, 10);
+        std::cout << "After Deformation" << std::endl;
+    }
+
+
 
 }
 
@@ -201,7 +213,29 @@ void MyViewer::processMouse(GLFWwindow *window, double xpos, double ypos)
 
 }
 
-void MyViewer::deformation(MyOpenMesh* open_mesh, unsigned int index, unsigned int rings){
+void MyViewer::deformation(ObjectMesh* obj_mesh, unsigned int id_vertex, unsigned int nb_rings)
+{
+
+    MyOpenMesh* open_mesh = this->obj_mesh->getMyOpenMesh();
+
+    this->ring_manager->compute(id_vertex, nb_rings);
+
+    MyOpenMesh::VertexIter v_it = open_mesh->vertices_sbegin();
+
+    MyOpenMesh::Point translation = MyOpenMesh::Point(0.0f, 0.01f, 0.0f);
+
+    for(unsigned int id_ring = 0; id_ring < nb_rings; ++id_ring){
+        float c = (float)id_ring/(float)(nb_rings-1);
+        float fun_transfert = (1.0f - c*c)*(1.0f - c*c);
+        std::set<unsigned int> ring = this->ring_manager->get(id_ring);
+        for(unsigned int vertex : ring){
+            MyOpenMesh::VertexHandle handle = open_mesh->vertex_handle(vertex);
+            open_mesh->point(handle) += fun_transfert * translation;
+        }
+
+    }
+
+    this->obj_mesh->update();
 
 }
 
@@ -217,102 +251,40 @@ void MyViewer::laplacian(ObjectMesh* obj_mesh, float alpha)
     MyOpenMesh::Point vertex_current;
     MyOpenMesh::VertexVertexIter vv_it;
 
+    unsigned int n = 0;
     for(v_it = open_mesh->vertices_sbegin(); v_it != v_end; ++v_it){
 
+        n+= 1;
         MyOpenMesh::Point center_of_gravity(0, 0, 0);
         unsigned int valence = 0;
+        vertex_current = open_mesh->point(*v_it);
+        std::cout << vertex_current[0] << ";" << vertex_current[1] << ";" << vertex_current[2] <<std::endl;
 
         for(vv_it = open_mesh->vv_iter(*v_it); vv_it.is_valid(); ++vv_it){
             center_of_gravity += open_mesh->point(*vv_it);
             ++valence;
         }
 
-        center_of_gravity /= valence;
-        new_vertices.push_back(alpha*vertex_current+(1-alpha)*center_of_gravity);
+        center_of_gravity /= (float)valence;
+        new_vertices.push_back(alpha*vertex_current+(1.0f-alpha)*center_of_gravity);
 
     }
 
     // Change points
-    unsigned int index = 0;
+    // unsigned int index = 0;
+    std::vector<MyOpenMesh::Point>::iterator cog_it;
+    for(v_it=open_mesh->vertices_begin(), cog_it=new_vertices.begin(); v_it!=v_end; ++v_it, ++cog_it)
+        if (!open_mesh->is_boundary( *v_it ) )
+            open_mesh->set_point( *v_it, *cog_it );
 
-    for(v_it = open_mesh->vertices_begin(); v_it != v_end; ++v_it){
-        open_mesh->point(*v_it) = new_vertices[++index];
-    }
+    //for(unsigned int index = 0; index < new_vertices.size(); ++index){
+    //    open_mesh
+    //}
+    //for(v_it = open_mesh->vertices_sbegin(); v_it != v_end; ++v_it){
+    //    open_mesh->point(*v_it) = new_vertices[++index];
+    //}
 
-    obj_mesh->update();
+    //std::cout << n << std::endl;
+    this->obj_mesh->update();
 
 }
-
-/*std::vector<unsigned int> MyViewer::one_ring(unsigned int index, unsigned int nb_ring)
-{
-    // Clear rings
-
-    for(std::set<unsigned int> ring : this->rings)
-        ring.clear();
-    this->rings.clear();
-
-    // Indexes of ring
-    std::vector<unsigned int> ring;
-
-    // Ring 0 : vertex selected
-    ring.push_back(index);
-    this->rings.push_back(ring);
-    ring.clear();
-
-    // Select the good vertex
-    MyOpenMesh::VertexIter v_it = this->obj_mesh->vertices_sbegin() + index;
-
-
-    // First ring
-    for(MyOpenMesh::VertexVertexIter vv_it = this->obj_mesh->vv_iter(*v_it); vv_it.is_valid(); ++vv_it)
-        ring.push_back(vv_it.handle().idx());
-
-    this->rings.push_back(ring);
-    ring.clear();
-
-    // Others rings :
-    for(unsigned int id_ring = 1; id_ring < )
-}*/
-
-/*void MyViewer::deformation(MyOpenMesh* open_mesh, unsigned int index, unsigned int rings)
-{
-
-    // Clear rings
-
-    for(std::vector<unsigned int> ring : this->rings)
-        ring.clear();
-    this->rings.clear();
-
-    // Indexes of ring
-    std::vector<unsigned int> ring;
-
-    // Ring 0 : vertex selected
-    ring.push_back(index);
-    this->rings.push_back(ring);
-    ring.clear();
-
-    // Select the good vertex
-    MyOpenMesh::VertexIter v_it = open_mesh->vertices_sbegin() + index;
-
-
-    // First ring
-    for(MyOpenMesh::VertexVertexIter vv_it = open_mesh->vv_iter(*v_it); vv_it.is_valid(); ++vv_it)
-        ring.push_back(vv_it.handle().idx());
-
-    this->rings.push_back(ring);
-    ring.clear();
-
-    // Others rings :
-
-
-    
-
-    
-    
-
-
-}*/
-
-// void MyViewer::one_ring(MyOpenMesh::Vertex v){
-
-// }

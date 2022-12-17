@@ -1,3 +1,8 @@
+/**
+ * @author akhaten
+ * @file CurveMesh.hpp
+ */
+
 #ifndef CURVE_MESH_HPP
 #define CURVE_MESH_HPP
 

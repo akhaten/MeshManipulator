@@ -1,6 +1,7 @@
-//
-// Created by akhaten on 8/7/22.
-//
+/**
+ * @author akhaten
+ * @file Mesh.hpp
+ */
 
 #ifndef MESH_HPP
 #define MESH_HPP

@@ -1,3 +1,8 @@
+/**
+ * @author akhaten
+ * @file BernsteinPolynom.hpp
+ */
+
 #ifndef BERNSTEIN_POLYNOM_HPP
 #define BERNSTEIN_POLYNOM_HPP
 

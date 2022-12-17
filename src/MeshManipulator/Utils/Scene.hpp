@@ -1,7 +1,7 @@
-//
-// Created by akhaten on 9/1/22.
-//
-
+/**
+ * @author akhaten
+ * @file Scene.hpp
+ */
 #ifndef SCENE_HPP
 #define SCENE_HPP
 

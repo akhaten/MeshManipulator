@@ -22,7 +22,7 @@ Camera::Camera(glm::vec3 position, glm::vec3 target)
 
     // Default
     this->fov = glm::radians(45.0f);
-    this->near = 0.1f;
+    this->near = 0.01f;
     this->far = 100.0f;
 
 }

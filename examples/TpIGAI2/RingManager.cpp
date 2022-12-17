@@ -13,7 +13,7 @@ RingManager::RingManager(MyOpenMesh* mesh)
 RingManager::~RingManager() { }
 
 
-void RingManager::compute(unsigned int id_vertex, int nb_ring)
+void RingManager::compute(unsigned int id_vertex, unsigned int nb_ring)
 {
 
     this->nb_ring = nb_ring;
@@ -63,9 +63,10 @@ std::set<unsigned int> RingManager::ring_from_vertices(std::set<unsigned int> id
     for(unsigned int id_vertex : ids_vertices){
 
         // Select the good vertex
-        MyOpenMesh::VertexIter v_it = this->mesh->vertices_sbegin() + id_vertex;
+        MyOpenMesh::VertexIter v_it = this->mesh->vertices_begin() + id_vertex;
         for(MyOpenMesh::VertexVertexIter vv_it = this->mesh->vv_iter(*v_it); vv_it.is_valid(); ++vv_it){
             //vv_it->valence();
+            //this->mesh->vertex_handle(v_it->idx());
             ring.insert(vv_it.handle().idx());
         }
 

@@ -11,8 +11,10 @@
 #include <MeshManipulator/Window/Viewer.hpp>
 #include <MeshManipulator/Utils/Drawable.hpp>
 #include <MeshManipulator/Utils/Scene.hpp>
-
 #include <MeshManipulator/Mesh/ObjectMesh.hpp>
+
+#include "RingManager.hpp"
+
 
 
 
@@ -79,6 +81,7 @@ class MyViewer:
         // void moveSelector();
 
         ObjectMesh* obj_mesh;
+        RingManager* ring_manager;
 
 
         //std::vector<std::set<unsigned int>> rings;
@@ -86,7 +89,7 @@ class MyViewer:
 
         // std::set<unsigned int> one_ring(MyOpenMesh* mesh);
         void laplacian(ObjectMesh* obj_mesh, float alpha);
-        void deformation(MyOpenMesh* open_mesh, unsigned int index, unsigned int rings);
+        void deformation(ObjectMesh* obj_mesh, unsigned int index, unsigned int rings);
 
 
         

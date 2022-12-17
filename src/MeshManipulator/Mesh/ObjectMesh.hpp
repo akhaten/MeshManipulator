@@ -1,9 +1,10 @@
-//
-// Created by akhaten on 9/1/22.
-//
+/**
+ * @author akhaten
+ * @file ObjectMesh.hpp
+ */
 
-#ifndef SURFACE_MESH_HPP
-#define SURFACE_MESH_HPP
+#ifndef OBJECT_MESH_HPP
+#define OBJECT_MESH_HPP
 
 #include <vector>
 #include <glm/glm.hpp>

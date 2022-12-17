@@ -4,10 +4,10 @@
 
 #include "Drawable.hpp"
 
-Drawable::Drawable(ObjectMesh* mesh)
+Drawable::Drawable(OpenGLObject* object)
 {
 
-    this->mesh = mesh;
+    this->object = object;
     this->model = glm::mat4(1.0f);
 
 }
@@ -19,7 +19,7 @@ glm::mat4 Drawable::modelMatrix()
     return this->model;
 }
 
-ObjectMesh* Drawable::getMesh()
+OpenGLObject* Drawable::getOpenGLObject()
 {
-    return this->mesh;
+    return this->object;
 }

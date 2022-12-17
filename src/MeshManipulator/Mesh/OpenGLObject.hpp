@@ -16,10 +16,12 @@
 class OpenGLObject
 {
 
+    public:
+        virtual void draw();
+
     protected:
         std::vector<glm::vec3> opengl_vertices;
         std::vector<unsigned int> opengl_indices;
-        virtual void draw();
         void toOpenGL();
 
     private:

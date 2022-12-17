@@ -27,7 +27,7 @@ typedef OpenMesh::PolyMesh_ArrayKernelT<> MyOpenMesh;
 
 class ObjectMesh:
     public MyOpenMesh,
-    protected OpenGLObject
+    public OpenGLObject
 {
     
 public:

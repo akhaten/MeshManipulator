@@ -39,7 +39,7 @@ void Renderer::render(Drawable* drawable)
     this->shader->setMat4("view", this->viewer->viewMatrix());
     this->shader->setMat4("projection", this->viewer->projectionMatrix());
     this->shader->use();
-    drawable->getMesh()->draw();
+    drawable->getOpenGLObject()->draw();
 
 }
 

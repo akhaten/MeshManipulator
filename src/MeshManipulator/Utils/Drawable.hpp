@@ -20,18 +20,40 @@ class Drawable
 
     public:
 
-        Drawable(ObjectMesh* mesh);
+        /**
+         * Constrictor of Drawable
+         * @param object : object to draw
+         */
+        Drawable(OpenGLObject* object);
+
+        /**
+         * Destructor of Drawable
+         */
         ~Drawable();
 
+        /**
+         * Get model/transformation matrix
+         * @return model matrix
+         */
         glm::mat4 modelMatrix();
 
-        ObjectMesh* getMesh();
+        /**
+         * Get Opengl object
+         * @return opengl object
+         */
+        OpenGLObject* getOpenGLObject();
 
-        
-        
 
     private:
-        ObjectMesh* mesh;
+
+        /**
+         * OpenGl object to display
+         */
+        OpenGLObject* object;
+
+        /**
+         * Transformation matrix
+         */
         glm::mat4 model;
     
 

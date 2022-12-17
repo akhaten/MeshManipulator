@@ -1,10 +1,10 @@
 /**
  * @author akhaten
- * @file Mesh.hpp
+ * @file OpenGLObject.hpp
  */
 
-#ifndef MESH_HPP
-#define MESH_HPP
+#ifndef OPENGL_OBJECT_HPP
+#define OPENGL_OBJECT_HPP
 
 #include <GL/glew.h>
 
@@ -16,17 +16,17 @@
 class OpenGLObject
 {
 
-public:
-    virtual void draw();
+    public:
+        virtual void draw();
 
-protected:
-    std::vector<glm::vec3> opengl_vertices;
-    std::vector<unsigned int> opengl_indices;
-    GLuint vao;
-    GLuint vbo;
-    GLuint ebo;
-    void loadDatas();
+    protected:
+        std::vector<glm::vec3> opengl_vertices;
+        std::vector<unsigned int> opengl_indices;
+        GLuint vao;
+        GLuint vbo;
+        GLuint ebo;
+        void loadDatas();
 
 };
 
-#endif // MESH_HPP
+#endif // OPENGL_OBJECT_HPP

@@ -37,7 +37,7 @@ void MyViewer::setScene(Scene* scene)
 void MyViewer::setObjectMesh(ObjectMesh* obj_mesh)
 {
     this->obj_mesh = obj_mesh;
-    this->ring_manager = new RingManager(this->obj_mesh->getMyOpenMesh());
+    this->ring_manager = new RingManager(this->obj_mesh);
 }
 
 /**
@@ -171,9 +171,9 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
 
     if(key == GLFW_KEY_D && action == GLFW_PRESS)
     {
-        std::cout << "Before Deformation" << std::endl;
+        // std::cout << "Before Deformation" << std::endl;
         this->deformation(this->obj_mesh, 500, 10);
-        std::cout << "After Deformation" << std::endl;
+        // std::cout << "After Deformation" << std::endl;
     }
 
 
@@ -216,11 +216,11 @@ void MyViewer::processMouse(GLFWwindow *window, double xpos, double ypos)
 void MyViewer::deformation(ObjectMesh* obj_mesh, unsigned int id_vertex, unsigned int nb_rings)
 {
 
-    MyOpenMesh* open_mesh = this->obj_mesh->getMyOpenMesh();
+    //MyOpenMesh* open_mesh = this->obj_mesh;
 
     this->ring_manager->compute(id_vertex, nb_rings);
 
-    MyOpenMesh::VertexIter v_it = open_mesh->vertices_sbegin();
+    MyOpenMesh::VertexIter v_it = this->obj_mesh->vertices_sbegin();
 
     MyOpenMesh::Point translation = MyOpenMesh::Point(0.0f, 0.01f, 0.0f);
 
@@ -229,8 +229,8 @@ void MyViewer::deformation(ObjectMesh* obj_mesh, unsigned int id_vertex, unsigne
         float fun_transfert = (1.0f - c*c)*(1.0f - c*c);
         std::set<unsigned int> ring = this->ring_manager->get(id_ring);
         for(unsigned int vertex : ring){
-            MyOpenMesh::VertexHandle handle = open_mesh->vertex_handle(vertex);
-            open_mesh->point(handle) += fun_transfert * translation;
+            MyOpenMesh::VertexHandle handle = this->obj_mesh->vertex_handle(vertex);
+            this->obj_mesh->point(handle) += fun_transfert * translation;
         }
 
     }
@@ -242,26 +242,26 @@ void MyViewer::deformation(ObjectMesh* obj_mesh, unsigned int id_vertex, unsigne
 void MyViewer::laplacian(ObjectMesh* obj_mesh, float alpha)
 {
 
-    MyOpenMesh* open_mesh = this->obj_mesh->getMyOpenMesh();
+    //MyOpenMesh* open_mesh = this->obj_mesh->getMyOpenMesh();
 
     std::vector<MyOpenMesh::Point> new_vertices;
 
     MyOpenMesh::VertexIter v_it;
-    MyOpenMesh::VertexIter v_end = open_mesh->vertices_end();
+    MyOpenMesh::VertexIter v_end = this->obj_mesh->vertices_end();
     MyOpenMesh::Point vertex_current;
     MyOpenMesh::VertexVertexIter vv_it;
 
     unsigned int n = 0;
-    for(v_it = open_mesh->vertices_sbegin(); v_it != v_end; ++v_it){
+    for(v_it = this->obj_mesh->vertices_sbegin(); v_it != v_end; ++v_it){
 
         n+= 1;
         MyOpenMesh::Point center_of_gravity(0, 0, 0);
         unsigned int valence = 0;
-        vertex_current = open_mesh->point(*v_it);
-        std::cout << vertex_current[0] << ";" << vertex_current[1] << ";" << vertex_current[2] <<std::endl;
+        vertex_current = this->obj_mesh->point(*v_it);
+        // std::cout << vertex_current[0] << ";" << vertex_current[1] << ";" << vertex_current[2] <<std::endl;
 
-        for(vv_it = open_mesh->vv_iter(*v_it); vv_it.is_valid(); ++vv_it){
-            center_of_gravity += open_mesh->point(*vv_it);
+        for(vv_it = this->obj_mesh->vv_iter(*v_it); vv_it.is_valid(); ++vv_it){
+            center_of_gravity += this->obj_mesh->point(*vv_it);
             ++valence;
         }
 
@@ -273,9 +273,9 @@ void MyViewer::laplacian(ObjectMesh* obj_mesh, float alpha)
     // Change points
     // unsigned int index = 0;
     std::vector<MyOpenMesh::Point>::iterator cog_it;
-    for(v_it=open_mesh->vertices_begin(), cog_it=new_vertices.begin(); v_it!=v_end; ++v_it, ++cog_it)
-        if (!open_mesh->is_boundary( *v_it ) )
-            open_mesh->set_point( *v_it, *cog_it );
+    for(v_it=this->obj_mesh->vertices_begin(), cog_it=new_vertices.begin(); v_it!=v_end; ++v_it, ++cog_it)
+        if (!this->obj_mesh->is_boundary( *v_it ) )
+            this->obj_mesh->set_point( *v_it, *cog_it );
 
     //for(unsigned int index = 0; index < new_vertices.size(); ++index){
     //    open_mesh

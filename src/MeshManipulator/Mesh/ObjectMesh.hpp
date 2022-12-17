@@ -26,24 +26,22 @@ typedef OpenMesh::PolyMesh_ArrayKernelT<> MyOpenMesh;
 #include "OpenGLObject.hpp"
 
 class ObjectMesh:
+    public MyOpenMesh,
     public OpenGLObject
 {
     
 public:
 
-    // ObjectMesh(std::vector<glm::vec3> opengl_vertices, std::vector<unsigned int> opengl_indices);
+    ObjectMesh();
     ObjectMesh(char* pathfile);
-    ObjectMesh(MyOpenMesh* my_mesh);
     ~ObjectMesh();
 
     void draw() override;
 
-    MyOpenMesh* getMyOpenMesh();
     void update();
     
 
 private:
-    MyOpenMesh* my_mesh;
     void toOpenGL();
 
 };

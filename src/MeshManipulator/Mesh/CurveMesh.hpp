@@ -9,7 +9,7 @@
 #include "OpenGLObject.hpp"
 
 class CurveMesh:
-    public OpenGLObject
+    protected OpenGLObject
 {
 public:
     CurveMesh(std::vector<glm::vec3> vertices);

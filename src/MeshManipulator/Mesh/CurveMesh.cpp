@@ -6,7 +6,7 @@ CurveMesh::CurveMesh(
     this->opengl_vertices = vertices;
     for(unsigned int index = 0; index < vertices.size(); ++index)
         this->opengl_indices.push_back(index);
-    this->loadDatas();
+    this->toOpenGL();
 }
 
 void CurveMesh::draw()

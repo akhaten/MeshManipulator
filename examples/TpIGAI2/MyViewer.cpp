@@ -220,16 +220,16 @@ void MyViewer::deformation(ObjectMesh* obj_mesh, unsigned int id_vertex, unsigne
 
     this->ring_manager->compute(id_vertex, nb_rings);
 
-    MyOpenMesh::VertexIter v_it = this->obj_mesh->vertices_sbegin();
+    ObjectMesh::VertexIter v_it = this->obj_mesh->vertices_sbegin();
 
-    MyOpenMesh::Point translation = MyOpenMesh::Point(0.0f, 0.01f, 0.0f);
+    ObjectMesh::Point translation = ObjectMesh::Point(0.0f, 0.01f, 0.0f);
 
     for(unsigned int id_ring = 0; id_ring < nb_rings; ++id_ring){
         float c = (float)id_ring/(float)(nb_rings-1);
         float fun_transfert = (1.0f - c*c)*(1.0f - c*c);
         std::set<unsigned int> ring = this->ring_manager->get(id_ring);
         for(unsigned int vertex : ring){
-            MyOpenMesh::VertexHandle handle = this->obj_mesh->vertex_handle(vertex);
+            ObjectMesh::VertexHandle handle = this->obj_mesh->vertex_handle(vertex);
             this->obj_mesh->point(handle) += fun_transfert * translation;
         }
 
@@ -244,18 +244,16 @@ void MyViewer::laplacian(ObjectMesh* obj_mesh, float alpha)
 
     //MyOpenMesh* open_mesh = this->obj_mesh->getMyOpenMesh();
 
-    std::vector<MyOpenMesh::Point> new_vertices;
+    std::vector<ObjectMesh::Point> new_vertices;
 
-    MyOpenMesh::VertexIter v_it;
-    MyOpenMesh::VertexIter v_end = this->obj_mesh->vertices_end();
-    MyOpenMesh::Point vertex_current;
-    MyOpenMesh::VertexVertexIter vv_it;
+    ObjectMesh::VertexIter v_it;
+    ObjectMesh::VertexIter v_end = this->obj_mesh->vertices_end();
+    ObjectMesh::Point vertex_current;
+    ObjectMesh::VertexVertexIter vv_it;
 
-    unsigned int n = 0;
     for(v_it = this->obj_mesh->vertices_sbegin(); v_it != v_end; ++v_it){
 
-        n+= 1;
-        MyOpenMesh::Point center_of_gravity(0, 0, 0);
+        ObjectMesh::Point center_of_gravity(0, 0, 0);
         unsigned int valence = 0;
         vertex_current = this->obj_mesh->point(*v_it);
         // std::cout << vertex_current[0] << ";" << vertex_current[1] << ";" << vertex_current[2] <<std::endl;
@@ -272,7 +270,8 @@ void MyViewer::laplacian(ObjectMesh* obj_mesh, float alpha)
 
     // Change points
     // unsigned int index = 0;
-    std::vector<MyOpenMesh::Point>::iterator cog_it;
+
+    std::vector<ObjectMesh::Point>::iterator cog_it;
     for(v_it=this->obj_mesh->vertices_begin(), cog_it=new_vertices.begin(); v_it!=v_end; ++v_it, ++cog_it)
         if (!this->obj_mesh->is_boundary( *v_it ) )
             this->obj_mesh->set_point( *v_it, *cog_it );

@@ -5,7 +5,7 @@
 #include "OpenGLObject.hpp"
 
 
-void OpenGLObject::loadDatas()
+void OpenGLObject::toOpenGL()
 {
 
     glGenVertexArrays(1, &this->vao);

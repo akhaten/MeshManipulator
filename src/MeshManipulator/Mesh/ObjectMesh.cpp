@@ -39,7 +39,8 @@ void ObjectMesh::toOpenGL()
             this->opengl_indices.push_back(pt.idx());
     }
 
-    this->loadDatas();
+    OpenGLObject::toOpenGL();
+
 }
 
 

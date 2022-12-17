@@ -35,8 +35,8 @@ set(PATH_WINDOW ${PATH_MESH_MANIPULATOR}/Window)
 
 
 set(MESH
-  ${PATH_MESH}/Mesh.hpp
-  ${PATH_MESH}/Mesh.cpp
+  ${PATH_MESH}/OpenGLObject.hpp
+  ${PATH_MESH}/OpenGLObject.cpp
   ${PATH_MESH}/ObjectMesh.hpp
   ${PATH_MESH}/ObjectMesh.cpp
   ${PATH_MESH}/CurveMesh.hpp

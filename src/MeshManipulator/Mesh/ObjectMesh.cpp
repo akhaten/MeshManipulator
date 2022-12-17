@@ -32,19 +32,19 @@ void ObjectMesh::update()
 void ObjectMesh::toOpenGL()
 {
 
-    this->vertices.clear();
-    this->indices.clear();
+    this->opengl_vertices.clear();
+    this->opengl_indices.clear();
 
     for(auto point : this->my_mesh->vertices()){
         auto p = this->my_mesh->point(point);
-        this->vertices.push_back(glm::vec3(p[0], p[1], p[2]));
-        // this->vertices.push_back(p);
+        this->opengl_vertices.push_back(glm::vec3(p[0], p[1], p[2]));
+        // this->opengl_vertices.push_back(p);
     }
 
     std::vector<unsigned int> indices;
     for(auto face : this->my_mesh->faces()){
         for(auto pt : face.vertices())
-            this->indices.push_back(pt.idx());
+            this->opengl_indices.push_back(pt.idx());
     }
 
     this->loadDatas();
@@ -55,10 +55,10 @@ ObjectMesh::~ObjectMesh() {}
 
 void ObjectMesh::draw()
 {
-    Mesh::draw();
+    OpenGLObject::draw();
     glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
-    glDrawElements(GL_TRIANGLES, this->indices.size(), GL_UNSIGNED_INT, (void*)0);
-    //glDrawElements(GL_LINE_STRIP, this->indices.size(), GL_UNSIGNED_INT, (void*)0);
+    glDrawElements(GL_TRIANGLES, this->opengl_indices.size(), GL_UNSIGNED_INT, (void*)0);
+    //glDrawElements(GL_LINE_STRIP, this->opengl_indices.size(), GL_UNSIGNED_INT, (void*)0);
 }
 
 MyOpenMesh* ObjectMesh::getMyOpenMesh()

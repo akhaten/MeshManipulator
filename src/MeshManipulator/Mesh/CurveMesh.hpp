@@ -6,10 +6,10 @@
 #ifndef CURVE_MESH_HPP
 #define CURVE_MESH_HPP
 
-#include "Mesh.hpp"
+#include "OpenGLObject.hpp"
 
 class CurveMesh:
-    public Mesh
+    public OpenGLObject
 {
 public:
     CurveMesh(std::vector<glm::vec3> vertices);

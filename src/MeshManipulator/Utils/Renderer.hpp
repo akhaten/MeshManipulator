@@ -8,7 +8,7 @@
 
 #include "MeshManipulator/Utils/Shader.hpp"
 #include "MeshManipulator/Window/Viewer.hpp"
-#include "MeshManipulator/Mesh/Mesh.hpp"
+#include "MeshManipulator/Mesh/OpenGLObject.hpp"
 #include "MeshManipulator/Utils/Drawable.hpp"
 
 

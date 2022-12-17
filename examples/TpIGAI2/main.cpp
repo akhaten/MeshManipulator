@@ -16,7 +16,7 @@
 #include <MeshManipulator/Utils/Shader.hpp>
 #include <MeshManipulator/Utils/Camera.hpp>
 
-#include <MeshManipulator/Mesh/Mesh.hpp>
+#include "OpenGLObject.hpp"
 #include <MeshManipulator/Mesh/CurveMesh.hpp>
 #include <MeshManipulator/Mesh/ObjectMesh.hpp>
 #include <MeshManipulator/Geometry/Curve/BezierCurve.hpp>
@@ -72,7 +72,7 @@ typedef OpenMesh::PolyMesh_ArrayKernelT<>  MyMesh;
 int main()
 {
   MyMesh mesh;
-  // generate vertices
+  // generate opengl_vertices
   MyMesh::VertexHandle vhandle[8];
   vhandle[0] = mesh.add_vertex(MyMesh::Point(-1, -1,  1));
   vhandle[1] = mesh.add_vertex(MyMesh::Point( 1, -1,  1));
@@ -127,7 +127,7 @@ int main()
     std::cout << v_it.handle().idx() << std::endl;
   }
   
-  // for(auto v : mesh.vertices())
+  // for(auto v : mesh.opengl_vertices())
   //   std::cout << v.idx() << std::endl;
 
 

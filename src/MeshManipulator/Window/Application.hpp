@@ -12,7 +12,7 @@
 #include <GLFW/glfw3.h>
 #include <vector>
 
-#include "MeshManipulator/Mesh/Mesh.hpp"
+#include "MeshManipulator/Mesh/OpenGLObject.hpp"
 #include "MeshManipulator/Utils/Scene.hpp"
 #include "MeshManipulator/Window/Viewer.hpp"
 

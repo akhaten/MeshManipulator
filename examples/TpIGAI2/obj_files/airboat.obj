@@ -5801,11 +5801,11 @@ v -5.867057 1.636714 1.358798
 v -5.867057 1.837016 1.213270
 v -6.048903 1.856823 1.202985
 v -6.028662 1.639770 1.364798
-# 5797 vertices
+# 5797 opengl_vertices
 
 # 0 vertex parms
 
-# 0 texture vertices
+# 0 texture opengl_vertices
 
 # 0 normals
 

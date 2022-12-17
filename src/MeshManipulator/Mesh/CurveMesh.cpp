@@ -3,14 +3,14 @@
 CurveMesh::CurveMesh(
     std::vector<glm::vec3> vertices
 ){
-    this->vertices = vertices;
+    this->opengl_vertices = vertices;
     for(unsigned int index = 0; index < vertices.size(); ++index)
-        this->indices.push_back(index);
+        this->opengl_indices.push_back(index);
     this->loadDatas();
 }
 
 void CurveMesh::draw()
 {
-    Mesh::draw();
-    glDrawElements(GL_LINE_STRIP, this->indices.size(), GL_UNSIGNED_INT, (void*)0);
+    OpenGLObject::draw();
+    glDrawElements(GL_LINE_STRIP, this->opengl_indices.size(), GL_UNSIGNED_INT, (void*)0);
 }

@@ -8,7 +8,7 @@ Pour chaque vertex, on prned le voisinage (anneau d'ordre 1).
 On calcule le centroide ie on fait la moyenne des points dans l'anneau.
 Le nouveau vertex est Vi' = alpha * Vi + (1 - alpha) * Ci  avec alpha dans ]0, 0.5[.
 
-![laplacian](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/videos/laplacian_smoothing.mp4)
+![laplacian](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/videos/laplacian_smoothing.gif)
 
 
 ## Séance 2 : Obtenir n anneaux

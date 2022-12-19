@@ -4,14 +4,20 @@
 
 ## Séance 1 : Lissage Laplacien
 
-Pour chaque vertex, on prned le voisinage (anneau d'ordre 1).
-On calcule le centroide ie on fait la moyenne des points dans l'anneau.
-Le nouveau vertex est Vi' = alpha * Vi + (1 - alpha) * Ci  avec alpha dans ]0, 0.5[.
+La fonctionnalité a été implémentée dans
+![RingManager.hpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/MyViewer.hpp)
 
-![laplacian](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/videos/laplacian_smoothing.gif)
+Pour chaque vertex, on prned le voisinage (anneau d'ordre 1).
+On calcule le centroid ie on fait la moyenne des points dans l'anneau.
+Le nouveau vertex est V_i' = alpha * V_i + (1 - alpha) * centroid_i  avec alpha dans ]0, 0.5[.
+
+![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/images/laplacian_smoothing.gif)
 
 
 ## Séance 2 : Obtenir n anneaux
+
+La recherche d'anneaux a été implémentée dans
+![RingManager.hpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/RingManager.hpp)
 
 Pour chaque vertex, on prends l'anneau d'ordre 1 du vertex courant.
 On enregistre ses vertex dans un ensemble.
@@ -24,6 +30,9 @@ On a donc notre anneau d'ordre n.
 
 ## Séance 3 : Utiliser les anneaux pour appliquer une déformation.
 
+Les fonctionnalités de cette partie ont été implémentées dans 
+![RingManager.hpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/RingManager.hpp)
+
 ### Déformation basique avec une fonction
 
 Cette méthode ne nécessite pas de résoudre le système avec la matrice Laplacienne (Laplacian Matrix).
@@ -31,7 +40,7 @@ Grossièrement, l'algorithme (en pseudo code) appliqué pour une telle déformat
 
 ```
 Hypothèse:
-    - S : ensemble contenant les vertex contenu dans les anneaux
+    - V : ensemble contenant les vertex contenue dans les anneaux
     - u : vecteur dans lequel on translate nos points (ie déformation locale du maillage)
     - f : une fonction tel que
             * f(0) = 1
@@ -45,9 +54,9 @@ Pour chaque sommet v dans V:
     v = v + alpha * u
 ```
 
-![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/videos/deformation_function_following_laplacian_smooth.gif)
+![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/images/deformation_function_following_laplacian_smooth.gif)
 
-![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/videos/deformation_function.png)
+![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/images/deformation_function.png)
 
 ### Déformation avec la matrice laplacienne (Laplacian Matrix)
 
@@ -58,11 +67,11 @@ La méthode étant basé sur les poids que l'on utilise pour résoubre notre sys
 
 - l'inverse de la valance
 
-![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/videos/deformation_valence_following_laplacian_smooth.png)
+![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/images/deformation_valence_following_laplacian_smooth.png)
 
 - la somme des cosinus à un coefficient près des angles opposés aux half-edges 
 
-![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/videos/deformation_angle_following_laplacian_smooth.png)
+![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/images/deformation_angle_following_laplacian_smooth.png)
 
 Dans les deux cas, on résout un système de tel sort Lx = B avec:
 - L : la matrice Laplacienne avec les conditions de bord

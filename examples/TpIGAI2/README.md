@@ -47,6 +47,8 @@ Pour chaque sommet v dans V:
 
 ![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/videos/deformation_function_following_laplacian_smooth.gif)
 
+![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/videos/deformation_function.png)
+
 ### Déformation avec la matrice laplacienne (Laplacian Matrix)
 
 
@@ -56,9 +58,11 @@ La méthode étant basé sur les poids que l'on utilise pour résoubre notre sys
 
 - l'inverse de la valance
 
+![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/videos/deformation_valence_following_laplacian_smooth.png)
 
 - la somme des cosinus à un coefficient près des angles opposés aux half-edges 
 
+![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/videos/deformation_angle_following_laplacian_smooth.png)
 
 Dans les deux cas, on résout un système de tel sort Lx = B avec:
 - L : la matrice Laplacienne avec les conditions de bord

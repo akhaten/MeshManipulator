@@ -35,9 +35,8 @@ make
 
 ```
 
-### Compilation
+### Exemples :
 
-Exemples :
 - [TP IGAI](https://github.com/akhaten/MeshManipulator/tree/main/examples/TpIGAI2)
 
 

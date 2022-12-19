@@ -24,7 +24,9 @@ nix-shell shell.nix
 
 ### Other distribution
 
-You must clone and build the dependencies.
+You must clone, build and install the dependencies.
+
+### Compilation
 
 ```
 cd MeshManipulator

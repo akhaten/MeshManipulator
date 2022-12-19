@@ -79,7 +79,7 @@ Dans les deux cas, on résout un système de tel sort Lx = B avec:
 - B : le vecteur contenant que des 0 sauf à la ligne correspondant au vertex au centre des anneaux
 
 
-## Keymaping
+## Key Mapping
 
 - Left Shift + Mouve mouse : Bouge la caméra autour d'un point cible
 - 1 : Applique un lissage laplacien

@@ -28,7 +28,7 @@ puis on mémorise ses vertex sans redondance. On veille également à éliminer
 les vertex qui pourraient se trouve dans l'anneau n-1.
 On a donc notre anneau d'ordre n.
 
-## Séance 3 : Utiliser les anneaux pour appliquer une déformation.
+## Séance 3 : Utiliser les anneaux pour appliquer une déformation
 
 Les fonctionnalités de cette partie ont été implémentées dans 
 ![RingManager.hpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/RingManager.hpp)

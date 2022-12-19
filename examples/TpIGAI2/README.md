@@ -40,7 +40,7 @@ Grossièrement, l'algorithme (en pseudo code) appliqué pour une telle déformat
 
 ```
 Hypothèse:
-    - V : ensemble contenant les vertex contenue dans les anneaux
+    - V : ensemble contenant les vertex contenus dans les anneaux
     - u : vecteur dans lequel on translate nos points (ie déformation locale du maillage)
     - f : une fonction tel que
             * f(0) = 1

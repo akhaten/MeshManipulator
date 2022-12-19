@@ -63,7 +63,7 @@ Pour chaque sommet v dans V:
 
 Deux variantes ont été implémentées.
 
-La méthode étant basé sur les poids que l'on utilise pour résoubre notre système, nous en utilisons deux sortes:
+La méthode étant basée sur les poids que l'on utilise pour résoubre notre système, nous en utilisons deux sortes:
 
 - l'inverse de la valance
 

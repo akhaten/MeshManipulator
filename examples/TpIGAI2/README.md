@@ -74,7 +74,7 @@ La méthode étant basée sur les poids que l'on utilise pour résoubre notre sy
 ![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/images/deformation_angle_following_laplacian_smooth.png)
 
 Dans les deux cas, on résout un système de tel sort Lx = B avec:
-- L : la matrice Laplacienne avec les conditions de bord
+- L : la matrice laplacienne avec les conditions de bord
 - x : les coefficients recherchés pour la déformation
 - B : le vecteur contenant que des 0 sauf à la ligne correspondant au vertex au centre des anneaux
 

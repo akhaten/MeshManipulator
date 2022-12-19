@@ -89,7 +89,7 @@ class MyViewer:
 
         // std::set<unsigned int> one_ring(MyOpenMesh* mesh);
         void laplacian(ObjectMesh* obj_mesh, float alpha);
-        void deformation(ObjectMesh* obj_mesh, unsigned int index, unsigned int rings);
+
 
 
         

@@ -5,7 +5,7 @@
 ## Séance 1 : Lissage Laplacien
 
 La fonctionnalité a été implémentée dans
-![RingManager.hpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/MyViewer.hpp)
+![RingManager.cpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/MyViewer.cpp)
 
 Pour chaque vertex, on prned le voisinage (anneau d'ordre 1).
 On calcule le centroid ie on fait la moyenne des points dans l'anneau.
@@ -17,7 +17,7 @@ Le nouveau vertex est V_i' = alpha * V_i + (1 - alpha) * centroid_i  avec alpha 
 ## Séance 2 : Obtenir n anneaux
 
 La recherche d'anneaux a été implémentée dans
-![RingManager.hpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/RingManager.hpp)
+![RingManager.cpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/RingManager.cpp)
 
 Pour chaque vertex, on prends l'anneau d'ordre 1 du vertex courant.
 On enregistre ses vertex dans un ensemble.
@@ -31,7 +31,7 @@ On a donc notre anneau d'ordre n.
 ## Séance 3 : Utiliser les anneaux pour appliquer une déformation
 
 Les fonctionnalités de cette partie ont été implémentées dans 
-![RingManager.hpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/RingManager.hpp)
+![RingManager.cpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/RingManager.cpp)
 
 ### Déformation basique avec une fonction
 
@@ -79,3 +79,12 @@ Dans les deux cas, on résout un système de tel sort Lx = B avec:
 - B : le vecteur contenant que des 0 sauf à la ligne correspondant au vertex au centre des anneaux
 
 
+## Keymaping
+
+- Left Shift + Mouve mouse : Bouge la caméra autour d'un point cible
+- 1 : Applique un lissage laplacien
+- 2 : Deformation avec une fonction (f(x) = (1-x²)²)
+- 3 : Déformation en résolvant la matrice laplacienne et avec comme poids l'inverse de la somme des cosinus des angles opposés aux half-edges.
+- 4 : Déformation en résolvant la matrice laplacienne et avec comme poids l'inverse de la valence
+- Up (flèche vers le haut) : Avance la caméra
+- Down (flèche vers le bas) : Recule la caméra

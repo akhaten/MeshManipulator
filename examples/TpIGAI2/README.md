@@ -45,6 +45,8 @@ Pour chaque sommet v dans V:
     v = v + alpha * u
 ```
 
+![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/videos/deformation_function_following_laplacian_smooth.gif)
+
 ### Déformation avec la matrice laplacienne (Laplacian Matrix)
 
 

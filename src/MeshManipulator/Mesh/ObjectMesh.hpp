@@ -9,7 +9,8 @@
 #include <vector>
 #include <glm/glm.hpp>
 
-#include <OpenMesh/Core/Mesh/PolyMesh_ArrayKernelT.hh>
+//#include <OpenMesh/Core/Mesh/PolyMesh_ArrayKernelT.hh>
+#include <OpenMesh/Core/Mesh/TriMesh_ArrayKernelT.hh>
 
 // struct MyTrait:
 //     OpenMesh::DefaultTraits
@@ -20,7 +21,8 @@
 
 // using MyOpenMesh = OpenMesh::PolyMesh_ArrayKernelT<MyTrait>;
 // typedef OpenMesh::PolyMesh_ArrayKernelT<MyTrait> MyOpenMesh;
-typedef OpenMesh::PolyMesh_ArrayKernelT<> MyOpenMesh;
+// typedef OpenMesh::PolyMesh_ArrayKernelT<> MyOpenMesh;
+typedef OpenMesh::TriMesh_ArrayKernelT<> MyOpenMesh;
 
 
 #include "OpenGLObject.hpp"

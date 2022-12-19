@@ -1,6 +1,7 @@
 
 #include <glm/glm.hpp>
 #include <glm/gtx/rotate_vector.hpp>
+#include <OpenMesh/Core/Utils/PropertyManager.hh>
 
 #include "MyViewer.hpp"
 
@@ -216,7 +217,24 @@ void MyViewer::processMouse(GLFWwindow *window, double xpos, double ypos)
 void MyViewer::deformation(ObjectMesh* obj_mesh, unsigned int id_vertex, unsigned int nb_rings)
 {
 
-    //MyOpenMesh* open_mesh = this->obj_mesh;
+    ObjectMesh::Point translation = ObjectMesh::Point(0.0f, 0.01f, 0.0f);
+
+    this->ring_manager->compute(id_vertex, nb_rings);
+    //this->ring_manager->laplacian_deformation_valence();
+    this->ring_manager->laplacian_deformation_angle();
+    for(ObjectMesh::VertexHandle vh : this->ring_manager->vertex_handles){
+        this->obj_mesh->point(vh) += this->ring_manager->deformation[vh];
+    }
+
+    /*for(ObjectMesh::VertexHandle vh : this->ring_manager->vertex_handles){
+        unsigned int id_ring = this->ring_manager->no_ring[vh];
+        std::cout << id_ring << std::endl;
+        float c = (float)id_ring/(float)(nb_rings);
+        float fun_transfert = (1.0f - c*c)*(1.0f - c*c);
+        this->obj_mesh->point(vh) += fun_transfert * translation;
+    }*/
+
+    /*//MyOpenMesh* open_mesh = this->obj_mesh;
 
     this->ring_manager->compute(id_vertex, nb_rings);
 
@@ -233,7 +251,7 @@ void MyViewer::deformation(ObjectMesh* obj_mesh, unsigned int id_vertex, unsigne
             this->obj_mesh->point(handle) += fun_transfert * translation;
         }
 
-    }
+    }*/
 
     this->obj_mesh->update();
 
@@ -242,48 +260,27 @@ void MyViewer::deformation(ObjectMesh* obj_mesh, unsigned int id_vertex, unsigne
 void MyViewer::laplacian(ObjectMesh* obj_mesh, float alpha)
 {
 
-    //MyOpenMesh* open_mesh = this->obj_mesh->getMyOpenMesh();
+    auto center_of_gravity = OpenMesh::VProp<ObjectMesh::Point>(*(this->obj_mesh));
 
-    std::vector<ObjectMesh::Point> new_vertices;
+    for(auto vh : this->obj_mesh->vertices()){
 
-    ObjectMesh::VertexIter v_it;
-    ObjectMesh::VertexIter v_end = this->obj_mesh->vertices_end();
-    ObjectMesh::Point vertex_current;
-    ObjectMesh::VertexVertexIter vv_it;
+        center_of_gravity[vh] = ObjectMesh::Point(0.0f, 0.0f, 0.0f);
+        int valence = 0;
 
-    for(v_it = this->obj_mesh->vertices_sbegin(); v_it != v_end; ++v_it){
-
-        ObjectMesh::Point center_of_gravity(0, 0, 0);
-        unsigned int valence = 0;
-        vertex_current = this->obj_mesh->point(*v_it);
-        // std::cout << vertex_current[0] << ";" << vertex_current[1] << ";" << vertex_current[2] <<std::endl;
-
-        for(vv_it = this->obj_mesh->vv_iter(*v_it); vv_it.is_valid(); ++vv_it){
-            center_of_gravity += this->obj_mesh->point(*vv_it);
+        // Iterate over all 1-ring vertices around vh
+        for (auto vvh : this->obj_mesh->vv_range(vh)) {
+            center_of_gravity[vh] += this->obj_mesh->point(vvh);
             ++valence;
         }
 
-        center_of_gravity /= (float)valence;
-        new_vertices.push_back(alpha*vertex_current+(1.0f-alpha)*center_of_gravity);
-
+        center_of_gravity[vh] /= valence;
     }
 
-    // Change points
-    // unsigned int index = 0;
+    for (const auto vh : this->obj_mesh->vertices()) {
+        this->obj_mesh->point(vh) = center_of_gravity[vh];
+    }
 
-    std::vector<ObjectMesh::Point>::iterator cog_it;
-    for(v_it=this->obj_mesh->vertices_begin(), cog_it=new_vertices.begin(); v_it!=v_end; ++v_it, ++cog_it)
-        if (!this->obj_mesh->is_boundary( *v_it ) )
-            this->obj_mesh->set_point( *v_it, *cog_it );
-
-    //for(unsigned int index = 0; index < new_vertices.size(); ++index){
-    //    open_mesh
-    //}
-    //for(v_it = open_mesh->vertices_sbegin(); v_it != v_end; ++v_it){
-    //    open_mesh->point(*v_it) = new_vertices[++index];
-    //}
-
-    //std::cout << n << std::endl;
     this->obj_mesh->update();
+
 
 }

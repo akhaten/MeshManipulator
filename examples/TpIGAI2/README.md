@@ -75,7 +75,7 @@ La méthode étant basé sur les poids que l'on utilise pour résoubre notre sys
 
 Dans les deux cas, on résout un système de tel sort Lx = B avec:
 - L : la matrice Laplacienne avec les conditions de bord
-- x : les coefficients rechechés pour la déformation
+- x : les coefficients recherchés pour la déformation
 - B : le vecteur contenant que des 0 sauf à la ligne correspondant au vertex au centre des anneaux
 
 

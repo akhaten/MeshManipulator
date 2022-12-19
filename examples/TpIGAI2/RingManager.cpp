@@ -56,45 +56,6 @@ void RingManager::compute(unsigned int id_vertex, unsigned int nb_ring)
 
     }
 
-
-    /*this->nb_ring = nb_ring;
-    // Clear rings
-    this->clear();
-
-    // Intitialization
-    this->id_vertex = id_vertex;
-    std::set<unsigned int> ring;
-    ring.insert(this->id_vertex);
-    this->vertices_rings.push_back(ring);
-    ring.clear();
-
-    for(unsigned int id_ring = 0; id_ring < nb_ring; ++id_ring){
-        // Clear ring
-        ring.clear();
-        // Take previous ring
-        std::set<unsigned int> previous_ring = this->vertices_rings[id_ring];
-        // Compute on ring for each vertex in previous ring
-        // But there are vertex in previous ring which are in ring
-        auto pseudo_ring = this->ring_from_vertices(previous_ring);
-        // So delete them
-        std::set_difference(
-            pseudo_ring.begin(),
-            pseudo_ring.end(),
-            previous_ring.begin(),
-            previous_ring.end(),
-            std::inserter(ring, ring.begin())
-        );
-
-        this->lenght += ring.size();
-        // Add the ring
-        this->vertices_rings.push_back(ring);
-    }*/
-
-}
-
-std::set<unsigned int> RingManager::get(unsigned int id_ring)
-{
-    return this->vertices_rings[id_ring];
 }
 
 std::set<ObjectMesh::VertexHandle> RingManager::ring_from_vertices(
@@ -193,9 +154,6 @@ std::set<ObjectMesh::VertexHandle> RingManager::ring_from_vertices(
 
 void RingManager::clear()
 {
-    /*this->vertices_rings.clear();
-    this->nb_ring = 0;
-    this->lenght = 0;*/
 
     this->vertex_handles.clear();
 
@@ -211,8 +169,13 @@ void RingManager::clear()
 
 }
 
-void RingManager::laplacian_deformation_valence()
-{
+void RingManager::deformation_laplacian_valence(
+        unsigned int id_vertex,
+        unsigned int nb_rings,
+        ObjectMesh::Point translation
+){
+
+    this->compute(id_vertex, nb_rings);
 
     unsigned int n = this->vertex_handles.size();
 
@@ -303,8 +266,8 @@ void RingManager::laplacian_deformation_valence()
 
     for(i = 0; i < n; ++i) {
         ObjectMesh::VertexHandle vh_i = this->vertex_handles[i];
-        std::cout << this->no_ring[vh_i] << " ; " << std::abs(res(i, 0)) << std::endl;
-        this->deformation[vh_i] = res(i, 0) * ObjectMesh::Point(0.0f, 0.01f, 0.0f);
+        //std::cout << this->no_ring[vh_i] << " ; " << std::abs(res(i, 0)) << std::endl;
+        this->deformation[vh_i] = -res(i, 0) * translation;
         //this->deformation[vh_i] = std::abs(res(i, 0)) * ObjectMesh::Point(0.0f, 0.01f, 0.0f);
     }
 
@@ -312,8 +275,14 @@ void RingManager::laplacian_deformation_valence()
 
 }
 
-void RingManager::laplacian_deformation_angle()
-{
+void RingManager::deformation_laplacian_angle(
+    unsigned int id_vertex,
+    unsigned int nb_rings,
+    ObjectMesh::Point translation,
+    float alpha
+){
+
+    this->compute(id_vertex, nb_rings);
 
     unsigned int n = this->vertex_handles.size();
 
@@ -322,8 +291,8 @@ void RingManager::laplacian_deformation_angle()
     //      half_edge(i, j) is not valid -> 0.0f
     //      half_edge(i, j) is valid -> weight(i, j)
     // i == nb_ring -> boundary condition :
-    //
-
+    //      i == j -> 1.0f
+    //      i != j -> 0.0f
     Eigen::MatrixXf m(n, n);
 
     // i < nb_ring -> 0.0f
@@ -331,18 +300,13 @@ void RingManager::laplacian_deformation_angle()
     Eigen::MatrixXf b(n, 1);
 
 
-    // weight(i, j) = valence(i)
-    // weight(i, j) = cos(alpha(i, j)) + cos(alpha(i, j))
-
     unsigned int i;
-
-
     for(i = 0; i < n; ++i){
 
         ObjectMesh::VertexHandle vh_i = this->vertex_handles[i];
 
         if(this->no_ring[vh_i] == this->nb_ring){
-            std::cout << this->no_ring[vh_i] << std::endl;
+            // std::cout << this->no_ring[vh_i] << std::endl;
             break;
         }
 
@@ -353,8 +317,6 @@ void RingManager::laplacian_deformation_angle()
             ObjectMesh::VertexHandle vh_j = this->vertex_handles[j];
 
             if(vh_i == vh_j){
-                //std::cout << "vh_i == vh_j" << std::endl;
-                //m(i, j) = -1.0f;
                 // Nothing
             }else{
 
@@ -363,7 +325,6 @@ void RingManager::laplacian_deformation_angle()
                     // vh_i and vh_j is not adjacent
                     m(i, j) = 0.0f;
                 }else{
-                    float alpha = 0.25f;
                     // vh_i and vh_j adjacent
                     double cos_theta0 = cos((double)this->angle[sheh]);
                     double cos_theta1 = cos((double)this->angle[sheh.opp()]);
@@ -388,9 +349,36 @@ void RingManager::laplacian_deformation_angle()
 
     for(i = 0; i < n; ++i) {
         ObjectMesh::VertexHandle vh_i = this->vertex_handles[i];
-        this->deformation[vh_i] = std::abs(res(i, 0)) * ObjectMesh::Point(0.0f, 0.01f, 0.0f);
+        this->deformation[vh_i] = std::abs(res(i, 0)) * translation;
     }
 
+}
 
+void RingManager::deformation_function(
+        unsigned int id_vertex,
+        unsigned int nb_rings,
+        ObjectMesh::Point translation
+){
+
+    this->compute(id_vertex, nb_rings);
+
+    for(ObjectMesh::VertexHandle vh : this->vertex_handles){
+        unsigned int id_ring = this->no_ring[vh];
+        // std::cout << id_ring << std::endl;
+        float c = (float)id_ring/(float)(this->nb_ring);
+        float fun_transfert = (1.0f - c*c)*(1.0f - c*c);
+        this->deformation[vh] = fun_transfert * translation;
+        // this->obj_mesh->point(vh) += fun_transfert * translation;
+    }
+
+}
+
+void RingManager::update(){
+
+    for(ObjectMesh::VertexHandle vh : this->vertex_handles){
+        this->obj_mesh->point(vh) += this->deformation[vh];
+    }
+
+    this->obj_mesh->update();
 
 }

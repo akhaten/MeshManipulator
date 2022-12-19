@@ -19,8 +19,6 @@ class RingManager {
         ~RingManager();
 
 
-        void compute(unsigned int id_vertex, unsigned int nb_ring);
-
         /**
          * Get ring from id
          * @param id_ring : id of ring
@@ -28,7 +26,6 @@ class RingManager {
          * @warning id_ring = 0 to get the vertex of reference.
          * So, there is only one vertex in 0-ring
          */
-        std::set<unsigned int> get(unsigned int id_ring);
 
         // Vertex handle storage
         std::vector<ObjectMesh::VertexHandle> vertex_handles;
@@ -38,34 +35,46 @@ class RingManager {
         OpenMesh::VProp<unsigned int> no_ring;
         // Association between valence and vertex handle
         OpenMesh::VProp<unsigned int> valence;
-        // Association between angle and half edge
+        // Association between opposite angle and half edge
         OpenMesh::HProp<float> angle;
-        // Point after deformation
+        // Deformations
         OpenMesh::VProp<ObjectMesh::Point> deformation;
 
-        void laplacian_deformation_valence();
-        void laplacian_deformation_angle();
+        void deformation_laplacian_valence(
+            unsigned int id_vertex,
+            unsigned int nb_rings,
+            ObjectMesh::Point translation
+        );
+
+        void deformation_laplacian_angle(
+            unsigned int id_vertex,
+            unsigned int nb_rings,
+            ObjectMesh::Point translation,
+            float alpha
+        );
+
+        void deformation_function(
+            unsigned int id_vertex,
+            unsigned int nb_rings,
+            ObjectMesh::Point translation
+        );
+
+        void update();
 
     private:
 
-
         ObjectMesh* obj_mesh;
-        unsigned int id_vertex;
         unsigned int nb_ring;
-        unsigned int lenght;
 
         std::vector<std::set<unsigned int>> vertices_rings;
 
         void clear();
+
+        void compute(unsigned int id_vertex, unsigned int nb_ring);
+
         std::set<ObjectMesh::VertexHandle> ring_from_vertices(
             std::set<ObjectMesh::VertexHandle> vertices_h
         );
-
-
-
-
-
-
 
 
 };

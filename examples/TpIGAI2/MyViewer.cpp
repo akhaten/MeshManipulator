@@ -163,21 +163,49 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
 
     }
 
-    if(key == GLFW_KEY_L && action == GLFW_PRESS)
+    // OPERATORS : LAPLACIAN & DEFORMATION
+
+    if(key == GLFW_KEY_1 && action == GLFW_PRESS)
     {
-        //std::cout << "Before Laplacian" << std::endl;
+        std::cout << "Begin Laplacian Smoothing" << std::endl;
         this->laplacian(this->obj_mesh, 0.3f);
-        //std::cout << "After Laplacian" << std::endl;
+        std::cout << "End Laplacian Smoothing" << std::endl;
     }
 
-    if(key == GLFW_KEY_D && action == GLFW_PRESS)
+    if(key == GLFW_KEY_2 && action == GLFW_PRESS)
     {
-        // std::cout << "Before Deformation" << std::endl;
-        this->deformation(this->obj_mesh, 500, 10);
-        // std::cout << "After Deformation" << std::endl;
+        std::cout << "Begin Deformation (Function)" << std::endl;
+        this->ring_manager->deformation_function(500, 10, ObjectMesh::Point(0.0f, 0.01f, 0.0f));
+        this->ring_manager->update();
+        std::cout << "End Deformation (Function)" << std::endl;
     }
 
+    if(key == GLFW_KEY_3 && action == GLFW_PRESS)
+    {
+        std::cout << "Begin Deformation (Laplacian Angle)" << std::endl;
+        // alpha in { 0.25f, 0.5f, 1.0f }
+        this->ring_manager->deformation_laplacian_angle(
+            500,
+            10,
+            ObjectMesh::Point(0.0f, 0.01f, 0.0f),
+            0.25f
+        );
 
+        this->ring_manager->update();
+        std::cout << "End Deformation (Laplacian Angle)" << std::endl;
+    }
+
+    if(key == GLFW_KEY_4 && action == GLFW_PRESS)
+    {
+        std::cout << "Begin Deformation (Laplacian Valence)" << std::endl;
+        this->ring_manager->deformation_laplacian_valence(
+            500,
+            10,
+            ObjectMesh::Point(0.0f, 0.01f, 0.0f)
+        );
+        this->ring_manager->update();
+        std::cout << "End Deformation (Laplacian Valence)" << std::endl;
+    }
 
 }
 
@@ -214,49 +242,6 @@ void MyViewer::processMouse(GLFWwindow *window, double xpos, double ypos)
 
 }
 
-void MyViewer::deformation(ObjectMesh* obj_mesh, unsigned int id_vertex, unsigned int nb_rings)
-{
-
-    ObjectMesh::Point translation = ObjectMesh::Point(0.0f, 0.01f, 0.0f);
-
-    this->ring_manager->compute(id_vertex, nb_rings);
-    //this->ring_manager->laplacian_deformation_valence();
-    this->ring_manager->laplacian_deformation_angle();
-    for(ObjectMesh::VertexHandle vh : this->ring_manager->vertex_handles){
-        this->obj_mesh->point(vh) += this->ring_manager->deformation[vh];
-    }
-
-    /*for(ObjectMesh::VertexHandle vh : this->ring_manager->vertex_handles){
-        unsigned int id_ring = this->ring_manager->no_ring[vh];
-        std::cout << id_ring << std::endl;
-        float c = (float)id_ring/(float)(nb_rings);
-        float fun_transfert = (1.0f - c*c)*(1.0f - c*c);
-        this->obj_mesh->point(vh) += fun_transfert * translation;
-    }*/
-
-    /*//MyOpenMesh* open_mesh = this->obj_mesh;
-
-    this->ring_manager->compute(id_vertex, nb_rings);
-
-    ObjectMesh::VertexIter v_it = this->obj_mesh->vertices_sbegin();
-
-    ObjectMesh::Point translation = ObjectMesh::Point(0.0f, 0.01f, 0.0f);
-
-    for(unsigned int id_ring = 0; id_ring < nb_rings; ++id_ring){
-        float c = (float)id_ring/(float)(nb_rings-1);
-        float fun_transfert = (1.0f - c*c)*(1.0f - c*c);
-        std::set<unsigned int> ring = this->ring_manager->get(id_ring);
-        for(unsigned int vertex : ring){
-            ObjectMesh::VertexHandle handle = this->obj_mesh->vertex_handle(vertex);
-            this->obj_mesh->point(handle) += fun_transfert * translation;
-        }
-
-    }*/
-
-    this->obj_mesh->update();
-
-}
-
 void MyViewer::laplacian(ObjectMesh* obj_mesh, float alpha)
 {
 
@@ -281,6 +266,5 @@ void MyViewer::laplacian(ObjectMesh* obj_mesh, float alpha)
     }
 
     this->obj_mesh->update();
-
 
 }

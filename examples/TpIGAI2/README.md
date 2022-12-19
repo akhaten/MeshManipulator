@@ -45,7 +45,7 @@ Hypothèse:
     - f : une fonction tel que
             * f(0) = 1
             * f(1) = 0
-            * strictement décorissante sur [0, 1] 
+            * strictement décroissante et continue sur [0, 1] 
     - no_ring : une fonction qui retourne le numéro de l'anneau d'un sommet
     
 Pour chaque sommet v dans V:

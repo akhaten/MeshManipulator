@@ -41,3 +41,25 @@ make
 - [TP IGAI](https://github.com/akhaten/MeshManipulator/tree/main/examples/TpIGAI2)
 
 
+
+### Features :
+
+- Import object 3D
+- Bezier Curves
+
+### Missing :
+
+- Colors / Lighting
+- Faire plusieurs types de lumière
+- Micro-Facette
+- Shadow Map
+- Normal
+- Mettre en place le Framebuffer
+- HDR
+- Bloom
+- Deffered Shading
+- Chargement de scène / Importation GLTF
+
+
+
+

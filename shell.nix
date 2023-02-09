@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
 
 let
-    OpenMesh = pkgs.callPackage ./nix-libs/OpenMesh.nix {} ;
+    OpenMesh = pkgs.callPackage ./nix-libs/OpenMesh {} ;
 in
 
 pkgs.mkShell {
@@ -24,13 +24,15 @@ pkgs.mkShell {
 
         # OPENMESH Dependencies
         OpenMesh
-
         # (pkgs.callPackage ./nix-libs/OpenMesh.nix)
         ## Nothing
 
         # EIGEN Dependencies
         eigen
         ## Nothing
+
+        # Assimp Dependencies
+        assimp
 
         # GLEW Dependencies
         glew

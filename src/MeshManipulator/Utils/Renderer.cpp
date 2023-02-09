@@ -35,6 +35,17 @@ Renderer::~Renderer() {}
 void Renderer::render(Drawable* drawable)
 {
 
+//	for(Light* light : this->lights){
+//		Shader* light_shader = light->getShader();
+//		light_shader->use();
+//		// For get color, we take with "location = ???" because
+//		// color will be take in datas on gpu.
+//		// datas ~ [vertex_1.pos, vertex_2.color, ... , vertex_n.pos, vertex_n.color]
+//		// light_shader->setVec3("object_color", drawable->getColor());
+//		light_shader->setVec3("light_color", light->getColor());
+//		light_shader->setMat4("model", light->getModel());
+//	}
+
     this->shader->setMat4("model", drawable->modelMatrix());
     this->shader->setMat4("view", this->viewer->viewMatrix());
     this->shader->setMat4("projection", this->viewer->projectionMatrix());
@@ -62,4 +73,9 @@ void Renderer::setShader(Shader* shader)
 void Renderer::setViewer(Viewer* viewer)
 {
     this->viewer = viewer;
+}
+
+void Renderer::addLight(Light* light)
+{
+	this->lights.push_back(light);
 }

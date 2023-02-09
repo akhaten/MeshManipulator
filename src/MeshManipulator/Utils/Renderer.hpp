@@ -10,7 +10,7 @@
 #include "MeshManipulator/Window/Viewer.hpp"
 #include "MeshManipulator/Mesh/OpenGLObject.hpp"
 #include "MeshManipulator/Utils/Drawable.hpp"
-
+#include "MeshManipulator/Utils/Lights/Light.hpp"
 
 class Renderer
 {
@@ -58,6 +58,14 @@ class Renderer
         */
         void setViewer(Viewer* viewer);
 
+		/**
+		 * Add a light to renderer
+		 * @param light : a light
+		 */
+		void addLight(Light* light);
+
+
+
     private:
 
         /**
@@ -70,6 +78,10 @@ class Renderer
          */
         Viewer* viewer;
         
+		/**
+		 * Lihts of renderer
+		 */
+		std::vector<Light*> lights;
 
 };
 

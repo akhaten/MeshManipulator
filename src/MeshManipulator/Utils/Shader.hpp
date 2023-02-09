@@ -55,6 +55,13 @@ class Shader
          */
         void setFloat(const char* name, const float value);
 
+		/**
+		 * Set vec3 variable in shader
+		 * @param name : name of variable
+		 * @param value : new value
+		 */
+		void setVec3(const char* name, const glm::vec3 vec);
+
         /**
          * Set matrix (4x4) variable in shader
          * @param name : name of variable

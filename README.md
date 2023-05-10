@@ -49,8 +49,6 @@ make
 
 ### Missing :
 
-- Colors / Lighting
-- Faire plusieurs types de lumière
 - Micro-Facette
 - Shadow Map
 - Normal

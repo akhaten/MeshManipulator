@@ -8,3 +8,4 @@ Dockerfile
 build2
 .devcontainer
 resources/
+compile_commands.json

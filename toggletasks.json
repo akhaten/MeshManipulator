@@ -4,28 +4,67 @@
 		
 		{
 			"name" : "Configure project",
-			"cmd" : "mkdir -p ${config_dir}/build && cmake -S ${config_dir} -B ${config_dir}/build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON && cp ${config_dir}/build/compile_commands.json ${config_dir}",
-			"tags" : [ "cmake" ]
+			"cmd" : "
+				mkdir -p ${config_dir}/build && 
+				cmake -S ${config_dir} -B ${config_dir}/build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON && 
+				cp ${config_dir}/build/compile_commands.json ${config_dir}",
+			"tags" : [ "cmake", "configure" ]
 		},
 
 		{
 			"name" : "Clean project",
-			"cmd" : "rm -rf ${config_dir}/build && rm ${config_dir}/compile_commands.json",
-			"tags" : [ "cmake" ]
+			"cmd" : "rm -rf ${config_dir}/build && 
+				rm ${config_dir}/compile_commands.json",
+			"tags" : [ "cmake", "clean" ]
 		},
 
 		{
 			"name" : "Build project",
 			"cmd" : "cmake --build ${config_dir}/build",
-			"tags" : [ "cmake" ]
+			"tags" : [ "cmake", "build" ]
 		},
 
 		{
 			"name" : "Build doc",
 			"cmd" : "make doc",
 			"cwd" : "${config_dir}/build",
-			"tags" : [ "cmake", "make", "doc" ]
+			"tags" : [ "cmake", "doc" ]
+		},
+
+		{
+			"name" : "Run IGAI3",
+			"cmd" : "./examples/TpIGAI3/tp-info3",
+			"cwd" : "${config_dir}/build",
+			"tags" : [ "Run" ]
+		},
+
+		{
+			"name" : "Clean and Configure",
+			"cmd" : "
+				rm -rf ${config_dir}/build &&                                                                                                                                                               
+                rm ${config_dir}/compile_commands.json &&
+				mkdir -p ${config_dir}/build &&                                                                                                                                                                  
+                cmake -S ${config_dir} -B ${config_dir}/build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON &&                                                                                                              
+                cp ${config_dir}/build/compile_commands.json ${config_dir}",
+			"cwd" : "${config_dir}",
+			"tags" : [ "cmake", "clean", "configure" ]
+		},
+
+		{
+			"name" : "Clean and Build",
+			"cmd" : "
+				rm -rf ${config_dir}/build &&
+				rm ${config_dir}/compile_commands.json &&                                                                                                                                                        
+				mkdir -p ${config_dir}/build &&                                                                                                                                                                  
+				cmake -S ${config_dir} -B ${config_dir}/build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON &&                                                                                                              
+				cp ${config_dir}/build/compile_commands.json ${config_dir} &&
+				cmake --build ${config_dir}/build",
+			"cwd" : "${config_dir}",
+			"tags" : [ "cmake", "clean", "configure", "build" ]
 		}
+
+
+
 
 	]
 

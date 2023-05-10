@@ -9,12 +9,20 @@ Drawable::Drawable(OpenGLObject* object)
 
     this->object = object;
     this->model = glm::mat4(1.0f);
+	this->on_screen = false;
 
 }
 
 Drawable::~Drawable() {}
 
-glm::mat4 Drawable::modelMatrix()
+
+
+bool Drawable::isOnScreen()
+{
+	return this->on_screen;
+}
+
+glm::mat4 Drawable::getModelMatrix()
 {
     return this->model;
 }
@@ -23,3 +31,10 @@ OpenGLObject* Drawable::getOpenGLObject()
 {
     return this->object;
 }
+
+void Drawable::setIsOnScreen(const bool on_screen)
+{
+	this->on_screen = on_screen;
+}
+
+

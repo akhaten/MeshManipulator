@@ -11,10 +11,12 @@
 class CurveMesh:
     public OpenGLObject
 {
+
 public:
     CurveMesh(std::vector<glm::vec3> vertices);
     ~CurveMesh();
     void draw() override;
+
 };
 
 

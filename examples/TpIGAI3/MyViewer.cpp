@@ -13,14 +13,23 @@ MyViewer::MyViewer(Camera* camera):
 {
 
     this->sensitivity = 2.0f;
-    this->radius = 0.01f;
+	//this->radius = 0.01f;
     this->camera_mod = false;
     this->moveset_mode = false;
+
+
+
+	this->target = this->camera->getPosition()+this->radius*this->camera->getDirection();
+	this->setRadius(0.1f);
+	this->setTarget(glm::vec3(0.0f, 0.0f, 0.0f));
     /*this->camera->setPosition(
             this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
     );*/
 
 }
+
+
+
 
 MyViewer::~MyViewer() {}
 
@@ -34,6 +43,24 @@ void MyViewer::setScene(Scene* scene)
 {
     this->scene = scene;
 }
+
+void MyViewer::setTarget(const glm::vec3 target)
+{
+	this->target = target;
+	glm::vec3 opposite_direction = -this->camera->getDirection();
+	glm::vec3 new_position = this->target + this->radius * opposite_direction;
+	this->camera->setPosition(new_position);
+}
+
+void MyViewer::setRadius(const float radius)
+{
+	this->radius = radius;
+	glm::vec3 opposite_direction = -this->camera->getDirection();
+	glm::vec3 new_position = this->target + this->radius * opposite_direction;
+	this->camera->setPosition(new_position);
+}
+
+
 
 
 /**
@@ -75,27 +102,30 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
         if(!this->moveset_mode){
 
 
-            if(this->radius-shift < 0.0f){
-                this->radius = 0.0f;
-                this->camera->setPosition(
-                        this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
-                );
-            }else if(this->radius > 0.0f) {
-                this->radius -= shift;
-                this->camera->setPosition(
-                        this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
-                );
+            if(this->radius-shift < 0.01f){
+				this->setRadius(0.01f);
+                //this->radius = 0.0f;
+                //this->camera->setPosition(
+                //        this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+                //);
+            }else{
+				this->setRadius(this->radius-shift);
+                //this->radius -= shift;
+                //this->camera->setPosition(
+                //        this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+                //);
             }
 
         }else{
 
-            glm::vec3 target = this->camera->getTarget();
+			this->setTarget(this->target+glm::vec3(0.0f, shift, 0.0f));
+            //glm::vec3 target = this->camera->getTarget();
             //std::cout << target.x << ";" << target.y << ";" << target.z << std::endl;
-            target += glm::vec3(0.0f, shift, 0.0f);
-            this->camera->setTarget(target);
-            this->camera->setPosition(
-                    this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
-            );
+            //target += glm::vec3(0.0f, shift, 0.0f);
+            //this->camera->setTarget(target);
+            //this->camera->setPosition(
+            //        this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+            //);
 
         }
 
@@ -106,20 +136,22 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
 
         if(!this->moveset_mode) {
 
-            this->radius += shift;
-            this->camera->setPosition(
-                    this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
-            );
+            //this->radius += shift;
+			this->setRadius(this->radius+shift);
+            //this->camera->setPosition(
+            //        this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+            //);
 
         }else{
 
-            glm::vec3 target = this->camera->getTarget();
+			this->setTarget(this->target-glm::vec3(0.0f, shift, 0.0f));
+            //glm::vec3 target = this->camera->getTarget();
             //std::cout << target.x << ";" << target.y << ";" << target.z << std::endl;
-            target += glm::vec3(0.0f, -shift, 0.0f);
-            this->camera->setTarget(target);
-            this->camera->setPosition(
-                    this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
-            );
+            //target += glm::vec3(0.0f, -shift, 0.0f);
+            //this->camera->setTarget(target);
+            //this->camera->setPosition(
+            //        this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+            //);
 
         }
 
@@ -135,26 +167,28 @@ void MyViewer::processKeyboard(GLFWwindow *window, int key, int scancode, int ac
     if(this->moveset_mode && key == GLFW_KEY_LEFT && action == GLFW_PRESS)
     {
 
-        glm::vec3 target = this->camera->getTarget();
+		this->setTarget(this->target+glm::vec3(-shift, 0.0f, 0.0f));
+        //glm::vec3 target = this->camera->getTarget();
         //std::cout << target.x << ";" << target.y << ";" << target.z << std::endl;
-        target += glm::vec3(-shift, 0.0f, 0.0f);
-        this->camera->setTarget(target);
-        this->camera->setPosition(
-            this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
-        );
+        //target += glm::vec3(-shift, 0.0f, 0.0f);
+        //this->camera->setTarget(target);
+        //this->camera->setPosition(
+        //    this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+        //);
 
     }
 
     if(this->moveset_mode && key == GLFW_KEY_RIGHT && action == GLFW_PRESS)
     {
 
-        glm::vec3 target = this->camera->getTarget();
+		this->setTarget(this->target+glm::vec3(shift, 0.0f, 0.0f));
+        //glm::vec3 target = this->camera->getTarget();
         //std::cout << target.x << ";" << target.y << ";" << target.z << std::endl;
-        target += glm::vec3(shift, 0.0f, 0.0f);
-        this->camera->setTarget(target);
-        this->camera->setPosition(
-            this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
-        );
+        //target += glm::vec3(shift, 0.0f, 0.0f);
+        //this->camera->setTarget(target);
+        //this->camera->setPosition(
+        //    this->camera->getTarget() + this->radius * (-glm::normalize(this->camera->getDirection()))
+        //);
 
     }
 
@@ -185,7 +219,7 @@ void MyViewer::processMouse(GLFWwindow *window, double xpos, double ypos)
         transformation = glm::rotate(transformation, xoffset, glm::vec3(0.0f, 1.0f, 0.0f));
         transformation = glm::rotate(transformation, -yoffset, glm::vec3(1.0f, 0.0f, 0.0f));
         this->camera->update(transformation);
-        this->camera->setPosition(this->camera->getTarget()+this->radius*(-glm::normalize(this->camera->getDirection())));
+        this->camera->setPosition(this->target+this->radius*(-glm::normalize(this->camera->getDirection())));
 
         glfwSetCursorPos(window, (float)width/2, (float)height/2);
     

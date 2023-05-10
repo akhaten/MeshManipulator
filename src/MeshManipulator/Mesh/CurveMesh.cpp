@@ -4,7 +4,7 @@ CurveMesh::CurveMesh(
     std::vector<glm::vec3> vertices
 ){
     this->opengl_vertices = vertices;
-    for(unsigned int index = 0; index < vertices.size(); ++index)
+    for(unsigned int index = 0; index < vertices.size()/2; ++index)
         this->opengl_indices.push_back(index);
     this->toOpenGL();
 }

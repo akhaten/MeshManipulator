@@ -18,11 +18,18 @@ void OpenGLObject::toOpenGL()
     glGenBuffers(1, &this->vbo);
     glBindBuffer(GL_ARRAY_BUFFER, this->vbo);
     glBufferData(GL_ARRAY_BUFFER, this->opengl_vertices.size() * sizeof(glm::vec3), this->opengl_vertices.data(), GL_STATIC_DRAW);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), (void*)0);
+	
+	// Vertex position
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(glm::vec3), (void*)0);
     glEnableVertexAttribArray(0);
 
-    
+	// Vertex color
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3*sizeof(glm::vec3), (void*)(sizeof(glm::vec3)));
+	glEnableVertexAttribArray(1);
 
+	// Vertex normal
+	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 3*sizeof(glm::vec3), (void*)(2*sizeof(glm::vec3)));
+	glEnableVertexAttribArray(2);
 }
 
 void OpenGLObject::draw()

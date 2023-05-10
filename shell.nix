@@ -45,7 +45,7 @@ pkgs.mkShell {
 
         # C++ Tools
         cmake
-        #gcc11
+        gcc11
         clang
         doxygen
         # valgrind

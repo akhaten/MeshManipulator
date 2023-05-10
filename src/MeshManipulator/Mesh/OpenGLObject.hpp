@@ -18,7 +18,10 @@ class OpenGLObject
 
     public:
         virtual void draw();
-
+		unsigned int getShaderIndex();
+		void setShaderIndex(const unsigned int index);
+		
+	
     protected:
         std::vector<glm::vec3> opengl_vertices;
         std::vector<unsigned int> opengl_indices;
@@ -28,7 +31,7 @@ class OpenGLObject
         GLuint vao;
         GLuint vbo;
         GLuint ebo;
-
+		unsigned int shader_index;
 
 };
 

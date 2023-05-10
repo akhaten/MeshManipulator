@@ -9,7 +9,9 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <eigen3/Eigen/Core>
 
+Eigen::Vector3f a = Eigen::Vector3f(0, 0, 0);
 
 class Camera
 {
@@ -20,9 +22,12 @@ class Camera
         /**
          * Camera constructor
          * @param position : position of camera into scene
-         * @param target : point target
+         * @param direction : point target
          */
-        Camera(glm::vec3 position, glm::vec3 target);
+        Camera(glm::vec3 position, glm::vec3 direction);
+
+		// Camera(Eigen::Vector3f position, Eigen::Vector3f direction, unsigned int width, unsigned int height, float fov, float near, flat far);
+	
 
         /**
          * Camera destructor
@@ -52,7 +57,7 @@ class Camera
          * Get target point of camera
          * @return target point
          */
-        glm::vec3 getTarget();
+        //glm::vec3 getTarget();
 
         /**
          * Get position of camera
@@ -112,7 +117,7 @@ class Camera
         * Set target point of camera
         * @param target : new target point
         */
-        void setTarget(glm::vec3 target);
+        //void setTarget(glm::vec3 target);
 
         /**
         * Set new position of camera
@@ -181,27 +186,27 @@ class Camera
         /**
          * Position of camera in world space
          */
-        glm::vec3 position;
+        //glm::vec3 position;
 
         /**
          * Direction of view
          */
-        glm::vec3 direction;
+        //glm::vec3 direction;
 
         /**
          * Point looking by camera
          */
-        glm::vec3 target;
+        //glm::vec3 target;
 
         /**
          * Up of camera
          */
-        glm::vec3 up;
+        //glm::vec3 up;
 
         /**
          * Right of camera
          */
-        glm::vec3 right;
+        //glm::vec3 right;
 
         /**
          * Up vector in world space

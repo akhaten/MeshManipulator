@@ -11,7 +11,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include "MeshManipulator/Mesh/ObjectMesh.hpp"
-#include "Shader.hpp"
+#include "MeshManipulator/Utils/Shader.hpp"
 
 
 
@@ -35,7 +35,18 @@ class Drawable
          * Get model/transformation matrix
          * @return model matrix
          */
-        glm::mat4 modelMatrix();
+        glm::mat4 getModelMatrix();
+
+		/**
+		 * Know if we draw only on 2D screen
+		 * @return Is it 2D drawable
+		 */
+		bool isOnScreen();
+
+		/**
+		 * Set draw mode
+		 */
+		void setIsOnScreen(const bool on_screen);
 
         /**
          * Get Opengl object
@@ -55,6 +66,14 @@ class Drawable
          * Transformation matrix
          */
         glm::mat4 model;
+
+		/**
+		 * Boolean for use only medel matrix in fragment shader
+		 * i.e draw only on 2D screen.
+		 * Example : draw a crosshair for fps
+		 */
+		bool on_screen;
+
     
 
 };

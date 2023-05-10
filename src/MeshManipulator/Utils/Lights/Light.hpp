@@ -13,10 +13,15 @@ class Light
 {
 
     protected:
+		GLint vao;
+
 		// unsigned int vao;
 		glm::mat4 matrix;
         glm::vec3 position;
         glm::vec3 color;
+		float ambient;
+		float diffuse;
+		float specular;
         Shader* shader;
 
     public:

@@ -52,8 +52,8 @@ class MyViewer:
         void setScene(Scene* scene);
         void setWindow(GLFWwindow* window);
 
-        void setObjectMesh(ObjectMesh* obj_mesh);
-
+		void setRadius(const float radius);
+		void setTarget(const glm::vec3 target);
 
     private:
 
@@ -61,6 +61,7 @@ class MyViewer:
         Scene* scene;
 
         float radius;
+		glm::vec3 target;
         double lastX;
         double lastY;
         float sensitivity;

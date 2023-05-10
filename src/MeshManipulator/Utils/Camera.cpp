@@ -3,23 +3,25 @@
 
 #include <iostream>
 
-Camera::Camera(glm::vec3 position, glm::vec3 target)
+Camera::Camera(glm::vec3 position, glm::vec3 direction)
 {
 
-    this->position = position;
-    this->target = target;
-    this->direction = glm::normalize(this->position-this->target);
+    //this->position = position;
+    //this->target = target;
+    //this->direction = glm::normalize(this->position-this->target);
+
     this->world_up = glm::vec3(0.0f, 1.0f, 0.0f);
-    this->right = glm::normalize(glm::cross(this->world_up, this->direction));
-    this->up = glm::normalize(glm::cross(this->direction, this->right));
+	glm::vec3 direction_normalized = glm::normalize(direction);
+	glm::vec3 right = glm::normalize(glm::cross(this->world_up, direction_normalized));
+	glm::vec3 up = glm::normalize(glm::cross(direction_normalized, right));
 
 
     this->matrix = glm::mat4(1.0f);
-    this->setRight(this->right);
-    this->setUp(this->up);
-    this->setDirection(this->direction);
-    this->setPosition(this->position);
-
+    this->setRight(right);
+    this->setUp(up);
+    this->setDirection(direction_normalized);
+    this->setPosition(position);
+	//this->setTarget(this->getPosition()+this->getDirection());
     // Default
     this->fov = glm::radians(45.0f);
     this->near = 0.01f;
@@ -53,10 +55,10 @@ glm::mat4 Camera::projectionMatrix()
  * GETTERS
  */
 
-glm::vec3 Camera::getTarget()
-{
-    return this->target;
-}
+//glm::vec3 Camera::getTarget()
+//{
+//    return this->target;
+//}
 
 glm::vec3 Camera::getPosition()
 {
@@ -65,7 +67,8 @@ glm::vec3 Camera::getPosition()
 
 glm::vec3 Camera::getDirection()
 {
-    return glm::vec3(this->matrix[0][2], this->matrix[1][2], this->matrix[2][2]);
+	glm::vec3 dir = glm::vec3(this->matrix[0][2], this->matrix[1][2], this->matrix[2][2]);
+	return glm::normalize(dir);
 }
 
 glm::vec3 Camera::getUp()
@@ -107,30 +110,35 @@ float Camera::getFar()
  * SETTERS
  */
 
-void Camera::setTarget(glm::vec3 target)
-{
-    this->target = target;
-}
+//void Camera::setTarget(glm::vec3 target)
+//{
+//    this->target = target;
+//}
 
 void Camera::setMatrix(unsigned int index, glm::vec3 value)
 {
-    for(unsigned int i = 0; i < 3; ++i)
-        this->matrix[i][index] = value[i];
+    //for(unsigned int i = 0; i < 3; ++i)
+    //    this->matrix[i][index] = value[i];
+	//auto value_norm = glm::normalize(value);
+	this->matrix[0][index] = value.x;
+	this->matrix[1][index] = value.y;
+	this->matrix[2][index] = value.z;
 }
 
 void Camera::setRight(glm::vec3 right)
 {
-    this->setMatrix(0, right);
+    this->setMatrix(0, glm::normalize(right));
 }
 
 void Camera::setUp(glm::vec3 up)
 {
-    this->setMatrix(1, up);
+    this->setMatrix(1, glm::normalize(up));
 }
 
 void Camera::setDirection(glm::vec3 direction)
 {
-    this->setMatrix(2, direction);
+    this->setMatrix(2, glm::normalize(direction));
+	//this->setMatrix(2, direction);
 }
 
 void Camera::setPosition(glm::vec3 position)

@@ -64,6 +64,9 @@ class Renderer
 		 */
 		void addLight(Light* light);
 
+		//unsigned int addShader(Shader* shader);
+		//Shader* getShader(unsigned int index);
+		//Shader* getShader(const char* name);
 
 
     private:
@@ -77,7 +80,10 @@ class Renderer
          * Viewer of renderer
          */
         Viewer* viewer;
-        
+       
+
+		std::vector<Shader*> shaders;
+		
 		/**
 		 * Lihts of renderer
 		 */

@@ -1,9 +1,17 @@
 cmake_minimum_required(VERSION 3.20)
 
+set(CMAKE_C_COMPILER "gcc")
+set(CMAKE_CXX_COMPILER "g++")
+set(CMAKE_BUILD_TYPE "Debug")
+
+# set(CMAKE_C_COMPILER "/nix/store/a64w6zy8w9hcj6b4g5nz0dl6zyd24c1x-gcc-wrapper-11.3.0/bin/gcc")
+# set(CMAKE_CXX_COMPILER "/nix/store/a64w6zy8w9hcj6b4g5nz0dl6zyd24c1x-gcc-wrapper-11.3.0/bin/g++")
+# set(CMAKE_C_COMPILER_WORKS 1)
+# set(CMAKE_CXX_COMPILER_WORKS 1)
+
 project(MeshManipulator)
 
-# set(CMAKE_C_COMPILER "/usr/bin/gcc")
-# set(CMAKE_CXX_COMPILER "/usr/bin/g++")
+
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -58,6 +66,9 @@ set(UTILS
 	${PATH_UTILS}/Lights/Light.hpp
 	${PATH_UTILS}/Lights/Light.cpp
 	${PATH_UTILS}/Lights/DirectionalLight.hpp
+	${PATH_UTILS}/Lights/DirectionalLight.cpp
+	${PATH_UTILS}/Lights/SpotLight.hpp
+	${PATH_UTILS}/Lights/SpotLight.cpp
 )
 
 

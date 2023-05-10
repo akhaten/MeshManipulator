@@ -5,14 +5,27 @@
 #ifndef SPOTLIGHT_HPP
 #define SPOTLIGHT_HPP
 
+#include <glm/glm.hpp>
+
 #include "MeshManipulator/Utils/Lights/Light.hpp"
 
 class SpotLight:
     public Light
 {
+	
+	public:
 
-	SpotLight(const char* fragment_shader_source, const char* vertex_shader_source);
-	~SpotLight();
+		/**
+		 * Constructor of SpotLight
+		 * @param position : position of SpotLight
+		 * @param color : color of SpotLight
+		 */
+		SpotLight(const glm::vec3 position, const glm::vec3 color);
+
+		/**
+		 * Destuctor of SpotLight
+		 */
+		~SpotLight();
 
 };
 

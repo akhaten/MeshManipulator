@@ -1,5 +1,5 @@
 
-# Compte rendu des fonctionnalités développées lors du tps
+# Compte rendu des fonctionnalités développées lors des tps
 
 
 ## Séance 1 : Lissage Laplacien

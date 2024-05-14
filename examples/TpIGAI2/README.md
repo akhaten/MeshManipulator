@@ -7,8 +7,8 @@
 La fonctionnalité a été implémentée dans
 ![RingManager.cpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/MyViewer.cpp)
 
-Pour chaque vertex, on prned le voisinage (anneau d'ordre 1).
-On calcule le centroid ie on fait la moyenne des points dans l'anneau.
+Pour chaque sommet, nous prenons le voisinage (anneau d'ordre 1).
+On calcule le centroid en calculant la moyenne des points dans l'anneau.
 Le nouveau vertex est V_i' = alpha * V_i + (1 - alpha) * centroid_i  avec alpha dans ]0, 0.5[.
 
 ![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/images/laplacian_smoothing.gif)
@@ -19,14 +19,13 @@ Le nouveau vertex est V_i' = alpha * V_i + (1 - alpha) * centroid_i  avec alpha 
 La recherche d'anneaux a été implémentée dans
 ![RingManager.cpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/RingManager.cpp)
 
-Pour chaque vertex, on prends l'anneau d'ordre 1 du vertex courant.
-On enregistre ses vertex dans un ensemble.
+Pour chaque sommet, nous prenons l'anneau d'ordre 1 du somment courant.
+Nous enregistrons ses sommets dans un ensemble (collection contenant des objets de manière unique).
 
-Pour l'anneau d'ordre n, on prends tous les vertex de l'anneau n-1.
-Puis on cherche l'anneau d'ordre 1 pour chaque vertex de l'anneau n-1
-puis on mémorise ses vertex sans redondance. On veille également à éliminer
-les vertex qui pourraient se trouve dans l'anneau n-1.
-On a donc notre anneau d'ordre n.
+Pour l'anneau d'ordre n, nous prennons tous les sommets de l'anneau n-1.
+Puis nous cherchons l'anneau d'ordre 1 pour chaque sommet de l'anneau n-1
+Ensuite, nous mémorisons ses sommets sans redondance avec la propriété mathématique
+d'un ensemble énoncé ci-dessus.
 
 ## Séance 3 : Utiliser les anneaux pour appliquer une déformation
 
@@ -41,7 +40,7 @@ Grossièrement, l'algorithme (en pseudo code) appliqué pour une telle déformat
 ```
 Hypothèse:
     - V : ensemble contenant les vertex contenus dans les anneaux
-    - u : vecteur dans lequel on translate nos points (ie déformation locale du maillage)
+    - u : vecteur par lequel on translate nos points (ie déformation locale du maillage)
     - f : une fonction tel que
             * f(0) = 1
             * f(1) = 0
@@ -63,7 +62,7 @@ Pour chaque sommet v dans V:
 
 Deux variantes ont été implémentées.
 
-La méthode étant basée sur les poids que l'on utilise pour résoubre notre système, nous en utilisons deux sortes:
+La méthode étant basée sur les poids que nous utilisons pour résoudre notre système, nous en utilisons deux sortes:
 
 - l'inverse de la valance
 
@@ -73,7 +72,7 @@ La méthode étant basée sur les poids que l'on utilise pour résoubre notre sy
 
 ![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/images/deformation_angle_following_laplacian_smooth.png)
 
-Dans les deux cas, on résout un système de tel sort Lx = B avec:
+Dans les deux cas, nous résolvons un système tel que Lx = B avec:
 - L : la matrice laplacienne avec les conditions de bord
 - x : les coefficients recherchés pour la déformation
 - B : le vecteur contenant que des 0 sauf à la ligne correspondant au vertex au centre des anneaux

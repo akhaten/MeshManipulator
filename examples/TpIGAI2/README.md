@@ -22,7 +22,7 @@ La recherche d'anneaux a été implémentée dans
 Pour chaque sommet, nous prenons l'anneau d'ordre 1 du sommet courant.
 Nous enregistrons ses sommets dans un ensemble (collection contenant des objets de manière unique).
 
-Pour l'anneau d'ordre n, nous cherchons l'anneau d'ordre 1 pour chaque sommet de l'anneau n-1
+Pour l'anneau d'ordre n, nous cherchons l'anneau d'ordre 1 pour chaque sommet de l'anneau n-1.
 Ensuite, nous mémorisons ses sommets sans redondance avec la propriété mathématique
 d'un ensemble énoncée ci-dessus.
 

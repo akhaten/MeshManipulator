@@ -9,7 +9,7 @@ La fonctionnalité a été implémentée dans
 
 Pour chaque sommet, nous prenons le voisinage (anneau d'ordre 1).
 On calcule le centroid en calculant la moyenne des points dans l'anneau.
-Le nouveau vertex est V_i' = alpha * V_i + (1 - alpha) * centroid_i  avec alpha dans ]0, 0.5[.
+Le nouveau sommet est V_i' = alpha * V_i + (1 - alpha) * centroid_i  avec alpha dans ]0, 0.5[.
 
 ![](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/images/laplacian_smoothing.gif)
 
@@ -19,13 +19,12 @@ Le nouveau vertex est V_i' = alpha * V_i + (1 - alpha) * centroid_i  avec alpha 
 La recherche d'anneaux a été implémentée dans
 ![RingManager.cpp](https://github.com/akhaten/MeshManipulator/blob/main/examples/TpIGAI2/RingManager.cpp)
 
-Pour chaque sommet, nous prenons l'anneau d'ordre 1 du somment courant.
+Pour chaque sommet, nous prenons l'anneau d'ordre 1 du sommet courant.
 Nous enregistrons ses sommets dans un ensemble (collection contenant des objets de manière unique).
 
-Pour l'anneau d'ordre n, nous prennons tous les sommets de l'anneau n-1.
-Puis nous cherchons l'anneau d'ordre 1 pour chaque sommet de l'anneau n-1
+Pour l'anneau d'ordre n, nous cherchons l'anneau d'ordre 1 pour chaque sommet de l'anneau n-1
 Ensuite, nous mémorisons ses sommets sans redondance avec la propriété mathématique
-d'un ensemble énoncé ci-dessus.
+d'un ensemble énoncée ci-dessus.
 
 ## Séance 3 : Utiliser les anneaux pour appliquer une déformation
 
